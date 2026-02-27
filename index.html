@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Dream Computers – Premium Refurbished Laptops | Trichy</title>
+<meta name="description" content="Dream Computers – Trichy's #1 destination for affordable, quality-tested refurbished & second-hand laptops. Located at Super Bazaar, Trichy."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#06090f;
+  --bg2:#0c1220;
+  --bg3:#111827;
+  --card:#131d2e;
+  --border:rgba(99,179,255,0.12);
+  --blue:#3b82f6;
+  --blue2:#60a5fa;
+  --glow:#1d4ed8;
+  --gold:#f59e0b;
+  --gold2:#fbbf24;
+  --text:#f1f5f9;
+  --muted:#94a3b8;
+  --radius:16px;
+  --transition:0.35s cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:99px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,9,15,0.85);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:var(--transition)}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--blue),var(--gold));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.nav-logo-text{font-size:1.15rem;font-weight:800;letter-spacing:-0.3px;color:var(--text)}
+.nav-logo-text span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:500;transition:var(--transition);position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);border-radius:99px;transition:var(--transition)}
+.nav-links a:hover{color:var(--text)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;border:none;padding:.55rem 1.4rem;border-radius:99px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--transition);text-decoration:none}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(59,130,246,.4)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition)}
+.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1.5rem 2rem;z-index:999;flex-direction:column;gap:1rem}
+.mobile-menu a{color:var(--muted);text-decoration:none;font-size:1rem;font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 2rem 60px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(29,78,216,.3) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 80% 50%,rgba(245,158,11,.08) 0%,transparent 60%),var(--bg);z-index:0}
+.hero-particles{position:absolute;inset:0;overflow:hidden;z-index:0}
+.particle{position:absolute;border-radius:50%;animation:float 8s infinite ease-in-out}
+@keyframes float{0%,100%{transform:translateY(0) scale(1);opacity:.6}50%{transform:translateY(-30px) scale(1.1);opacity:1}}
+.hero-content{position:relative;z-index:1;max-width:680px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);color:var(--gold);padding:.4rem 1rem;border-radius:99px;font-size:.8rem;font-weight:600;letter-spacing:.5px;margin-bottom:1.5rem;text-transform:uppercase}
+.hero-badge::before{content:'●';font-size:8px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:900;line-height:1.08;letter-spacing:-2px;margin-bottom:1.2rem}
+.hero h1 .accent{background:linear-gradient(135deg,var(--gold),var(--gold2),#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero h1 .blue{background:linear-gradient(135deg,var(--blue2),#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-desc{font-size:1.05rem;color:var(--muted);line-height:1.75;margin-bottom:2rem;max-width:540px}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--gold),#fb923c);color:#0a0500;padding:.8rem 2rem;border-radius:99px;font-weight:700;font-size:1rem;text-decoration:none;transition:var(--transition);display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(245,158,11,.4)}
+.btn-outline{border:1.5px solid var(--border);color:var(--text);padding:.8rem 2rem;border-radius:99px;font-weight:600;font-size:1rem;text-decoration:none;transition:var(--transition);display:inline-flex;align-items:center;gap:8px;backdrop-filter:blur(8px)}
+.btn-outline:hover{border-color:var(--blue2);color:var(--blue2);transform:translateY(-3px)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;flex-wrap:wrap}
+.stat{display:flex;flex-direction:column}
+.stat-num{font-size:2rem;font-weight:900;color:var(--gold);line-height:1}
+.stat-label{font-size:.78rem;color:var(--muted);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
+.hero-visual{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55%;max-width:700px;z-index:0;opacity:.5;pointer-events:none}
+.hero-visual img{width:100%;filter:drop-shadow(0 0 60px rgba(59,130,246,.3))}
+
+/* MARQUEE */
+.marquee-wrap{padding:1.2rem 0;background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(245,158,11,.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden}
+.marquee-inner{display:flex;gap:3rem;animation:marquee 25s linear infinite;width:max-content}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-item{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.88rem;font-weight:500;white-space:nowrap}
+.marquee-item span.dot{color:var(--gold)}
+
+/* SECTION COMMONS */
+section{padding:100px 2rem}
+.section-label{display:inline-flex;align-items:center;gap:8px;color:var(--blue2);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem}
+.section-label::before{content:'';width:30px;height:2px;background:var(--blue2);border-radius:99px}
+.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem}
+.section-sub{color:var(--muted);font-size:1rem;line-height:1.7;max-width:520px}
+.container{max-width:1200px;margin:0 auto}
+
+/* ABOUT */
+.about{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:4rem}
+.about-img-wrap{position:relative}
+.about-img-card{background:linear-gradient(135deg,var(--card),var(--bg3));border:1px solid var(--border);border-radius:24px;padding:2.5rem;text-align:center;position:relative;overflow:hidden}
+.about-img-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(59,130,246,.15),transparent 60%)}
+.about-icon-big{font-size:5rem;margin-bottom:1rem;display:block}
+.about-location-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);color:var(--gold2);padding:.5rem 1.2rem;border-radius:99px;font-size:.85rem;font-weight:600;margin-top:1rem}
+.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.highlight-card{background:rgba(59,130,246,.07);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center}
+.highlight-card .num{font-size:1.6rem;font-weight:900;color:var(--gold)}
+.highlight-card .label{font-size:.75rem;color:var(--muted);font-weight:500;margin-top:2px}
+.about-text p{color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:1.2rem}
+.about-features{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem}
+.about-features li{display:flex;align-items:center;gap:.75rem;color:var(--text);font-size:.95rem;font-weight:500}
+.about-features li .icon{width:32px;height:32px;background:linear-gradient(135deg,rgba(59,130,246,.2),rgba(245,158,11,.1));border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+
+/* PRODUCTS */
+.products{background:var(--bg)}
+.products-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;margin-bottom:3rem}
+.filter-tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+.filter-tab{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:.45rem 1.1rem;border-radius:99px;font-size:.85rem;font-weight:500;cursor:pointer;transition:var(--transition);font-family:'Outfit',sans-serif}
+.filter-tab.active,.filter-tab:hover{background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;border-color:transparent}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
+.product-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);cursor:pointer;position:relative}
+.product-card:hover{transform:translateY(-6px);border-color:rgba(59,130,246,.35);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(59,130,246,.15)}
+.product-badge{position:absolute;top:14px;left:14px;z-index:2;padding:.3rem .75rem;border-radius:99px;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.badge-hot{background:linear-gradient(135deg,#ef4444,#dc2626);color:#fff}
+.badge-best{background:linear-gradient(135deg,var(--gold),#fb923c);color:#000}
+.badge-new{background:linear-gradient(135deg,var(--blue),#6366f1);color:#fff}
+.product-img{width:100%;height:200px;background:linear-gradient(135deg,var(--bg3),var(--bg2));display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;overflow:hidden}
+.product-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,var(--card));pointer-events:none}
+.product-body{padding:1.25rem}
+.product-brand{font-size:.75rem;color:var(--blue2);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:.35rem}
+.product-name{font-size:1rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:.75rem}
+.product-specs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.spec-tag{background:rgba(99,179,255,.08);border:1px solid rgba(99,179,255,.15);color:var(--muted);padding:.25rem .65rem;border-radius:6px;font-size:.72rem;font-weight:500}
+.product-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.75rem;border-top:1px solid var(--border)}
+.product-price{display:flex;flex-direction:column}
+.price-main{font-size:1.4rem;font-weight:900;color:var(--gold);line-height:1}
+.price-old{font-size:.78rem;color:var(--muted);text-decoration:line-through;margin-top:2px}
+.btn-cart{background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;border:none;padding:.55rem 1.2rem;border-radius:99px;font-size:.82rem;font-weight:600;cursor:pointer;transition:var(--transition);font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:6px}
+.btn-cart:hover{transform:scale(1.05);box-shadow:0 8px 20px rgba(59,130,246,.4)}
+.products-empty{text-align:center;padding:4rem 2rem;color:var(--muted)}
+.products-empty .emoji{font-size:3rem;display:block;margin-bottom:1rem}
+.add-btn{margin-top:2.5rem;text-align:center}
+
+/* WHY US */
+.why{background:var(--bg2);position:relative;overflow:hidden}
+.why-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 50%,rgba(29,78,216,.12),transparent)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3.5rem}
+.why-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.5rem;transition:var(--transition);position:relative;overflow:hidden}
+.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--gold));opacity:0;transition:var(--transition)}
+.why-card:hover{transform:translateY(-5px);border-color:rgba(59,130,246,.3)}
+.why-card:hover::before{opacity:1}
+.why-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1.25rem}
+.why-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.6rem;color:var(--text)}
+.why-card p{font-size:.88rem;color:var(--muted);line-height:1.65}
+
+/* YOUTUBE */
+.youtube{background:var(--bg)}
+.yt-card{background:linear-gradient(135deg,var(--card),var(--bg2));border:1px solid var(--border);border-radius:24px;padding:3rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;margin-top:3rem;position:relative;overflow:hidden}
+.yt-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(255,0,0,.06),transparent 60%)}
+.yt-text .yt-label{display:flex;align-items:center;gap:10px;color:#ff4444;font-weight:700;font-size:.9rem;margin-bottom:1rem}
+.yt-text .yt-label .dot{width:10px;height:10px;background:#ff4444;border-radius:50%;animation:pulse 2s infinite}
+.yt-text h2{font-size:2rem;font-weight:900;letter-spacing:-1px;margin-bottom:.75rem}
+.yt-text p{color:var(--muted);line-height:1.7;font-size:.95rem;max-width:480px;margin-bottom:1.5rem}
+.btn-youtube{display:inline-flex;align-items:center;gap:10px;background:#ff0000;color:#fff;padding:.75rem 1.75rem;border-radius:99px;font-weight:700;font-size:.95rem;text-decoration:none;transition:var(--transition)}
+.btn-youtube:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(255,0,0,.4);background:#cc0000}
+.yt-visual{font-size:8rem;opacity:.6;position:relative;z-index:1}
+
+/* BRANDS */
+.brands{background:var(--bg2);padding:60px 2rem}
+.brands-title{text-align:center;color:var(--muted);font-size:.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:2.5rem}
+.brands-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem}
+.brand-pill{background:var(--card);border:1px solid var(--border);padding:.65rem 1.5rem;border-radius:99px;font-weight:700;font-size:.9rem;color:var(--muted);transition:var(--transition)}
+.brand-pill:hover{color:var(--text);border-color:var(--blue);background:rgba(59,130,246,.08)}
+
+/* CONTACT */
+.contact{background:var(--bg)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3.5rem;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem}
+.contact-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:var(--transition)}
+.contact-card:hover{border-color:rgba(59,130,246,.3);transform:translateX(5px)}
+.contact-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.contact-card h4{font-size:.85rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.3rem}
+.contact-card p{font-size:.95rem;font-weight:500;color:var(--text);line-height:1.5}
+.contact-card a{color:var(--blue2);text-decoration:none}
+.contact-card a:hover{text-decoration:underline}
+.contact-form{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:2rem}
+.contact-form h3{font-size:1.3rem;font-weight:700;margin-bottom:1.5rem}
+.form-group{margin-bottom:1.2rem}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.5px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:.75rem 1rem;border-radius:10px;font-family:'Outfit',sans-serif;font-size:.9rem;outline:none;transition:var(--transition)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-group select option{background:var(--bg3)}
+.btn-submit{width:100%;background:linear-gradient(135deg,var(--gold),#fb923c);color:#000;border:none;padding:.9rem;border-radius:99px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:var(--transition);margin-top:.5rem}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(245,158,11,.4)}
+
+/* INSTAGRAM CTA */
+.insta-cta{background:linear-gradient(135deg,#833ab4 0%,#fd1d1d 50%,#fcb045 100%);padding:80px 2rem;text-align:center;position:relative;overflow:hidden}
+.insta-cta::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
+.insta-cta-inner{position:relative;z-index:1}
+.insta-cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin-bottom:.75rem}
+.insta-cta p{font-size:1rem;opacity:.85;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.65}
+.insta-id{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.6rem 1.4rem;border-radius:99px;font-weight:700;font-size:1rem;margin-bottom:1.75rem}
+.btn-insta{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#833ab4;padding:.8rem 2rem;border-radius:99px;font-weight:800;font-size:1rem;text-decoration:none;transition:var(--transition)}
+.btn-insta:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,.3)}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem}
+.footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto}
+.footer-brand .footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:1rem}
+.footer-brand .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--blue),var(--gold));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.footer-brand .logo-text{font-size:1.1rem;font-weight:800}
+.footer-brand .logo-text span{color:var(--gold)}
+.footer-brand p{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:1.25rem}
+.footer-socials{display:flex;gap:.75rem}
+.social-btn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;text-decoration:none;transition:var(--transition);border:1px solid var(--border);background:var(--card)}
+.social-btn:hover{transform:translateY(-3px);border-color:var(--blue)}
+.footer-col h4{font-size:.85rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.footer-col ul li a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:var(--transition)}
+.footer-col ul li a:hover{color:var(--blue2)}
+.footer-col ul li span{color:var(--muted);font-size:.88rem}
+.footer-bottom{max-width:1200px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;flex-wrap:wrap;gap:.75rem}
+.footer-bottom p{color:var(--muted);font-size:.82rem}
+.footer-bottom a{color:var(--blue2);text-decoration:none}
+.footer-tags{display:flex;gap:.5rem;flex-wrap:wrap}
+.footer-tag{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:.25rem .7rem;border-radius:6px;font-size:.75rem;font-weight:500}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;padding:1rem 1.5rem;border-radius:14px;font-weight:600;font-size:.9rem;transform:translateX(200%);transition:var(--transition);box-shadow:0 10px 30px rgba(59,130,246,.4);display:flex;align-items:center;gap:10px}
+.toast.show{transform:translateX(0)}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* BACK TO TOP */
+.back-top{position:fixed;bottom:2rem;left:2rem;z-index:999;width:44px;height:44px;background:var(--card);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:var(--transition);opacity:0;pointer-events:none;text-decoration:none;color:var(--text)}
+.back-top.show{opacity:1;pointer-events:all}
+.back-top:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-3px)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-visual{display:none}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .yt-card{grid-template-columns:1fr;text-align:center}
+  .yt-visual{font-size:5rem}
+  .footer-main{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  nav{padding:0 1rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  section{padding:70px 1rem}
+  .hero{padding:100px 1rem 60px}
+  .hero-stats{gap:1.5rem}
+  .footer-main{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .yt-card{padding:2rem 1.25rem}
+  .contact-form{padding:1.5rem}
+  .about-highlights{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <div class="nav-logo-icon">💻</div>
+    <div class="nav-logo-text">Dream<span>Computers</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#products">Laptops</a></li>
+    <li><a href="#youtube">YouTube</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#products" class="nav-cta">Shop Now →</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home">🏠 Home</a>
+  <a href="#about">ℹ️ About Us</a>
+  <a href="#products">💻 Laptops</a>
+  <a href="#youtube">▶️ YouTube</a>
+  <a href="#contact">📞 Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-particles" id="particles"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🏆 Trichy's #1 Laptop Store</div>
+    <h1>
+      <span class="accent">Dream</span>
+      <span class="blue"> Computers</span>
+      <br>Premium Laptops,<br>Affordable Prices
+    </h1>
+    <p class="hero-desc">Quality-tested second-hand & refurbished laptops at prices you won't find anywhere else in Trichy. Every laptop is checked, cleaned, and ready to perform.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-primary">🛒 Browse Laptops</a>
+      <a href="#about" class="btn-outline">Learn More ↓</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">500+</span>
+        <span class="stat-label">Laptops Sold</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Quality Tested</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">₹5K+</span>
+        <span class="stat-label">Starting Price</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">5⭐</span>
+        <span class="stat-label">Customer Reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner" id="marqueeInner"></div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-label">Our Story</div>
+    <h2 class="section-title reveal">About Dream Computers</h2>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-left">
+        <div class="about-img-card">
+          <span class="about-icon-big">🏪</span>
+          <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:.5rem">Dream Computers</h3>
+          <p style="color:var(--muted);font-size:.9rem">Trichy's Trusted Laptop Destination</p>
+          <div class="about-location-badge">📍 Super Bazaar, Trichy</div>
+          <div class="about-highlights">
+            <div class="highlight-card"><div class="num">5+</div><div class="label">Years Experience</div></div>
+            <div class="highlight-card"><div class="num">50+</div><div class="label">Brands Available</div></div>
+            <div class="highlight-card"><div class="num">500+</div><div class="label">Happy Customers</div></div>
+            <div class="highlight-card"><div class="num">100%</div><div class="label">Tested Units</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal-right">
+        <div class="section-label">Who We Are</div>
+        <h3 class="section-title" style="font-size:2rem">Your Dream Laptop is Here – at a Dream Price</h3>
+        <p>Dream Computers is Trichy's most trusted second-hand laptop store, located in the heart of Super Bazaar. We specialize in sourcing corporate-grade, quality-tested refurbished laptops from top companies and offering them at prices that genuinely surprise our customers.</p>
+        <p>Every laptop that enters our store goes through a rigorous inspection, cleaning, and testing process. We handle bulk corporate inventory and pass those savings directly to you – that's why nobody in Trichy can match our prices without compromising on quality.</p>
+        <ul class="about-features">
+          <li><div class="icon">✅</div> Every laptop individually tested & quality-checked</li>
+          <li><div class="icon">🏢</div> Bulk corporate laptop inventory – best rates guaranteed</li>
+          <li><div class="icon">💰</div> Prices you simply won't find anywhere else in Trichy</li>
+          <li><div class="icon">🔧</div> Post-sale support and guidance for every customer</li>
+          <li><div class="icon">📦</div> Ready to use – cleaned, formatted & prepped for you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <div class="container">
+    <div class="products-header">
+      <div>
+        <div class="section-label">Our Collection</div>
+        <h2 class="section-title reveal">Featured Laptops</h2>
+        <p class="section-sub" style="margin-top:.5rem">Every unit tested and ready to perform. Prices updated regularly.</p>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="business">Business</button>
+        <button class="filter-tab" data-filter="student">Student</button>
+        <button class="filter-tab" data-filter="gaming">Gaming</button>
+      </div>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="add-btn reveal">
+      <a href="#contact" class="btn-outline">📞 Ask About Specific Model →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="why-bg"></div>
+  <div class="container">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title reveal">The Dream Computers<br>Advantage</h2>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:rgba(59,130,246,.15)">💰</div>
+        <h3>Unbeatable Prices</h3>
+        <p>We source directly from corporate bulk inventories. This means massive savings we pass right to you – prices no other shop in Trichy can match.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:rgba(34,197,94,.15)">✅</div>
+        <h3>100% Quality Tested</h3>
+        <p>Each laptop undergoes battery test, display check, keyboard/port inspection, and performance benchmarking before it reaches you.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:rgba(245,158,11,.15)">🏢</div>
+        <h3>Corporate Grade Stock</h3>
+        <p>Our laptops come from top companies – well-maintained machines used in professional environments. Premium quality, second-hand prices.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:rgba(168,85,247,.15)">🔧</div>
+        <h3>After-Sales Support</h3>
+        <p>We don't disappear after the sale. Call us anytime for software help, upgrades, or advice. We're always here for our customers.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:rgba(239,68,68,.15)">📦</div>
+        <h3>Ready to Use</h3>
+        <p>Every laptop comes formatted, cleaned, and ready to use out of the box. Just open it and start working – no setup hassle.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon" style="background:rgba(20,184,166,.15)">🤝</div>
+        <h3>Trusted by Hundreds</h3>
+        <p>Over 500+ satisfied customers across Trichy trust Dream Computers. Our reputation is built on honesty, quality, and genuine care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+<section id="youtube" class="youtube">
+  <div class="container">
+    <div class="section-label">Watch Us Online</div>
+    <h2 class="section-title reveal">We're on YouTube!</h2>
+    <div class="yt-card reveal">
+      <div class="yt-text">
+        <div class="yt-label"><span class="dot"></span>LIVE on YouTube</div>
+        <h2>Dream Computers Trichy</h2>
+        <p>Watch real unboxings, honest laptop reviews, setup guides, and price reveals on our YouTube channel. See exactly what you're buying before you visit the store.</p>
+        <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" class="btn-youtube">
+          ▶ Visit Our Channel
+        </a>
+      </div>
+      <div class="yt-visual">📺</div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<div class="brands">
+  <div class="container">
+    <p class="brands-title">Brands Available at Dream Computers</p>
+    <div class="brands-row" id="brandsRow"></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title reveal">Visit Us or Enquire Online</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-card reveal">
+          <div class="contact-icon" style="background:rgba(59,130,246,.15)">📍</div>
+          <div>
+            <h4>Our Location</h4>
+            <p>Super Bazaar, Trichy<br><span style="color:var(--muted);font-size:.88rem">Tamil Nadu, India</span></p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon" style="background:rgba(34,197,94,.15)">📞</div>
+          <div>
+            <h4>Call / WhatsApp</h4>
+            <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a><br><span style="color:var(--muted);font-size:.88rem">Mon–Sat, 10 AM – 8 PM</span></p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon" style="background:rgba(245,158,11,.15)">⏰</div>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Monday – Saturday<br><span style="color:var(--muted);font-size:.88rem">10:00 AM – 8:00 PM</span></p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon" style="background:rgba(139,92,246,.15)">▶️</div>
+          <div>
+            <h4>YouTube Channel</h4>
+            <p><a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank">@dreamcomputerstrichy</a></p>
+          </div>
+        </div>
+        <div class="contact-card reveal">
+          <div class="contact-icon" style="background:linear-gradient(135deg,rgba(131,58,180,.2),rgba(252,176,69,.2))">📸</div>
+          <div>
+            <h4>Instagram</h4>
+            <p><span style="color:var(--muted)">Instagram page coming soon!<br>Follow us for product updates.</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="contact-form">
+          <h3>📧 Send an Enquiry</h3>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="enquiryName" placeholder="Enter your name"/>
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" id="enquiryPhone" placeholder="+91 XXXXX XXXXX"/>
+          </div>
+          <div class="form-group">
+            <label>What are you looking for?</label>
+            <select id="enquiryCategory">
+              <option value="">Select category...</option>
+              <option>Business Laptop (Office Work)</option>
+              <option>Student Laptop (College/Study)</option>
+              <option>Gaming Laptop</option>
+              <option>Budget Laptop (Under ₹15,000)</option>
+              <option>High-Performance Laptop</option>
+              <option>Specific Brand / Model</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Budget Range</label>
+            <select id="enquiryBudget">
+              <option value="">Select budget...</option>
+              <option>Under ₹10,000</option>
+              <option>₹10,000 – ₹20,000</option>
+              <option>₹20,000 – ₹35,000</option>
+              <option>₹35,000 – ₹50,000</option>
+              <option>Above ₹50,000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Additional Requirements</label>
+            <textarea id="enquiryMsg" placeholder="Any specific specs, brand preferences, or questions..."></textarea>
+          </div>
+          <button class="btn-submit" onclick="submitEnquiry()">Send Enquiry 🚀</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM CTA -->
+<div class="insta-cta">
+  <div class="insta-cta-inner reveal">
+    <h2>📸 Follow Us on Instagram</h2>
+    <p>Stay updated with our latest laptop arrivals, exclusive deals, and behind-the-scenes content. New products posted regularly!</p>
+    <div class="insta-id">📸 Instagram – Coming Soon!</div>
+    <br>
+    <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" class="btn-insta">▶ Watch on YouTube Instead</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-icon">💻</div>
+        <div class="logo-text">Dream<span>Computers</span></div>
+      </div>
+      <p>Trichy's most trusted source for premium refurbished and second-hand laptops. Quality you can trust, prices you'll love.</p>
+      <div class="footer-socials">
+        <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" class="social-btn" title="YouTube">▶</a>
+        <a href="#contact" class="social-btn" title="WhatsApp">💬</a>
+        <a href="#contact" class="social-btn" title="Instagram">📸</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Laptops</a></li>
+        <li><a href="#youtube">YouTube</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#products">Business Laptops</a></li>
+        <li><a href="#products">Student Laptops</a></li>
+        <li><a href="#products">Gaming Laptops</a></li>
+        <li><a href="#products">Budget Deals</a></li>
+        <li><a href="#products">Corporate Stock</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Store Info</h4>
+      <ul>
+        <li><span>📍 Super Bazaar, Trichy</span></li>
+        <li><span>⏰ Mon–Sat: 10AM – 8PM</span></li>
+        <li><a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank">▶ YouTube Channel</a></li>
+        <li><span>📸 Instagram – Coming Soon</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Dream Computers, Trichy. All rights reserved.</p>
+    <div class="footer-tags">
+      <span class="footer-tag">Refurbished Laptops</span>
+      <span class="footer-tag">Trichy</span>
+      <span class="footer-tag">Super Bazaar</span>
+      <span class="footer-tag">Best Prices</span>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a href="#home" class="back-top" id="backTop">↑</a>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// DATA
+const products = [
+  {id:1,brand:'Dell',name:'Dell Latitude E7470',specs:['Intel i5-6th Gen','8GB RAM','256GB SSD','14" FHD'],price:'₹15,500',old:'₹22,000',badge:'hot',category:'business',emoji:'💻'},
+  {id:2,brand:'Lenovo',name:'ThinkPad T470',specs:['Intel i5-7th Gen','8GB RAM','512GB SSD','14" FHD'],price:'₹18,000',old:'₹28,000',badge:'best',category:'business',emoji:'🖥️'},
+  {id:3,brand:'HP',name:'HP EliteBook 840 G3',specs:['Intel i5-6th Gen','8GB RAM','256GB SSD','14" Touch'],price:'₹16,500',old:'₹25,000',badge:'',category:'business',emoji:'💻'},
+  {id:4,brand:'Lenovo',name:'Lenovo IdeaPad 330',specs:['AMD A6','4GB RAM','1TB HDD','15.6" HD'],price:'₹9,500',old:'₹15,000',badge:'',category:'student',emoji:'📚'},
+  {id:5,brand:'Dell',name:'Dell Inspiron 15',specs:['Intel i3-7th Gen','4GB RAM','500GB HDD','15.6" HD'],price:'₹8,999',old:'₹14,000',badge:'',category:'student',emoji:'🎓'},
+  {id:6,brand:'HP',name:'HP 15s Notebook',specs:['Intel Celeron','4GB RAM','256GB SSD','15.6"'],price:'₹7,500',old:'₹12,000',badge:'new',category:'student',emoji:'📓'},
+  {id:7,brand:'ASUS',name:'ASUS VivoBook 15',specs:['Intel i5-8th Gen','8GB RAM','512GB SSD','15.6" FHD'],price:'₹22,000',old:'₹35,000',badge:'hot',category:'business',emoji:'⚡'},
+  {id:8,brand:'MSI',name:'MSI GF63 Thin',specs:['Intel i5-10th Gen','8GB RAM','256GB SSD','GTX 1650'],price:'₹35,000',old:'₹55,000',badge:'best',category:'gaming',emoji:'🎮'},
+  {id:9,brand:'Lenovo',name:'Legion 5 Gaming',specs:['AMD Ryzen 5','8GB RAM','512GB SSD','GTX 1650Ti'],price:'₹38,000',old:'₹62,000',badge:'',category:'gaming',emoji:'🕹️'},
+];
+
+const brands = ['Dell','Lenovo','HP','ASUS','MSI','Acer','Apple','Samsung','Toshiba','Sony','Compaq','HCL'];
+
+const marqueeItems = ['✅ Quality Tested Laptops','📍 Super Bazaar, Trichy','💰 Unbeatable Prices','🏢 Corporate Grade Stock','⚡ Ready to Use','🤝 500+ Happy Customers','▶ Watch on YouTube','🔧 Post-Sale Support','🖥️ All Top Brands Available','📦 Bulk Corporate Inventory'];
+
+// INIT
+function init(){
+  buildMarquee();
+  buildBrands();
+  renderProducts('all');
+  buildParticles();
+  setupTabs();
+  setupScroll();
+  setupNav();
+  setupHamburger();
+}
+
+function buildMarquee(){
+  const inner = document.getElementById('marqueeInner');
+  const doubled = [...marqueeItems,...marqueeItems];
+  inner.innerHTML = doubled.map(t=>`<div class="marquee-item"><span class="dot">◆</span>${t}</div>`).join('');
+}
+
+function buildBrands(){
+  document.getElementById('brandsRow').innerHTML = brands.map(b=>`<div class="brand-pill">${b}</div>`).join('');
+}
+
+function renderProducts(filter){
+  const grid = document.getElementById('productsGrid');
+  const filtered = filter==='all'?products:products.filter(p=>p.category===filter);
+  if(!filtered.length){
+    grid.innerHTML=`<div class="products-empty" style="grid-column:1/-1"><span class="emoji">🔍</span>No laptops in this category right now. Check back soon or enquire below!</div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(p=>`
+    <div class="product-card reveal" onclick="enquireProduct('${p.name}')">
+      ${p.badge?`<span class="product-badge badge-${p.badge}">${p.badge==='hot'?'🔥 Hot Deal':p.badge==='best'?'⭐ Best Seller':'🆕 New'}</span>`:''}
+      <div class="product-img">${p.emoji}</div>
+      <div class="product-body">
+        <div class="product-brand">${p.brand}</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-specs">${p.specs.map(s=>`<span class="spec-tag">${s}</span>`).join('')}</div>
+        <div class="product-footer">
+          <div class="product-price">
+            <span class="price-main">${p.price}</span>
+            <span class="price-old">${p.old}</span>
+          </div>
+          <button class="btn-cart" onclick="event.stopPropagation();enquireProduct('${p.name}')">📞 Enquire</button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  observeReveal();
+}
+
+function setupTabs(){
+  document.querySelectorAll('.filter-tab').forEach(tab=>{
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
+      this.classList.add('active');
+      renderProducts(this.dataset.filter);
+    });
+  });
+}
+
+function buildParticles(){
+  const container = document.getElementById('particles');
+  for(let i=0;i<20;i++){
+    const p = document.createElement('div');
+    p.className='particle';
+    const size = Math.random()*4+2;
+    p.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${Math.random()>.5?'rgba(59,130,246,':'rgba(245,158,11,'}${Math.random()*.4+.2});animation-delay:${Math.random()*6}s;animation-duration:${Math.random()*5+6}s`;
+    container.appendChild(p);
+  }
+}
+
+function setupScroll(){
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll',()=>{
+    backTop.classList.toggle('show',window.scrollY>400);
+    observeReveal();
+  });
+  observeReveal();
+}
+
+function observeReveal(){
+  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top<window.innerHeight-80) el.classList.add('visible');
+  });
+}
+
+function setupNav(){
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll',()=>{
+    nav.style.background = window.scrollY>50?'rgba(6,9,15,.97)':'rgba(6,9,15,.85)';
+  });
+}
+
+function setupHamburger(){
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),3500);
+}
+
+function enquireProduct(name){
+  document.getElementById('enquiryMsg').value = `I'm interested in the ${name}. Please let me know availability and price.`;
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  showToast(`📋 Enquiry set for: ${name}`);
+}
+
+function submitEnquiry(){
+  const name = document.getElementById('enquiryName').value.trim();
+  const phone = document.getElementById('enquiryPhone').value.trim();
+  if(!name||!phone){showToast('⚠️ Please fill Name and Phone!');return;}
+  showToast(`✅ Enquiry sent, ${name}! We'll contact you soon.`);
+  document.getElementById('enquiryName').value='';
+  document.getElementById('enquiryPhone').value='';
+  document.getElementById('enquiryMsg').value='';
+  document.getElementById('enquiryCategory').value='';
+  document.getElementById('enquiryBudget').value='';
+}
+
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>
