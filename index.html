@@ -1,775 +1,2781 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Dream Computers – Premium Refurbished Laptops | Trichy</title>
-<meta name="description" content="Dream Computers – Trichy's #1 destination for affordable, quality-tested refurbished & second-hand laptops. Located at Super Bazaar, Trichy."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<style>
-:root{
-  --bg:#06090f;
-  --bg2:#0c1220;
-  --bg3:#111827;
-  --card:#131d2e;
-  --border:rgba(99,179,255,0.12);
-  --blue:#3b82f6;
-  --blue2:#60a5fa;
-  --glow:#1d4ed8;
-  --gold:#f59e0b;
-  --gold2:#fbbf24;
-  --text:#f1f5f9;
-  --muted:#94a3b8;
-  --radius:16px;
-  --transition:0.35s cubic-bezier(.4,0,.2,1);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Dream Computers – Premium Refurbished Laptops | Trichy</title>
+  <meta name="description"
+    content="Dream Computers – Trichy's #1 shop for affordable, quality-tested refurbished laptops. Super Bazaar, Trichy." />
+  <link rel="icon" type="image/jpeg" href="fevicon/fevicon.jpeg" />
+  <link rel="apple-touch-icon" href="fevicon/fevicon.jpeg" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --p: #6366f1;
+      --p2: #8b5cf6;
+      --o: #f97316;
+      --c: #06b6d4;
+      --bg: #fff;
+      --bg2: #f0f4ff;
+      --bg3: #fdf4ff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --r: 18px;
+      --t: .3s cubic-bezier(.4, 0, .2, 1)
+    }
 
-/* SCROLLBAR */
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:var(--bg2)}
-::-webkit-scrollbar-thumb{background:var(--blue);border-radius:99px}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 2rem;height:70px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,9,15,0.85);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:var(--transition)}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--blue),var(--gold));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
-.nav-logo-text{font-size:1.15rem;font-weight:800;letter-spacing:-0.3px;color:var(--text)}
-.nav-logo-text span{color:var(--gold)}
-.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
-.nav-links a{text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:500;transition:var(--transition);position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);border-radius:99px;transition:var(--transition)}
-.nav-links a:hover{color:var(--text)}
-.nav-links a:hover::after{width:100%}
-.nav-cta{background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;border:none;padding:.55rem 1.4rem;border-radius:99px;font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:600;cursor:pointer;transition:var(--transition);text-decoration:none}
-.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(59,130,246,.4)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
-.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:var(--transition)}
-.mobile-menu{display:none;position:fixed;top:70px;left:0;right:0;background:rgba(6,9,15,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:1.5rem 2rem;z-index:999;flex-direction:column;gap:1rem}
-.mobile-menu a{color:var(--muted);text-decoration:none;font-size:1rem;font-weight:500;padding:.5rem 0;border-bottom:1px solid var(--border)}
-.mobile-menu.open{display:flex}
+    html {
+      scroll-behavior: smooth
+    }
 
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:100px 2rem 60px}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(29,78,216,.3) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 80% 50%,rgba(245,158,11,.08) 0%,transparent 60%),var(--bg);z-index:0}
-.hero-particles{position:absolute;inset:0;overflow:hidden;z-index:0}
-.particle{position:absolute;border-radius:50%;animation:float 8s infinite ease-in-out}
-@keyframes float{0%,100%{transform:translateY(0) scale(1);opacity:.6}50%{transform:translateY(-30px) scale(1.1);opacity:1}}
-.hero-content{position:relative;z-index:1;max-width:680px}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);color:var(--gold);padding:.4rem 1rem;border-radius:99px;font-size:.8rem;font-weight:600;letter-spacing:.5px;margin-bottom:1.5rem;text-transform:uppercase}
-.hero-badge::before{content:'●';font-size:8px;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-size:clamp(2.5rem,6vw,4.2rem);font-weight:900;line-height:1.08;letter-spacing:-2px;margin-bottom:1.2rem}
-.hero h1 .accent{background:linear-gradient(135deg,var(--gold),var(--gold2),#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero h1 .blue{background:linear-gradient(135deg,var(--blue2),#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-desc{font-size:1.05rem;color:var(--muted);line-height:1.75;margin-bottom:2rem;max-width:540px}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,var(--gold),#fb923c);color:#0a0500;padding:.8rem 2rem;border-radius:99px;font-weight:700;font-size:1rem;text-decoration:none;transition:var(--transition);display:inline-flex;align-items:center;gap:8px}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(245,158,11,.4)}
-.btn-outline{border:1.5px solid var(--border);color:var(--text);padding:.8rem 2rem;border-radius:99px;font-weight:600;font-size:1rem;text-decoration:none;transition:var(--transition);display:inline-flex;align-items:center;gap:8px;backdrop-filter:blur(8px)}
-.btn-outline:hover{border-color:var(--blue2);color:var(--blue2);transform:translateY(-3px)}
-.hero-stats{display:flex;gap:2.5rem;margin-top:3rem;flex-wrap:wrap}
-.stat{display:flex;flex-direction:column}
-.stat-num{font-size:2rem;font-weight:900;color:var(--gold);line-height:1}
-.stat-label{font-size:.78rem;color:var(--muted);font-weight:500;margin-top:4px;text-transform:uppercase;letter-spacing:.5px}
-.hero-visual{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55%;max-width:700px;z-index:0;opacity:.5;pointer-events:none}
-.hero-visual img{width:100%;filter:drop-shadow(0 0 60px rgba(59,130,246,.3))}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden
+    }
 
-/* MARQUEE */
-.marquee-wrap{padding:1.2rem 0;background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(245,158,11,.05));border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden}
-.marquee-inner{display:flex;gap:3rem;animation:marquee 25s linear infinite;width:max-content}
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.marquee-item{display:flex;align-items:center;gap:.6rem;color:var(--muted);font-size:.88rem;font-weight:500;white-space:nowrap}
-.marquee-item span.dot{color:var(--gold)}
+    ::-webkit-scrollbar {
+      width: 5px
+    }
 
-/* SECTION COMMONS */
-section{padding:100px 2rem}
-.section-label{display:inline-flex;align-items:center;gap:8px;color:var(--blue2);font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:1rem}
-.section-label::before{content:'';width:30px;height:2px;background:var(--blue2);border-radius:99px}
-.section-title{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-1.5px;line-height:1.1;margin-bottom:1rem}
-.section-sub{color:var(--muted);font-size:1rem;line-height:1.7;max-width:520px}
-.container{max-width:1200px;margin:0 auto}
+    ::-webkit-scrollbar-track {
+      background: #f8faff
+    }
 
-/* ABOUT */
-.about{background:var(--bg2)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;margin-top:4rem}
-.about-img-wrap{position:relative}
-.about-img-card{background:linear-gradient(135deg,var(--card),var(--bg3));border:1px solid var(--border);border-radius:24px;padding:2.5rem;text-align:center;position:relative;overflow:hidden}
-.about-img-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(59,130,246,.15),transparent 60%)}
-.about-icon-big{font-size:5rem;margin-bottom:1rem;display:block}
-.about-location-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);color:var(--gold2);padding:.5rem 1.2rem;border-radius:99px;font-size:.85rem;font-weight:600;margin-top:1rem}
-.about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
-.highlight-card{background:rgba(59,130,246,.07);border:1px solid var(--border);border-radius:12px;padding:1rem;text-align:center}
-.highlight-card .num{font-size:1.6rem;font-weight:900;color:var(--gold)}
-.highlight-card .label{font-size:.75rem;color:var(--muted);font-weight:500;margin-top:2px}
-.about-text p{color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:1.2rem}
-.about-features{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.75rem}
-.about-features li{display:flex;align-items:center;gap:.75rem;color:var(--text);font-size:.95rem;font-weight:500}
-.about-features li .icon{width:32px;height:32px;background:linear-gradient(135deg,rgba(59,130,246,.2),rgba(245,158,11,.1));border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(var(--p), var(--o));
+      border-radius: 99px
+    }
 
-/* PRODUCTS */
-.products{background:var(--bg)}
-.products-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:2rem;margin-bottom:3rem}
-.filter-tabs{display:flex;gap:.5rem;flex-wrap:wrap}
-.filter-tab{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:.45rem 1.1rem;border-radius:99px;font-size:.85rem;font-weight:500;cursor:pointer;transition:var(--transition);font-family:'Outfit',sans-serif}
-.filter-tab.active,.filter-tab:hover{background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;border-color:transparent}
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
-.product-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);cursor:pointer;position:relative}
-.product-card:hover{transform:translateY(-6px);border-color:rgba(59,130,246,.35);box-shadow:0 20px 50px rgba(0,0,0,.4),0 0 0 1px rgba(59,130,246,.15)}
-.product-badge{position:absolute;top:14px;left:14px;z-index:2;padding:.3rem .75rem;border-radius:99px;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
-.badge-hot{background:linear-gradient(135deg,#ef4444,#dc2626);color:#fff}
-.badge-best{background:linear-gradient(135deg,var(--gold),#fb923c);color:#000}
-.badge-new{background:linear-gradient(135deg,var(--blue),#6366f1);color:#fff}
-.product-img{width:100%;height:200px;background:linear-gradient(135deg,var(--bg3),var(--bg2));display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;overflow:hidden}
-.product-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 60%,var(--card));pointer-events:none}
-.product-body{padding:1.25rem}
-.product-brand{font-size:.75rem;color:var(--blue2);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:.35rem}
-.product-name{font-size:1rem;font-weight:700;color:var(--text);line-height:1.3;margin-bottom:.75rem}
-.product-specs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
-.spec-tag{background:rgba(99,179,255,.08);border:1px solid rgba(99,179,255,.15);color:var(--muted);padding:.25rem .65rem;border-radius:6px;font-size:.72rem;font-weight:500}
-.product-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.75rem;border-top:1px solid var(--border)}
-.product-price{display:flex;flex-direction:column}
-.price-main{font-size:1.4rem;font-weight:900;color:var(--gold);line-height:1}
-.price-old{font-size:.78rem;color:var(--muted);text-decoration:line-through;margin-top:2px}
-.btn-cart{background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;border:none;padding:.55rem 1.2rem;border-radius:99px;font-size:.82rem;font-weight:600;cursor:pointer;transition:var(--transition);font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:6px}
-.btn-cart:hover{transform:scale(1.05);box-shadow:0 8px 20px rgba(59,130,246,.4)}
-.products-empty{text-align:center;padding:4rem 2rem;color:var(--muted)}
-.products-empty .emoji{font-size:3rem;display:block;margin-bottom:1rem}
-.add-btn{margin-top:2.5rem;text-align:center}
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: 68px;
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--t)
+    }
 
-/* WHY US */
-.why{background:var(--bg2);position:relative;overflow:hidden}
-.why-bg{position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 50%,rgba(29,78,216,.12),transparent)}
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem;margin-top:3.5rem}
-.why-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem 1.5rem;transition:var(--transition);position:relative;overflow:hidden}
-.why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--gold));opacity:0;transition:var(--transition)}
-.why-card:hover{transform:translateY(-5px);border-color:rgba(59,130,246,.3)}
-.why-card:hover::before{opacity:1}
-.why-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:1.25rem}
-.why-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.6rem;color:var(--text)}
-.why-card p{font-size:.88rem;color:var(--muted);line-height:1.65}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none
+    }
 
-/* YOUTUBE */
-.youtube{background:var(--bg)}
-.yt-card{background:linear-gradient(135deg,var(--card),var(--bg2));border:1px solid var(--border);border-radius:24px;padding:3rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;margin-top:3rem;position:relative;overflow:hidden}
-.yt-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(255,0,0,.06),transparent 60%)}
-.yt-text .yt-label{display:flex;align-items:center;gap:10px;color:#ff4444;font-weight:700;font-size:.9rem;margin-bottom:1rem}
-.yt-text .yt-label .dot{width:10px;height:10px;background:#ff4444;border-radius:50%;animation:pulse 2s infinite}
-.yt-text h2{font-size:2rem;font-weight:900;letter-spacing:-1px;margin-bottom:.75rem}
-.yt-text p{color:var(--muted);line-height:1.7;font-size:.95rem;max-width:480px;margin-bottom:1.5rem}
-.btn-youtube{display:inline-flex;align-items:center;gap:10px;background:#ff0000;color:#fff;padding:.75rem 1.75rem;border-radius:99px;font-weight:700;font-size:.95rem;text-decoration:none;transition:var(--transition)}
-.btn-youtube:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(255,0,0,.4);background:#cc0000}
-.yt-visual{font-size:8rem;opacity:.6;position:relative;z-index:1}
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, .35);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
 
-/* BRANDS */
-.brands{background:var(--bg2);padding:60px 2rem}
-.brands-title{text-align:center;color:var(--muted);font-size:.85rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:2.5rem}
-.brands-row{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem}
-.brand-pill{background:var(--card);border:1px solid var(--border);padding:.65rem 1.5rem;border-radius:99px;font-weight:700;font-size:.9rem;color:var(--muted);transition:var(--transition)}
-.brand-pill:hover{color:var(--text);border-color:var(--blue);background:rgba(59,130,246,.08)}
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px
+    }
 
-/* CONTACT */
-.contact{background:var(--bg)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3.5rem;align-items:start}
-.contact-info{display:flex;flex-direction:column;gap:1.5rem}
-.contact-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;display:flex;align-items:flex-start;gap:1rem;transition:var(--transition)}
-.contact-card:hover{border-color:rgba(59,130,246,.3);transform:translateX(5px)}
-.contact-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.contact-card h4{font-size:.85rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.3rem}
-.contact-card p{font-size:.95rem;font-weight:500;color:var(--text);line-height:1.5}
-.contact-card a{color:var(--blue2);text-decoration:none}
-.contact-card a:hover{text-decoration:underline}
-.contact-form{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:2rem}
-.contact-form h3{font-size:1.3rem;font-weight:700;margin-bottom:1.5rem}
-.form-group{margin-bottom:1.2rem}
-.form-group label{display:block;font-size:.82rem;font-weight:600;color:var(--muted);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.5px}
-.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--bg2);border:1px solid var(--border);color:var(--text);padding:.75rem 1rem;border-radius:10px;font-family:'Outfit',sans-serif;font-size:.9rem;outline:none;transition:var(--transition)}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(59,130,246,.12)}
-.form-group textarea{resize:vertical;min-height:100px}
-.form-group select option{background:var(--bg3)}
-.btn-submit{width:100%;background:linear-gradient(135deg,var(--gold),#fb923c);color:#000;border:none;padding:.9rem;border-radius:99px;font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:var(--transition);margin-top:.5rem}
-.btn-submit:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(245,158,11,.4)}
+    .logo-name {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--text)
+    }
 
-/* INSTAGRAM CTA */
-.insta-cta{background:linear-gradient(135deg,#833ab4 0%,#fd1d1d 50%,#fcb045 100%);padding:80px 2rem;text-align:center;position:relative;overflow:hidden}
-.insta-cta::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.45)}
-.insta-cta-inner{position:relative;z-index:1}
-.insta-cta h2{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin-bottom:.75rem}
-.insta-cta p{font-size:1rem;opacity:.85;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.65}
-.insta-id{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.6rem 1.4rem;border-radius:99px;font-weight:700;font-size:1rem;margin-bottom:1.75rem}
-.btn-insta{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#833ab4;padding:.8rem 2rem;border-radius:99px;font-weight:800;font-size:1rem;text-decoration:none;transition:var(--transition)}
-.btn-insta:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,.3)}
+    .logo-name span {
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
 
-/* FOOTER */
-footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2rem 1.5rem}
-.footer-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;max-width:1200px;margin:0 auto}
-.footer-brand .footer-logo{display:flex;align-items:center;gap:12px;margin-bottom:1rem}
-.footer-brand .logo-icon{width:40px;height:40px;background:linear-gradient(135deg,var(--blue),var(--gold));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px}
-.footer-brand .logo-text{font-size:1.1rem;font-weight:800}
-.footer-brand .logo-text span{color:var(--gold)}
-.footer-brand p{color:var(--muted);font-size:.88rem;line-height:1.7;margin-bottom:1.25rem}
-.footer-socials{display:flex;gap:.75rem}
-.social-btn{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;text-decoration:none;transition:var(--transition);border:1px solid var(--border);background:var(--card)}
-.social-btn:hover{transform:translateY(-3px);border-color:var(--blue)}
-.footer-col h4{font-size:.85rem;font-weight:700;color:var(--text);text-transform:uppercase;letter-spacing:.5px;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
-.footer-col ul li a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:var(--transition)}
-.footer-col ul li a:hover{color:var(--blue2)}
-.footer-col ul li span{color:var(--muted);font-size:.88rem}
-.footer-bottom{max-width:1200px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:gap;flex-wrap:wrap;gap:.75rem}
-.footer-bottom p{color:var(--muted);font-size:.82rem}
-.footer-bottom a{color:var(--blue2);text-decoration:none}
-.footer-tags{display:flex;gap:.5rem;flex-wrap:wrap}
-.footer-tag{background:var(--card);border:1px solid var(--border);color:var(--muted);padding:.25rem .7rem;border-radius:6px;font-size:.75rem;font-weight:500}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none
+    }
 
-/* TOAST */
-.toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:linear-gradient(135deg,var(--blue),var(--glow));color:#fff;padding:1rem 1.5rem;border-radius:14px;font-weight:600;font-size:.9rem;transform:translateX(200%);transition:var(--transition);box-shadow:0 10px 30px rgba(59,130,246,.4);display:flex;align-items:center;gap:10px}
-.toast.show{transform:translateX(0)}
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 600;
+      transition: var(--t)
+    }
 
-/* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease}
-.reveal-left.visible{opacity:1;transform:translateX(0)}
-.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease}
-.reveal-right.visible{opacity:1;transform:translateX(0)}
+    .nav-links a:hover {
+      color: var(--p)
+    }
 
-/* BACK TO TOP */
-.back-top{position:fixed;bottom:2rem;left:2rem;z-index:999;width:44px;height:44px;background:var(--card);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;transition:var(--transition);opacity:0;pointer-events:none;text-decoration:none;color:var(--text)}
-.back-top.show{opacity:1;pointer-events:all}
-.back-top:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-3px)}
+    .nav-cta {
+      background: linear-gradient(135deg, var(--p), var(--o));
+      color: #fff;
+      padding: .55rem 1.4rem;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: .88rem;
+      text-decoration: none;
+      transition: var(--t);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, .35)
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .hero-visual{display:none}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .yt-card{grid-template-columns:1fr;text-align:center}
-  .yt-visual{font-size:5rem}
-  .footer-main{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  nav{padding:0 1rem}
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  section{padding:70px 1rem}
-  .hero{padding:100px 1rem 60px}
-  .hero-stats{gap:1.5rem}
-  .footer-main{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column;text-align:center}
-  .yt-card{padding:2rem 1.25rem}
-  .contact-form{padding:1.5rem}
-  .about-highlights{grid-template-columns:1fr 1fr}
-}
-</style>
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(99, 102, 241, .5)
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2.5px;
+      background: var(--text);
+      border-radius: 3px;
+      display: block;
+      transition: var(--t)
+    }
+
+    .mob-menu {
+      display: none;
+      position: fixed;
+      top: 68px;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 5%;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 999;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .08)
+    }
+
+    .mob-menu a {
+      color: var(--muted);
+      font-weight: 600;
+      text-decoration: none;
+      padding: .6rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .95rem
+    }
+
+    .mob-menu a:hover {
+      color: var(--p)
+    }
+
+    .mob-menu.open {
+      display: flex
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 5% 60px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(150deg, #f3f0ff 0%, #eff6ff 40%, #fff7ed 100%)
+    }
+
+    .hero-shapes {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      animation: drift 10s ease-in-out infinite
+    }
+
+    .s1 {
+      width: 500px;
+      height: 500px;
+      background: rgba(99, 102, 241, .15);
+      top: -150px;
+      right: -100px
+    }
+
+    .s2 {
+      width: 350px;
+      height: 350px;
+      background: rgba(249, 115, 22, .12);
+      bottom: -100px;
+      left: 5%;
+      animation-delay: 3s
+    }
+
+    .s3 {
+      width: 300px;
+      height: 300px;
+      background: rgba(6, 182, 212, .1);
+      top: 40%;
+      left: -80px;
+      animation-delay: 6s
+    }
+
+    @keyframes drift {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1)
+      }
+
+      50% {
+        transform: translate(25px, -25px) scale(1.06)
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 620px
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(99, 102, 241, .1);
+      border: 1.5px solid rgba(99, 102, 241, .25);
+      color: var(--p);
+      padding: .4rem 1.1rem;
+      border-radius: 99px;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      animation: badge-in .6s ease
+    }
+
+    .hero-badge::before {
+      content: '';
+      font-size: 9px;
+      animation: blink 1.5s infinite
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .2
+      }
+    }
+
+    @keyframes badge-in {
+      from {
+        opacity: 0;
+        transform: translateY(-10px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    h1.hero-h1 {
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 1.2rem;
+      animation: h1-in .7s .1s both ease
+    }
+
+    @keyframes h1-in {
+      from {
+        opacity: 0;
+        transform: translateY(20px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .grad-text {
+      background: linear-gradient(135deg, var(--p) 0%, #a855f7 45%, var(--o) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .hero-desc {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 510px;
+      animation: h1-in .7s .2s both ease
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: h1-in .7s .3s both ease
+    }
+
+    .btn-p {
+      background: linear-gradient(135deg, var(--p), var(--p2));
+      color: #fff;
+      padding: .85rem 2rem;
+      border-radius: 99px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--t);
+      box-shadow: 0 8px 28px rgba(99, 102, 241, .4)
+    }
+
+    .btn-p:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(99, 102, 241, .55)
+    }
+
+    .btn-g {
+      border: 2px solid var(--border);
+      color: var(--text);
+      padding: .85rem 2rem;
+      border-radius: 99px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--t);
+      background: #fff
+    }
+
+    .btn-g:hover {
+      border-color: var(--p);
+      color: var(--p);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, .15)
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+      animation: h1-in .7s .4s both ease
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column
+    }
+
+    .stat-n {
+      font-size: 2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1
+    }
+
+    .stat-l {
+      font-size: .7rem;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-top: 4px
+    }
+
+    .hero-card {
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 30px 80px rgba(99, 102, 241, .18);
+      z-index: 1;
+      animation: float-up 5s ease-in-out infinite;
+      max-width: 270px;
+      width: 100%
+    }
+
+    @keyframes float-up {
+
+      0%,
+      100% {
+        transform: translateY(-50%)
+      }
+
+      50% {
+        transform: translateY(calc(-50% - 15px))
+      }
+    }
+
+    .hcard-icon {
+      font-size: 3.5rem;
+      display: block;
+      text-align: center;
+      margin-bottom: .75rem
+    }
+
+    .hcard-title {
+      font-size: 1rem;
+      font-weight: 800;
+      text-align: center;
+      color: var(--text);
+      margin-bottom: .5rem
+    }
+
+    .hcard-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .4rem
+    }
+
+    .hcard-row span {
+      font-size: .8rem;
+      color: var(--muted);
+      font-weight: 500
+    }
+
+    .hcard-row .price {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--p)
+    }
+
+    .hcard-badge {
+      background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+      color: #16a34a;
+      padding: .25rem .7rem;
+      border-radius: 99px;
+      font-size: .72rem;
+      font-weight: 800;
+      text-align: center;
+      margin-top: .5rem
+    }
+
+    .marquee-wrap {
+      padding: .9rem 0;
+      background: linear-gradient(90deg, var(--p), var(--p2), var(--o));
+      overflow: hidden
+    }
+
+    .marquee-inner {
+      display: flex;
+      gap: 2rem;
+      animation: marquee 22s linear infinite;
+      width: max-content
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0)
+      }
+
+      100% {
+        transform: translateX(-50%)
+      }
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      color: #fff;
+      font-size: .83rem;
+      font-weight: 700;
+      white-space: nowrap
+    }
+
+    section {
+      padding: 90px 5%
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    .sec-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .7rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: .75rem;
+      color: var(--p)
+    }
+
+    .sec-label::before {
+      content: '';
+      width: 26px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--p), var(--o));
+      border-radius: 99px
+    }
+
+    .sec-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: .75rem;
+      color: var(--text)
+    }
+
+    .sec-sub {
+      color: var(--muted);
+      font-size: .97rem;
+      line-height: 1.75;
+      max-width: 500px
+    }
+
+    .about {
+      background: var(--bg2)
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 4rem
+    }
+
+    .about-card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 2.5rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(99, 102, 241, .1);
+      border: 1.5px solid rgba(99, 102, 241, .1);
+      position: relative;
+      overflow: hidden
+    }
+
+    .about-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--p), var(--p2), var(--o))
+    }
+
+    .about-icon {
+      font-size: 4.5rem;
+      display: block;
+      margin-bottom: 1rem
+    }
+
+    .about-name {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: .35rem
+    }
+
+    .about-sub-t {
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 500
+    }
+
+    .about-loc {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, .1), rgba(249, 115, 22, .08));
+      border: 1.5px solid rgba(99, 102, 241, .2);
+      color: var(--p);
+      padding: .4rem 1rem;
+      border-radius: 99px;
+      font-size: .82rem;
+      font-weight: 700;
+      margin-top: .75rem
+    }
+
+    .sm-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-top: 1.5rem
+    }
+
+    .sm-card {
+      background: linear-gradient(135deg, #f0f4ff, #fdf4ff);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      text-align: center
+    }
+
+    .sm-n {
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .sm-l {
+      font-size: .68rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-top: 2px;
+      text-transform: uppercase;
+      letter-spacing: .3px
+    }
+
+    .about-text p {
+      color: var(--muted);
+      font-size: .97rem;
+      line-height: 1.85;
+      margin-bottom: 1.2rem
+    }
+
+    .feat-list {
+      list-style: none;
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem
+    }
+
+    .feat-list li {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--text);
+      font-size: .93rem;
+      font-weight: 600
+    }
+
+    .feat-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, .12), rgba(249, 115, 22, .08));
+      border: 1.5px solid rgba(99, 102, 241, .15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0
+    }
+
+    .products {
+      background: #fff
+    }
+
+    .prod-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 3rem
+    }
+
+    .filter-tabs {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap
+    }
+
+    .ftab {
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      color: var(--muted);
+      padding: .45rem 1.1rem;
+      border-radius: 99px;
+      font-size: .82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--t);
+      font-family: inherit
+    }
+
+    .ftab.active,
+    .ftab:hover {
+      background: linear-gradient(135deg, var(--p), var(--p2));
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, .3)
+    }
+
+    .prod-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem
+    }
+
+    .prod-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--r);
+      overflow: hidden;
+      transition: var(--t);
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
+      position: relative
+    }
+
+    .prod-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(99, 102, 241, .3);
+      box-shadow: 0 30px 70px rgba(99, 102, 241, .15)
+    }
+
+    .prod-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: .28rem .75rem;
+      border-radius: 99px;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      z-index: 2
+    }
+
+    .b-hot {
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: #fff
+    }
+
+    .b-best {
+      background: linear-gradient(135deg, var(--o), #fb923c);
+      color: #fff
+    }
+
+    .b-new {
+      background: linear-gradient(135deg, var(--p), var(--c));
+      color: #fff
+    }
+
+    .prod-img {
+      height: 185px;
+      background: linear-gradient(135deg, #f0f4ff, #fdf4ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      transition: var(--t)
+    }
+
+    .prod-card:hover .prod-img {
+      background: linear-gradient(135deg, #e8ecff, #f5f0ff)
+    }
+
+    .prod-body {
+      padding: 1.25rem
+    }
+
+    .prod-brand {
+      font-size: .7rem;
+      color: var(--p);
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: .3rem
+    }
+
+    .prod-name {
+      font-size: .97rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: .75rem;
+      line-height: 1.3
+    }
+
+    .spec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin-bottom: 1rem
+    }
+
+    .spec {
+      background: rgba(99, 102, 241, .07);
+      border: 1px solid rgba(99, 102, 241, .15);
+      color: var(--muted);
+      padding: .22rem .6rem;
+      border-radius: 6px;
+      font-size: .68rem;
+      font-weight: 700
+    }
+
+    .prod-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: .75rem;
+      border-top: 1.5px solid var(--border)
+    }
+
+    .price-now {
+      font-size: 1.35rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1
+    }
+
+    .price-old {
+      font-size: .72rem;
+      color: var(--muted);
+      text-decoration: line-through;
+      margin-top: 2px
+    }
+
+    .btn-enq {
+      background: linear-gradient(135deg, var(--p), var(--p2));
+      color: #fff;
+      border: none;
+      padding: .52rem 1.1rem;
+      border-radius: 99px;
+      font-size: .78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--t);
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 5px
+    }
+
+    .btn-enq:hover {
+      transform: scale(1.07);
+      box-shadow: 0 8px 22px rgba(99, 102, 241, .45)
+    }
+
+    .prod-empty {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+      grid-column: 1/-1;
+      font-size: 1rem;
+      font-weight: 600
+    }
+
+    .why {
+      background: var(--bg3)
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-top: 3.5rem
+    }
+
+    .why-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: var(--r);
+      padding: 1.75rem 1.5rem;
+      transition: var(--t);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .04)
+    }
+
+    .why-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 25px 55px rgba(99, 102, 241, .14);
+      border-color: rgba(99, 102, 241, .25)
+    }
+
+    .why-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--p), var(--o));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--t)
+    }
+
+    .why-card:hover::after {
+      transform: scaleX(1)
+    }
+
+    .why-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 1.25rem
+    }
+
+    .why-card h3 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: .5rem;
+      color: var(--text)
+    }
+
+    .why-card p {
+      font-size: .85rem;
+      color: var(--muted);
+      line-height: 1.7
+    }
+
+    .youtube-sec {
+      background: #fff
+    }
+
+    .yt-card {
+      background: linear-gradient(135deg, #fff1f2, #fff7ed, #fef3c7);
+      border: 2px solid rgba(239, 68, 68, .15);
+      border-radius: 28px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 3rem;
+      box-shadow: 0 20px 60px rgba(239, 68, 68, .08)
+    }
+
+    .yt-live {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #dc2626;
+      font-weight: 800;
+      font-size: .85rem;
+      margin-bottom: .75rem
+    }
+
+    .yt-dot {
+      width: 10px;
+      height: 10px;
+      background: #dc2626;
+      border-radius: 50%;
+      animation: blink 1.5s infinite
+    }
+
+    .yt-card h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: .75rem;
+      color: var(--text)
+    }
+
+    .yt-card p {
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: .97rem;
+      max-width: 450px;
+      margin-bottom: 1.5rem
+    }
+
+    .btn-yt {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #ff0000;
+      color: #fff;
+      padding: .78rem 1.8rem;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: .92rem;
+      text-decoration: none;
+      transition: var(--t);
+      box-shadow: 0 8px 25px rgba(255, 0, 0, .3)
+    }
+
+    .btn-yt:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(255, 0, 0, .45)
+    }
+
+    .yt-visual {
+      font-size: 7rem;
+      animation: float-up 4s ease-in-out infinite;
+      filter: drop-shadow(0 10px 20px rgba(255, 0, 0, .2))
+    }
+
+    .brands {
+      background: var(--bg2);
+      padding: 60px 5%
+    }
+
+    .brands-ttl {
+      text-align: center;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 2rem
+    }
+
+    .brands-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem
+    }
+
+    .brand-pill {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      padding: .6rem 1.4rem;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: .88rem;
+      color: var(--muted);
+      transition: var(--t);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+      cursor: default
+    }
+
+    .brand-pill:hover {
+      color: var(--p);
+      border-color: rgba(99, 102, 241, .4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, .15)
+    }
+
+    .social-sec {
+      background: linear-gradient(135deg, #0f0720 0%, #1a0533 40%, #1a0f00 100%);
+      padding: 90px 5%;
+      position: relative;
+      overflow: hidden
+    }
+
+    .social-sec::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 15% 50%, rgba(99, 102, 241, .25), transparent 50%), radial-gradient(ellipse at 85% 50%, rgba(249, 115, 22, .2), transparent 50%)
+    }
+
+    .social-inner {
+      position: relative;
+      z-index: 1
+    }
+
+    .social-inner .sec-label,
+    .social-inner .sec-title,
+    .social-inner .sec-sub {
+      color: #e2d9f3
+    }
+
+    .social-inner .sec-label {
+      color: #a78bfa
+    }
+
+    .social-inner .sec-label::before {
+      background: linear-gradient(90deg, #a78bfa, var(--o))
+    }
+
+    .social-inner .sec-title {
+      color: #fff
+    }
+
+    .social-inner .sec-sub {
+      color: rgba(255, 255, 255, .55);
+      margin-bottom: 3rem
+    }
+
+    .social-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem
+    }
+
+    .soc-card {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 24px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: var(--t);
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden
+    }
+
+    .soc-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, .1);
+      border-color: rgba(255, 255, 255, .25);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, .3)
+    }
+
+    .soc-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, .3)
+    }
+
+    .soc-card h3 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: .35rem
+    }
+
+    .soc-handle {
+      font-size: .88rem;
+      color: rgba(255, 255, 255, .5);
+      margin-bottom: 1.25rem;
+      font-weight: 500
+    }
+
+    .soc-handle strong {
+      color: rgba(255, 255, 255, .85);
+      font-weight: 700
+    }
+
+    .soc-desc {
+      font-size: .83rem;
+      color: rgba(255, 255, 255, .45);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      font-weight: 500
+    }
+
+    .soc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: .65rem 1.6rem;
+      border-radius: 99px;
+      font-weight: 800;
+      font-size: .85rem;
+      text-decoration: none;
+      transition: var(--t);
+      border: none;
+      cursor: pointer;
+      font-family: inherit
+    }
+
+    .soc-btn:hover {
+      transform: scale(1.06)
+    }
+
+    .yt-soc {
+      background: #ff0000;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(255, 0, 0, .35)
+    }
+
+    .ig-soc {
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(131, 58, 180, .4)
+    }
+
+    .wa-soc {
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, .35)
+    }
+
+    .contact {
+      background: var(--bg2)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+      align-items: start
+    }
+
+    .cinfo {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem
+    }
+
+    .ccard {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: var(--t);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .04)
+    }
+
+    .ccard:hover {
+      border-color: rgba(99, 102, 241, .3);
+      transform: translateX(6px);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, .1)
+    }
+
+    .ccard-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+      flex-shrink: 0
+    }
+
+    .ccard h4 {
+      font-size: .75rem;
+      color: var(--muted);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: .25rem
+    }
+
+    .ccard p {
+      font-size: .93rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4
+    }
+
+    .ccard a {
+      color: var(--p);
+      text-decoration: none;
+      font-weight: 700
+    }
+
+    .ccard a:hover {
+      text-decoration: underline
+    }
+
+    .cform {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 20px 60px rgba(99, 102, 241, .08)
+    }
+
+    .cform h3 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: var(--text)
+    }
+
+    .fg {
+      margin-bottom: 1.1rem
+    }
+
+    .fg label {
+      display: block;
+      font-size: .75rem;
+      font-weight: 800;
+      color: var(--muted);
+      margin-bottom: .45rem;
+      text-transform: uppercase;
+      letter-spacing: .5px
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      width: 100%;
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      color: var(--text);
+      padding: .72rem 1rem;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: .9rem;
+      outline: none;
+      transition: var(--t)
+    }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: var(--p);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, .1);
+      background: #fff
+    }
+
+    .fg select option {
+      background: #fff
+    }
+
+    .fg textarea {
+      resize: vertical;
+      min-height: 90px
+    }
+
+    .btn-sub {
+      width: 100%;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      color: #fff;
+      border: none;
+      padding: .9rem;
+      border-radius: 99px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--t);
+      margin-top: .5rem;
+      box-shadow: 0 8px 25px rgba(99, 102, 241, .3)
+    }
+
+    .btn-sub:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 38px rgba(99, 102, 241, .5)
+    }
+
+    footer {
+      background: #0f172a;
+      padding: 3rem 5% 1.5rem;
+      color: #e2e8f0
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto
+    }
+
+    .fb .fl {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1rem
+    }
+
+    .fb .fl .fi {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px
+    }
+
+    .fb .fl .fn {
+      font-size: 1rem;
+      font-weight: 900;
+      color: #fff
+    }
+
+    .fb .fl .fn span {
+      background: linear-gradient(135deg, #a78bfa, #fb923c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .fb p {
+      color: #94a3b8;
+      font-size: .85rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem
+    }
+
+    .fsocs {
+      display: flex;
+      gap: .6rem
+    }
+
+    .fsoc {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      text-decoration: none;
+      transition: var(--t);
+      border: 1px solid rgba(255, 255, 255, .1);
+      background: rgba(255, 255, 255, .06);
+      color: #e2e8f0
+    }
+
+    .fsoc:hover {
+      transform: translateY(-3px);
+      background: var(--p);
+      border-color: var(--p)
+    }
+
+    .fcol h4 {
+      font-size: .78rem;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .fcol ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem
+    }
+
+    .fcol ul li a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-size: .85rem;
+      transition: var(--t);
+      font-weight: 500
+    }
+
+    .fcol ul li a:hover {
+      color: #a78bfa
+    }
+
+    .fcol ul li span {
+      color: #94a3b8;
+      font-size: .85rem;
+      font-weight: 500
+    }
+
+    .fbtm {
+      max-width: 1200px;
+      margin: 2.5rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .75rem
+    }
+
+    .fbtm p {
+      color: #475569;
+      font-size: .8rem
+    }
+
+    .ftags {
+      display: flex;
+      gap: .45rem;
+      flex-wrap: wrap
+    }
+
+    .ftag {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      color: #475569;
+      padding: .22rem .65rem;
+      border-radius: 6px;
+      font-size: .72rem;
+      font-weight: 600
+    }
+
+    .bk {
+      position: fixed;
+      bottom: 1.75rem;
+      left: 1.75rem;
+      z-index: 999;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--p), var(--p2));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      cursor: pointer;
+      transition: var(--t);
+      opacity: 0;
+      pointer-events: none;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(99, 102, 241, .4)
+    }
+
+    .bk.show {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .bk:hover {
+      transform: translateY(-3px)
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 9999;
+      background: linear-gradient(135deg, var(--p), var(--p2));
+      color: #fff;
+      padding: .9rem 1.5rem;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: .88rem;
+      transform: translateX(200%);
+      transition: var(--t);
+      box-shadow: 0 10px 30px rgba(99, 102, 241, .4);
+      max-width: 300px
+    }
+
+    .toast.show {
+      transform: translateX(0)
+    }
+
+    .rv {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity .6s ease, transform .6s ease
+    }
+
+    .rv.on {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    .rl {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity .65s ease, transform .65s ease
+    }
+
+    .rl.on {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    .rr {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity .65s ease, transform .65s ease
+    }
+
+    .rr.on {
+      opacity: 1;
+      transform: translateX(0)
+    }
+
+    @media(max-width:960px) {
+      .hero-card {
+        display: none
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .yt-card {
+        grid-template-columns: 1fr;
+        text-align: center
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:640px) {
+      nav {
+        padding: 0 1.2rem
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none
+      }
+
+      .hamburger {
+        display: flex
+      }
+
+      section {
+        padding: 70px 1.2rem
+      }
+
+      .hero {
+        padding: 90px 1.2rem 55px
+      }
+
+      .hero h1.hero-h1 {
+        font-size: 2.4rem;
+        letter-spacing: -1.5px
+      }
+
+      .hero-stats {
+        gap: 1.5rem
+      }
+
+      .brands {
+        padding: 50px 1.2rem
+      }
+
+      .social-sec {
+        padding: 70px 1.2rem
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr
+      }
+
+      .fbtm {
+        flex-direction: column;
+        text-align: center
+      }
+
+      .social-cards {
+        grid-template-columns: 1fr
+      }
+
+      .yt-card {
+        padding: 2rem 1.25rem;
+        grid-template-columns: 1fr
+      }
+
+      .yt-visual {
+        display: none
+      }
+
+      .prod-grid {
+        grid-template-columns: 1fr
+      }
+
+      .about-grid,
+      .contact-grid {
+        gap: 2.5rem
+      }
+    }
+
+    /* CART ICON IN NAV */
+    .nav-cart {
+      position: relative;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, .35);
+      transition: var(--t);
+      text-decoration: none;
+      color: #fff;
+      flex-shrink: 0
+    }
+
+    .nav-cart:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, .5)
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      width: 20px;
+      height: 20px;
+      background: #ef4444;
+      color: #fff;
+      border-radius: 50%;
+      font-size: .65rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff;
+      transition: var(--t);
+      transform: scale(0)
+    }
+
+    .cart-count.show {
+      transform: scale(1)
+    }
+
+    /* LEFT HERO FLOATING CARD */
+    .hero-left-card {
+      position: absolute;
+      left: 2%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      animation: float-left 5s ease-in-out infinite
+    }
+
+    @keyframes float-left {
+
+      0%,
+      100% {
+        transform: translateY(-50%)
+      }
+
+      50% {
+        transform: translateY(calc(-50% - 12px))
+      }
+    }
+
+    .mini-card {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 18px;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 15px 40px rgba(99, 102, 241, .14);
+      cursor: pointer;
+      transition: var(--t);
+      width: 210px;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      position: relative;
+      overflow: hidden
+    }
+
+    .mini-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--p), var(--o))
+    }
+
+    .mini-card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 20px 50px rgba(99, 102, 241, .22);
+      border-color: rgba(99, 102, 241, .3)
+    }
+
+    .mini-card-emoji {
+      font-size: 2rem;
+      flex-shrink: 0
+    }
+
+    .mini-card-info {
+      flex: 1;
+      min-width: 0
+    }
+
+    .mini-card-name {
+      font-size: .78rem;
+      font-weight: 800;
+      color: var(--text);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+    }
+
+    .mini-card-price {
+      font-size: .88rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-top: 1px
+    }
+
+    .mini-card-badge {
+      font-size: .65rem;
+      font-weight: 700;
+      color: var(--p);
+      background: rgba(99, 102, 241, .1);
+      border-radius: 99px;
+      padding: .15rem .5rem;
+      margin-top: 2px;
+      display: inline-block
+    }
+
+    /* ADD TO CART BUTTON */
+    .btn-cart-add {
+      background: linear-gradient(135deg, var(--p), var(--o));
+      color: #fff;
+      border: none;
+      padding: .5rem 1rem;
+      border-radius: 99px;
+      font-size: .75rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--t);
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap
+    }
+
+    .btn-cart-add:hover {
+      transform: scale(1.07);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, .45)
+    }
+
+    .btn-cart-add.added {
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      animation: pop .3s ease
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(1)
+      }
+
+      50% {
+        transform: scale(1.18)
+      }
+
+      100% {
+        transform: scale(1)
+      }
+    }
+
+    /* CART DRAWER */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .4);
+      z-index: 1998;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+      backdrop-filter: blur(4px)
+    }
+
+    .cart-overlay.open {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .cart-drawer {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: min(420px, 100vw);
+      background: #fff;
+      z-index: 1999;
+      transform: translateX(100%);
+      transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+      box-shadow: -20px 0 60px rgba(99, 102, 241, .2);
+      display: flex;
+      flex-direction: column
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0)
+    }
+
+    .cart-head {
+      padding: 1.5rem;
+      border-bottom: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #f0f4ff, #fff)
+    }
+
+    .cart-head h3 {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text)
+    }
+
+    .cart-head .cart-head-sub {
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 600;
+      margin-top: 2px
+    }
+
+    .cart-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: var(--t);
+      font-family: inherit
+    }
+
+    .cart-close:hover {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #ef4444
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem
+    }
+
+    .cart-item {
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: .85rem;
+      transition: var(--t);
+      position: relative
+    }
+
+    .cart-item:hover {
+      border-color: rgba(99, 102, 241, .3);
+      box-shadow: 0 4px 15px rgba(99, 102, 241, .08)
+    }
+
+    .cart-item-emoji {
+      font-size: 2.2rem;
+      flex-shrink: 0;
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--border)
+    }
+
+    .cart-item-info {
+      flex: 1;
+      min-width: 0
+    }
+
+    .cart-item-brand {
+      font-size: .65rem;
+      color: var(--p);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .5px
+    }
+
+    .cart-item-name {
+      font-size: .88rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.3;
+      margin: .1rem 0
+    }
+
+    .cart-item-price {
+      font-size: 1rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .cart-qty {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: .5rem
+    }
+
+    .qty-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      border: 1.5px solid var(--border);
+      background: #fff;
+      font-size: .9rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--t);
+      font-family: inherit;
+      color: var(--text)
+    }
+
+    .qty-btn:hover {
+      background: var(--p);
+      color: #fff;
+      border-color: var(--p)
+    }
+
+    .qty-val {
+      font-size: .88rem;
+      font-weight: 800;
+      min-width: 20px;
+      text-align: center;
+      color: var(--text)
+    }
+
+    .cart-remove {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #fee2e2;
+      border: none;
+      cursor: pointer;
+      color: #ef4444;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--t);
+      flex-shrink: 0;
+      font-family: inherit;
+      align-self: flex-start
+    }
+
+    .cart-remove:hover {
+      background: #ef4444;
+      color: #fff
+    }
+
+    .cart-empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted)
+    }
+
+    .cart-empty-state .ce-icon {
+      font-size: 3.5rem;
+      display: block;
+      margin-bottom: 1rem
+    }
+
+    .cart-empty-state p {
+      font-weight: 700;
+      font-size: .95rem
+    }
+
+    .cart-empty-state span {
+      font-size: .85rem;
+      font-weight: 500;
+      display: block;
+      margin-top: .5rem
+    }
+
+    .cart-foot {
+      padding: 1.25rem;
+      border-top: 1.5px solid var(--border);
+      background: linear-gradient(135deg, #f0f4ff, #fff)
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem
+    }
+
+    .cart-total-label {
+      font-size: .88rem;
+      color: var(--muted);
+      font-weight: 700
+    }
+
+    .cart-total-val {
+      font-size: 1.35rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text
+    }
+
+    .btn-checkout {
+      width: 100%;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      color: #fff;
+      border: none;
+      padding: .9rem;
+      border-radius: 99px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--t);
+      box-shadow: 0 8px 25px rgba(99, 102, 241, .35)
+    }
+
+    .btn-checkout:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(99, 102, 241, .5)
+    }
+
+    .btn-enquire-small {
+      width: 100%;
+      background: transparent;
+      color: var(--p);
+      border: 1.5px solid rgba(99, 102, 241, .3);
+      padding: .65rem;
+      border-radius: 99px;
+      font-family: inherit;
+      font-size: .88rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--t);
+      margin-top: .65rem
+    }
+
+    .btn-enquire-small:hover {
+      background: rgba(99, 102, 241, .07);
+      border-color: var(--p)
+    }
+
+    /* MOBILE CART NAV */
+    @media(max-width:640px) {
+      .hero-left-card {
+        display: none
+      }
+
+      .nav-cart {
+        width: 36px;
+        height: 36px;
+        font-size: 16px
+      }
+    }
+  </style>
 </head>
+
 <body>
-
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#home" class="nav-logo">
-    <div class="nav-logo-icon">💻</div>
-    <div class="nav-logo-text">Dream<span>Computers</span></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#products">Laptops</a></li>
-    <li><a href="#youtube">YouTube</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="#products" class="nav-cta">Shop Now →</a>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home">🏠 Home</a>
-  <a href="#about">ℹ️ About Us</a>
-  <a href="#products">💻 Laptops</a>
-  <a href="#youtube">▶️ YouTube</a>
-  <a href="#contact">📞 Contact</a>
-</div>
-
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-particles" id="particles"></div>
-  <div class="hero-content">
-    <div class="hero-badge">🏆 Trichy's #1 Laptop Store</div>
-    <h1>
-      <span class="accent">Dream</span>
-      <span class="blue"> Computers</span>
-      <br>Premium Laptops,<br>Affordable Prices
-    </h1>
-    <p class="hero-desc">Quality-tested second-hand & refurbished laptops at prices you won't find anywhere else in Trichy. Every laptop is checked, cleaned, and ready to perform.</p>
-    <div class="hero-actions">
-      <a href="#products" class="btn-primary">🛒 Browse Laptops</a>
-      <a href="#about" class="btn-outline">Learn More ↓</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">500+</span>
-        <span class="stat-label">Laptops Sold</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">100%</span>
-        <span class="stat-label">Quality Tested</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">₹5K+</span>
-        <span class="stat-label">Starting Price</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">5⭐</span>
-        <span class="stat-label">Customer Reviews</span>
-      </div>
-    </div>
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#home" class="logo">
+      <div class="logo-icon"><img src="fevicon/fevicon.jpeg" alt="Dream Computers Logo" /></div>
+      <div class="logo-name">Dream<span>Computers</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Laptops</a></li>
+      <li><a href="#youtube">YouTube</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#products" class="nav-cta">Shop Now </a>
+    <button class="nav-cart" onclick="toggleCart()" title="View Cart" aria-label="Open Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count" id="cartCount">0</span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mob-menu" id="mobMenu">
+    <a href="#home" onclick="closeMob()"> Home</a>
+    <a href="#about" onclick="closeMob()">ℹ About Us</a>
+    <a href="#products" onclick="closeMob()"> Laptops</a>
+    <a href="#youtube" onclick="closeMob()"> YouTube</a>
+    <a href="#social" onclick="closeMob()"> Social Media</a>
+    <a href="#contact" onclick="closeMob()"> Contact</a>
   </div>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+  <div class="hero-shapes">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"> Trichy's #1 Laptop Store</div>
+      <h1 class="hero-h1">Get Your <span class="grad-text">Dream Laptop</span><br>at Dream Prices</h1>
+      <p class="hero-desc">Quality-tested second-hand &amp; refurbished laptops at prices you won't find anywhere else
+        in Trichy. Every laptop is checked, cleaned &amp; ready to perform.</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-p"> Browse Laptops</a>
+        <a href="#about" class="btn-g">Learn More </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">500+</span><span class="stat-l">Laptops Sold</span></div>
+        <div class="stat"><span class="stat-n">100%</span><span class="stat-l">Quality Tested</span></div>
+        <div class="stat"><span class="stat-n">₹5K+</span><span class="stat-l">Starting Price</span></div>
+        <div class="stat"><span class="stat-n">5</span><span class="stat-l">Rated by Customers</span></div>
+      </div>
+    </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-inner" id="marqueeInner"></div>
-</div>
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-inner" id="marqueeInner"></div>
+  </div>
 
-<!-- ABOUT -->
-<section id="about" class="about">
-  <div class="container">
-    <div class="section-label">Our Story</div>
-    <h2 class="section-title reveal">About Dream Computers</h2>
-    <div class="about-grid">
-      <div class="about-img-wrap reveal-left">
-        <div class="about-img-card">
-          <span class="about-icon-big">🏪</span>
-          <h3 style="font-size:1.4rem;font-weight:800;margin-bottom:.5rem">Dream Computers</h3>
-          <p style="color:var(--muted);font-size:.9rem">Trichy's Trusted Laptop Destination</p>
-          <div class="about-location-badge">📍 Super Bazaar, Trichy</div>
-          <div class="about-highlights">
-            <div class="highlight-card"><div class="num">5+</div><div class="label">Years Experience</div></div>
-            <div class="highlight-card"><div class="num">50+</div><div class="label">Brands Available</div></div>
-            <div class="highlight-card"><div class="num">500+</div><div class="label">Happy Customers</div></div>
-            <div class="highlight-card"><div class="num">100%</div><div class="label">Tested Units</div></div>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="sec-label">Our Story</div>
+      <h2 class="sec-title rv">About Dream Computers</h2>
+      <div class="about-grid">
+        <div class="rl">
+          <div class="about-card">
+            <span class="about-icon"></span>
+            <div class="about-name">Dream Computers</div>
+            <div class="about-sub-t">Trichy's Trusted Laptop Destination</div>
+            <div class="about-loc"> Super Bazaar, Trichy</div>
+            <div class="sm-stats">
+              <div class="sm-card">
+                <div class="sm-n">5+</div>
+                <div class="sm-l">Years Exp.</div>
+              </div>
+              <div class="sm-card">
+                <div class="sm-n">50+</div>
+                <div class="sm-l">Brands</div>
+              </div>
+              <div class="sm-card">
+                <div class="sm-n">500+</div>
+                <div class="sm-l">Customers</div>
+              </div>
+              <div class="sm-card">
+                <div class="sm-n">100%</div>
+                <div class="sm-l">Tested</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-text rr">
+          <div class="sec-label">Who We Are</div>
+          <h3 class="sec-title" style="font-size:2rem">Your Dream Laptop is Here – at a Dream Price</h3>
+          <p>Dream Computers is Trichy's most trusted second-hand laptop store, located at the heart of Super Bazaar. We
+            source corporate-grade, quality-tested refurbished laptops and offer them at prices that genuinely surprise
+            our customers.</p>
+          <p>Every laptop goes through a rigorous inspection, cleaning, and testing process. We handle bulk corporate
+            inventory and pass those savings directly to you.</p>
+          <ul class="feat-list">
+            <li>
+              <div class="feat-icon"></div> Every laptop individually tested &amp; quality-checked
+            </li>
+            <li>
+              <div class="feat-icon"></div> Bulk corporate laptop inventory – best rates guaranteed
+            </li>
+            <li>
+              <div class="feat-icon"></div> Prices you simply won't find anywhere else in Trichy
+            </li>
+            <li>
+              <div class="feat-icon"></div> Post-sale support and guidance for every customer
+            </li>
+            <li>
+              <div class="feat-icon"></div> Ready to use – cleaned, formatted &amp; prepped for you
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products">
+    <div class="container">
+      <div class="prod-header">
+        <div>
+          <div class="sec-label">Our Collection</div>
+          <h2 class="sec-title rv">Featured Laptops</h2>
+          <p class="sec-sub" style="margin-top:.5rem">Every unit tested and ready to perform. Prices updated regularly.
+          </p>
+        </div>
+        <div class="filter-tabs">
+          <button class="ftab active" data-filter="all">All</button>
+          <button class="ftab" data-filter="business">Business</button>
+          <button class="ftab" data-filter="student">Student</button>
+          <button class="ftab" data-filter="gaming">Gaming</button>
+        </div>
+      </div>
+      <div class="prod-grid" id="prodGrid"></div>
+      <div style="margin-top:2.5rem;text-align:center">
+        <a href="#contact" class="btn-g"> Ask About a Specific Model </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why">
+    <div class="container">
+      <div class="sec-label">Why Choose Us</div>
+      <h2 class="sec-title rv">The Dream Computers<br>Advantage</h2>
+      <div class="why-grid">
+        <div class="why-card rv">
+          <div class="why-icon" style="background:linear-gradient(135deg,#e0e7ff,#ede9fe)"></div>
+          <h3>Unbeatable Prices</h3>
+          <p>We source directly from corporate bulk inventories — passing massive savings right to you. Nobody in Trichy
+            beats our prices.</p>
+        </div>
+        <div class="why-card rv">
+          <div class="why-icon" style="background:linear-gradient(135deg,#dcfce7,#d1fae5)"></div>
+          <h3>100% Quality Tested</h3>
+          <p>Battery, display, keyboard, ports — everything is checked and benchmarked before any laptop reaches you.
+          </p>
+        </div>
+        <div class="why-card rv">
+          <div class="why-icon" style="background:linear-gradient(135deg,#fff7ed,#ffedd5)"></div>
+          <h3>Corporate Grade Stock</h3>
+          <p>Our laptops come from top companies — professionally maintained machines at second-hand prices.</p>
+        </div>
+        <div class="why-card rv">
+          <div class="why-icon" style="background:linear-gradient(135deg,#f3e8ff,#ede9fe)"></div>
+          <h3>After-Sales Support</h3>
+          <p>We don't disappear after the sale. Call us anytime for software help, upgrades, or advice.</p>
+        </div>
+        <div class="why-card rv">
+          <div class="why-icon" style="background:linear-gradient(135deg,#fee2e2,#fecaca)"></div>
+          <h3>Ready to Use</h3>
+          <p>Every laptop comes formatted, cleaned, and ready out of the box. Just open it and start working.</p>
+        </div>
+        <div class="why-card rv">
+          <div class="why-icon" style="background:linear-gradient(135deg,#cffafe,#a5f3fc)"></div>
+          <h3>Trusted by Hundreds</h3>
+          <p>500+ satisfied customers across Trichy trust Dream Computers. Built on honesty, quality &amp; genuine care.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE -->
+  <section id="youtube" class="youtube-sec">
+    <div class="container">
+      <div class="sec-label">Watch Us Online</div>
+      <h2 class="sec-title rv">We're on YouTube!</h2>
+      <div class="yt-card rv">
+        <div class="yt-text">
+          <div class="yt-live"><span class="yt-dot"></span>LIVE on YouTube</div>
+          <h2>Dream Computers Trichy</h2>
+          <p>Watch real unboxings, honest laptop reviews, setup guides, and price reveals. See exactly what you're
+            buying before you visit our store!</p>
+          <a href="https://www.youtube.com/@dreamcomputerstrichy2021" target="_blank" rel="noopener" class="btn-yt"> Visit
+            Our Channel</a>
+        </div>
+        <div class="yt-visual"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <div class="brands">
+    <div class="container">
+      <p class="brands-ttl">Brands Available at Dream Computers</p>
+      <div class="brands-row" id="brandsRow"></div>
+    </div>
+  </div>
+
+  <!-- SOCIAL MEDIA -->
+  <section id="social" class="social-sec">
+    <div class="social-inner container">
+      <div class="sec-label">Connect With Us</div>
+      <h2 class="sec-title">Follow Us on Social Media</h2>
+      <p class="sec-sub">Stay updated with new arrivals, exclusive deals, honest reviews &amp; behind-the-scenes
+        content. We're active on all platforms!</p>
+      <div class="social-cards">
+        <div class="soc-card rv">
+          <div class="soc-icon" style="background:linear-gradient(135deg,#ff0000,#cc0000)"></div>
+          <h3>YouTube</h3>
+          <div class="soc-handle">Channel: <strong>@dreamcomputerstrichy</strong></div>
+          <div class="soc-desc">Watch laptop unboxings, honest reviews, price reveals, and setup guides. Subscribe for
+            weekly uploads!</div>
+          <a href="https://www.youtube.com/@dreamcomputerstrichy2021" target="_blank" rel="noopener" class="soc-btn yt-soc">
+            Subscribe Now</a>
+        </div>
+        <div class="soc-card rv">
+          <div class="soc-icon" style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)"></div>
+          <h3>Instagram</h3>
+          <div class="soc-handle">Follow: <strong>@dreamcomputerstrichy</strong></div>
+          <div class="soc-desc">Daily product posts, exclusive deals, customer stories, and behind-the-scenes content.
+            Follow for updates!</div>
+          <a href="https://www.instagram.com/dreamcomputerstrichy" target="_blank" rel="noopener"
+            class="soc-btn ig-soc"> Follow Us</a>
+        </div>
+        <div class="soc-card rv">
+          <div class="soc-icon" style="background:linear-gradient(135deg,#25D366,#128C7E)"></div>
+          <h3>WhatsApp</h3>
+          <div class="soc-handle">Chat with us <strong>directly</strong></div>
+          <div class="soc-desc">Quick enquiries, price checks, availability questions — chat with us directly on
+            WhatsApp. Fast responses!</div>
+          <a href="#contact" class="soc-btn wa-soc"> Chat Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="sec-label">Get In Touch</div>
+      <h2 class="sec-title rv">Visit Us or Enquire Online</h2>
+      <div class="contact-grid">
+        <div class="cinfo">
+          <div class="ccard rl">
+            <div class="ccard-icon" style="background:linear-gradient(135deg,#e0e7ff,#ede9fe)"></div>
+            <div>
+              <h4>Our Location</h4>
+              <p>Super Bazaar, Trichy<br><span style="color:var(--muted);font-size:.85rem;font-weight:500">Tamil Nadu,
+                  India</span></p>
+            </div>
+          </div>
+          <div class="ccard rl">
+            <div class="ccard-icon" style="background:linear-gradient(135deg,#dcfce7,#d1fae5)"></div>
+            <div>
+              <h4>Call / WhatsApp</h4>
+              <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a><br><span
+                  style="color:var(--muted);font-size:.85rem;font-weight:500">Mon–Sat, 10 AM – 8 PM</span></p>
+            </div>
+          </div>
+          <div class="ccard rl">
+            <div class="ccard-icon" style="background:linear-gradient(135deg,#fff7ed,#ffedd5)"></div>
+            <div>
+              <h4>Working Hours</h4>
+              <p>Monday – Saturday<br><span style="color:var(--muted);font-size:.85rem;font-weight:500">10:00 AM – 8:00
+                  PM</span></p>
+            </div>
+          </div>
+          <div class="ccard rl">
+            <div class="ccard-icon" style="background:linear-gradient(135deg,#fee2e2,#fecaca)"></div>
+            <div>
+              <h4>YouTube Channel</h4>
+              <p><a href="https://www.youtube.com/@dreamcomputerstrichy2021" target="_blank"
+                  rel="noopener">@dreamcomputerstrichy</a></p>
+            </div>
+          </div>
+          <div class="ccard rl">
+            <div class="ccard-icon" style="background:linear-gradient(135deg,#fdf4ff,#f3e8ff)"></div>
+            <div>
+              <h4>Instagram</h4>
+              <p><a href="https://www.instagram.com/dreamcomputerstrichy" target="_blank"
+                  rel="noopener">@dreamcomputerstrichy</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="rr">
+          <div class="cform">
+            <h3> Send an Enquiry</h3>
+            <div class="fg"><label>Your Name</label><input type="text" id="eName" placeholder="Enter your name" /></div>
+            <div class="fg"><label>Phone / WhatsApp</label><input type="tel" id="ePhone"
+                placeholder="+91 XXXXX XXXXX" /></div>
+            <div class="fg">
+              <label>What are you looking for?</label>
+              <select id="eCat">
+                <option value="">Select category...</option>
+                <option>Business Laptop (Office Work)</option>
+                <option>Student Laptop (College/Study)</option>
+                <option>Gaming Laptop</option>
+                <option>Budget Laptop (Under ₹15,000)</option>
+                <option>High-Performance Laptop</option>
+                <option>Specific Brand / Model</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Budget Range</label>
+              <select id="eBudget">
+                <option value="">Select budget...</option>
+                <option>Under ₹10,000</option>
+                <option>₹10,000 – ₹20,000</option>
+                <option>₹20,000 – ₹35,000</option>
+                <option>₹35,000 – ₹50,000</option>
+                <option>Above ₹50,000</option>
+              </select>
+            </div>
+            <div class="fg"><label>Additional Requirements</label><textarea id="eMsg"
+                placeholder="Any specific specs, brand preferences, or questions..."></textarea></div>
+            <button class="btn-sub" onclick="submitEnq()">Send Enquiry </button>
           </div>
         </div>
       </div>
-      <div class="about-text reveal-right">
-        <div class="section-label">Who We Are</div>
-        <h3 class="section-title" style="font-size:2rem">Your Dream Laptop is Here – at a Dream Price</h3>
-        <p>Dream Computers is Trichy's most trusted second-hand laptop store, located in the heart of Super Bazaar. We specialize in sourcing corporate-grade, quality-tested refurbished laptops from top companies and offering them at prices that genuinely surprise our customers.</p>
-        <p>Every laptop that enters our store goes through a rigorous inspection, cleaning, and testing process. We handle bulk corporate inventory and pass those savings directly to you – that's why nobody in Trichy can match our prices without compromising on quality.</p>
-        <ul class="about-features">
-          <li><div class="icon">✅</div> Every laptop individually tested & quality-checked</li>
-          <li><div class="icon">🏢</div> Bulk corporate laptop inventory – best rates guaranteed</li>
-          <li><div class="icon">💰</div> Prices you simply won't find anywhere else in Trichy</li>
-          <li><div class="icon">🔧</div> Post-sale support and guidance for every customer</li>
-          <li><div class="icon">📦</div> Ready to use – cleaned, formatted & prepped for you</li>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div class="fb">
+        <div class="fl">
+          <div class="fi"><img src="fevicon/fevicon.jpeg" alt="Dream Computers"
+              style="width:100%;height:100%;object-fit:cover;border-radius:10px" /></div>
+          <div class="fn">Dream<span>Computers</span></div>
+        </div>
+        <p>Trichy's most trusted source for premium refurbished &amp; second-hand laptops. Quality you can trust, prices
+          you'll love.</p>
+        <div class="fsocs">
+          <a href="https://www.youtube.com/@dreamcomputerstrichy2021" target="_blank" rel="noopener" class="fsoc"
+            title="YouTube"></a>
+          <a href="https://www.instagram.com/dreamcomputerstrichy" target="_blank" rel="noopener" class="fsoc"
+            title="Instagram"></a>
+          <a href="#contact" class="fsoc" title="WhatsApp"></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Laptops</a></li>
+          <li><a href="#youtube">YouTube</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#products">Business Laptops</a></li>
+          <li><a href="#products">Student Laptops</a></li>
+          <li><a href="#products">Gaming Laptops</a></li>
+          <li><a href="#products">Budget Deals</a></li>
+          <li><a href="#products">Corporate Stock</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Store Info</h4>
+        <ul>
+          <li><span> Super Bazaar, Trichy</span></li>
+          <li><span> Mon–Sat: 10AM–8PM</span></li>
+          <li><a href="https://www.youtube.com/@dreamcomputerstrichy2021" target="_blank" rel="noopener"> YouTube
+              Channel</a></li>
+          <li><a href="https://www.instagram.com/dreamcomputerstrichy" target="_blank" rel="noopener">
+              @dreamcomputerstrichy</a></li>
         </ul>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products" class="products">
-  <div class="container">
-    <div class="products-header">
-      <div>
-        <div class="section-label">Our Collection</div>
-        <h2 class="section-title reveal">Featured Laptops</h2>
-        <p class="section-sub" style="margin-top:.5rem">Every unit tested and ready to perform. Prices updated regularly.</p>
-      </div>
-      <div class="filter-tabs">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="business">Business</button>
-        <button class="filter-tab" data-filter="student">Student</button>
-        <button class="filter-tab" data-filter="gaming">Gaming</button>
+    <div class="fbtm">
+      <p> 2025 Dream Computers, Trichy. All rights reserved.</p>
+      <div class="ftags">
+        <span class="ftag">Refurbished Laptops</span>
+        <span class="ftag">Trichy</span>
+        <span class="ftag">Super Bazaar</span>
+        <span class="ftag">Best Prices</span>
       </div>
     </div>
-    <div class="products-grid" id="productsGrid"></div>
-    <div class="add-btn reveal">
-      <a href="#contact" class="btn-outline">📞 Ask About Specific Model →</a>
-    </div>
-  </div>
-</section>
+  </footer>
 
-<!-- WHY US -->
-<section class="why">
-  <div class="why-bg"></div>
-  <div class="container">
-    <div class="section-label">Why Choose Us</div>
-    <h2 class="section-title reveal">The Dream Computers<br>Advantage</h2>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <div class="why-icon" style="background:rgba(59,130,246,.15)">💰</div>
-        <h3>Unbeatable Prices</h3>
-        <p>We source directly from corporate bulk inventories. This means massive savings we pass right to you – prices no other shop in Trichy can match.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon" style="background:rgba(34,197,94,.15)">✅</div>
-        <h3>100% Quality Tested</h3>
-        <p>Each laptop undergoes battery test, display check, keyboard/port inspection, and performance benchmarking before it reaches you.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon" style="background:rgba(245,158,11,.15)">🏢</div>
-        <h3>Corporate Grade Stock</h3>
-        <p>Our laptops come from top companies – well-maintained machines used in professional environments. Premium quality, second-hand prices.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon" style="background:rgba(168,85,247,.15)">🔧</div>
-        <h3>After-Sales Support</h3>
-        <p>We don't disappear after the sale. Call us anytime for software help, upgrades, or advice. We're always here for our customers.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon" style="background:rgba(239,68,68,.15)">📦</div>
-        <h3>Ready to Use</h3>
-        <p>Every laptop comes formatted, cleaned, and ready to use out of the box. Just open it and start working – no setup hassle.</p>
-      </div>
-      <div class="why-card reveal">
-        <div class="why-icon" style="background:rgba(20,184,166,.15)">🤝</div>
-        <h3>Trusted by Hundreds</h3>
-        <p>Over 500+ satisfied customers across Trichy trust Dream Computers. Our reputation is built on honesty, quality, and genuine care.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <a href="#home" class="bk" id="bkTop"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></a>
+  <div class="toast" id="toast"></div>
+  <script>
+    const products = [
+      { id: 1, brand: 'Dell', name: 'Dell Latitude E7470', specs: ['Intel i5-6th Gen', '8GB RAM', '256GB SSD', '14" FHD'], price: '₹15,500', old: '₹22,000', badge: 'hot', cat: 'business', emoji: '' },
+      { id: 2, brand: 'Lenovo', name: 'ThinkPad T470', specs: ['Intel i5-7th Gen', '8GB RAM', '512GB SSD', '14" FHD'], price: '₹18,000', old: '₹28,000', badge: 'best', cat: 'business', emoji: '' },
+      { id: 3, brand: 'HP', name: 'HP EliteBook 840 G3', specs: ['Intel i5-6th Gen', '8GB RAM', '256GB SSD', '14" Touch'], price: '₹16,500', old: '₹25,000', badge: '', cat: 'business', emoji: '' },
+      { id: 4, brand: 'Lenovo', name: 'Lenovo IdeaPad 330', specs: ['AMD A6', '4GB RAM', '1TB HDD', '15.6" HD'], price: '₹9,500', old: '₹15,000', badge: '', cat: 'student', emoji: '' },
+      { id: 5, brand: 'Dell', name: 'Dell Inspiron 15', specs: ['Intel i3-7th Gen', '4GB RAM', '500GB HDD', '15.6" HD'], price: '₹8,999', old: '₹14,000', badge: '', cat: 'student', emoji: '' },
+      { id: 6, brand: 'HP', name: 'HP 15s Notebook', specs: ['Intel Celeron', '4GB RAM', '256GB SSD', '15.6"'], price: '₹7,500', old: '₹12,000', badge: 'new', cat: 'student', emoji: '' },
+      { id: 7, brand: 'ASUS', name: 'ASUS VivoBook 15', specs: ['Intel i5-8th Gen', '8GB RAM', '512GB SSD', '15.6" FHD'], price: '₹22,000', old: '₹35,000', badge: 'hot', cat: 'business', emoji: '' },
+      { id: 8, brand: 'MSI', name: 'MSI GF63 Thin', specs: ['Intel i5-10th Gen', '8GB RAM', '256GB SSD', 'GTX 1650'], price: '₹35,000', old: '₹55,000', badge: 'best', cat: 'gaming', emoji: '' },
+      { id: 9, brand: 'Lenovo', name: 'Legion 5 Gaming', specs: ['AMD Ryzen 5', '8GB RAM', '512GB SSD', 'GTX 1650Ti'], price: '₹38,000', old: '₹62,000', badge: '', cat: 'gaming', emoji: '' }
+    ];
 
-<!-- YOUTUBE -->
-<section id="youtube" class="youtube">
-  <div class="container">
-    <div class="section-label">Watch Us Online</div>
-    <h2 class="section-title reveal">We're on YouTube!</h2>
-    <div class="yt-card reveal">
-      <div class="yt-text">
-        <div class="yt-label"><span class="dot"></span>LIVE on YouTube</div>
-        <h2>Dream Computers Trichy</h2>
-        <p>Watch real unboxings, honest laptop reviews, setup guides, and price reveals on our YouTube channel. See exactly what you're buying before you visit the store.</p>
-        <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" class="btn-youtube">
-          ▶ Visit Our Channel
-        </a>
-      </div>
-      <div class="yt-visual">📺</div>
-    </div>
-  </div>
-</section>
+    const brands = ['Dell', 'Lenovo', 'HP', 'ASUS', 'MSI', 'Acer', 'Apple', 'Samsung', 'Toshiba', 'Sony', 'Compaq', 'HCL'];
 
-<!-- BRANDS -->
-<div class="brands">
-  <div class="container">
-    <p class="brands-title">Brands Available at Dream Computers</p>
-    <div class="brands-row" id="brandsRow"></div>
-  </div>
-</div>
+    const marItems = [' Quality Tested Laptops', ' Super Bazaar, Trichy', ' Unbeatable Prices', ' Corporate Grade Stock', ' Ready to Use', ' 500+ Happy Customers', ' Watch on YouTube', ' Post-Sale Support', ' Follow on Instagram', ' Bulk Corporate Inventory'];
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <div class="container">
-    <div class="section-label">Get In Touch</div>
-    <h2 class="section-title reveal">Visit Us or Enquire Online</h2>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-card reveal">
-          <div class="contact-icon" style="background:rgba(59,130,246,.15)">📍</div>
-          <div>
-            <h4>Our Location</h4>
-            <p>Super Bazaar, Trichy<br><span style="color:var(--muted);font-size:.88rem">Tamil Nadu, India</span></p>
-          </div>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon" style="background:rgba(34,197,94,.15)">📞</div>
-          <div>
-            <h4>Call / WhatsApp</h4>
-            <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a><br><span style="color:var(--muted);font-size:.88rem">Mon–Sat, 10 AM – 8 PM</span></p>
-          </div>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon" style="background:rgba(245,158,11,.15)">⏰</div>
-          <div>
-            <h4>Working Hours</h4>
-            <p>Monday – Saturday<br><span style="color:var(--muted);font-size:.88rem">10:00 AM – 8:00 PM</span></p>
-          </div>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon" style="background:rgba(139,92,246,.15)">▶️</div>
-          <div>
-            <h4>YouTube Channel</h4>
-            <p><a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank">@dreamcomputerstrichy</a></p>
-          </div>
-        </div>
-        <div class="contact-card reveal">
-          <div class="contact-icon" style="background:linear-gradient(135deg,rgba(131,58,180,.2),rgba(252,176,69,.2))">📸</div>
-          <div>
-            <h4>Instagram</h4>
-            <p><span style="color:var(--muted)">Instagram page coming soon!<br>Follow us for product updates.</span></p>
-          </div>
-        </div>
-      </div>
-      <div class="reveal-right">
-        <div class="contact-form">
-          <h3>📧 Send an Enquiry</h3>
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" id="enquiryName" placeholder="Enter your name"/>
-          </div>
-          <div class="form-group">
-            <label>Phone / WhatsApp</label>
-            <input type="tel" id="enquiryPhone" placeholder="+91 XXXXX XXXXX"/>
-          </div>
-          <div class="form-group">
-            <label>What are you looking for?</label>
-            <select id="enquiryCategory">
-              <option value="">Select category...</option>
-              <option>Business Laptop (Office Work)</option>
-              <option>Student Laptop (College/Study)</option>
-              <option>Gaming Laptop</option>
-              <option>Budget Laptop (Under ₹15,000)</option>
-              <option>High-Performance Laptop</option>
-              <option>Specific Brand / Model</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Budget Range</label>
-            <select id="enquiryBudget">
-              <option value="">Select budget...</option>
-              <option>Under ₹10,000</option>
-              <option>₹10,000 – ₹20,000</option>
-              <option>₹20,000 – ₹35,000</option>
-              <option>₹35,000 – ₹50,000</option>
-              <option>Above ₹50,000</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Additional Requirements</label>
-            <textarea id="enquiryMsg" placeholder="Any specific specs, brand preferences, or questions..."></textarea>
-          </div>
-          <button class="btn-submit" onclick="submitEnquiry()">Send Enquiry 🚀</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    function init() {
+      buildMarquee();
+      buildBrands();
+      renderProds('all');
+      setupTabs();
+      setupScroll();
+      setupNav();
+      document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobMenu').classList.toggle('open'));
+    }
 
-<!-- INSTAGRAM CTA -->
-<div class="insta-cta">
-  <div class="insta-cta-inner reveal">
-    <h2>📸 Follow Us on Instagram</h2>
-    <p>Stay updated with our latest laptop arrivals, exclusive deals, and behind-the-scenes content. New products posted regularly!</p>
-    <div class="insta-id">📸 Instagram – Coming Soon!</div>
-    <br>
-    <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" class="btn-insta">▶ Watch on YouTube Instead</a>
-  </div>
-</div>
+    function buildMarquee() {
+      const el = document.getElementById('marqueeInner');
+      const d = [...marItems, ...marItems];
+      el.innerHTML = d.map(t => `<div class="marquee-item"> ${t}</div>`).join('');
+    }
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-main">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <div class="logo-icon">💻</div>
-        <div class="logo-text">Dream<span>Computers</span></div>
-      </div>
-      <p>Trichy's most trusted source for premium refurbished and second-hand laptops. Quality you can trust, prices you'll love.</p>
-      <div class="footer-socials">
-        <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" class="social-btn" title="YouTube">▶</a>
-        <a href="#contact" class="social-btn" title="WhatsApp">💬</a>
-        <a href="#contact" class="social-btn" title="Instagram">📸</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#products">Laptops</a></li>
-        <li><a href="#youtube">YouTube</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Categories</h4>
-      <ul>
-        <li><a href="#products">Business Laptops</a></li>
-        <li><a href="#products">Student Laptops</a></li>
-        <li><a href="#products">Gaming Laptops</a></li>
-        <li><a href="#products">Budget Deals</a></li>
-        <li><a href="#products">Corporate Stock</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Store Info</h4>
-      <ul>
-        <li><span>📍 Super Bazaar, Trichy</span></li>
-        <li><span>⏰ Mon–Sat: 10AM – 8PM</span></li>
-        <li><a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank">▶ YouTube Channel</a></li>
-        <li><span>📸 Instagram – Coming Soon</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Dream Computers, Trichy. All rights reserved.</p>
-    <div class="footer-tags">
-      <span class="footer-tag">Refurbished Laptops</span>
-      <span class="footer-tag">Trichy</span>
-      <span class="footer-tag">Super Bazaar</span>
-      <span class="footer-tag">Best Prices</span>
-    </div>
-  </div>
-</footer>
+    function buildBrands() {
+      document.getElementById('brandsRow').innerHTML = brands.map(b => `<div class="brand-pill">${b}</div>`).join('');
+    }
 
-<!-- BACK TO TOP -->
-<a href="#home" class="back-top" id="backTop">↑</a>
-
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
-
-<script>
-// DATA
-const products = [
-  {id:1,brand:'Dell',name:'Dell Latitude E7470',specs:['Intel i5-6th Gen','8GB RAM','256GB SSD','14" FHD'],price:'₹15,500',old:'₹22,000',badge:'hot',category:'business',emoji:'💻'},
-  {id:2,brand:'Lenovo',name:'ThinkPad T470',specs:['Intel i5-7th Gen','8GB RAM','512GB SSD','14" FHD'],price:'₹18,000',old:'₹28,000',badge:'best',category:'business',emoji:'🖥️'},
-  {id:3,brand:'HP',name:'HP EliteBook 840 G3',specs:['Intel i5-6th Gen','8GB RAM','256GB SSD','14" Touch'],price:'₹16,500',old:'₹25,000',badge:'',category:'business',emoji:'💻'},
-  {id:4,brand:'Lenovo',name:'Lenovo IdeaPad 330',specs:['AMD A6','4GB RAM','1TB HDD','15.6" HD'],price:'₹9,500',old:'₹15,000',badge:'',category:'student',emoji:'📚'},
-  {id:5,brand:'Dell',name:'Dell Inspiron 15',specs:['Intel i3-7th Gen','4GB RAM','500GB HDD','15.6" HD'],price:'₹8,999',old:'₹14,000',badge:'',category:'student',emoji:'🎓'},
-  {id:6,brand:'HP',name:'HP 15s Notebook',specs:['Intel Celeron','4GB RAM','256GB SSD','15.6"'],price:'₹7,500',old:'₹12,000',badge:'new',category:'student',emoji:'📓'},
-  {id:7,brand:'ASUS',name:'ASUS VivoBook 15',specs:['Intel i5-8th Gen','8GB RAM','512GB SSD','15.6" FHD'],price:'₹22,000',old:'₹35,000',badge:'hot',category:'business',emoji:'⚡'},
-  {id:8,brand:'MSI',name:'MSI GF63 Thin',specs:['Intel i5-10th Gen','8GB RAM','256GB SSD','GTX 1650'],price:'₹35,000',old:'₹55,000',badge:'best',category:'gaming',emoji:'🎮'},
-  {id:9,brand:'Lenovo',name:'Legion 5 Gaming',specs:['AMD Ryzen 5','8GB RAM','512GB SSD','GTX 1650Ti'],price:'₹38,000',old:'₹62,000',badge:'',category:'gaming',emoji:'🕹️'},
-];
-
-const brands = ['Dell','Lenovo','HP','ASUS','MSI','Acer','Apple','Samsung','Toshiba','Sony','Compaq','HCL'];
-
-const marqueeItems = ['✅ Quality Tested Laptops','📍 Super Bazaar, Trichy','💰 Unbeatable Prices','🏢 Corporate Grade Stock','⚡ Ready to Use','🤝 500+ Happy Customers','▶ Watch on YouTube','🔧 Post-Sale Support','🖥️ All Top Brands Available','📦 Bulk Corporate Inventory'];
-
-// INIT
-function init(){
-  buildMarquee();
-  buildBrands();
-  renderProducts('all');
-  buildParticles();
-  setupTabs();
-  setupScroll();
-  setupNav();
-  setupHamburger();
-}
-
-function buildMarquee(){
-  const inner = document.getElementById('marqueeInner');
-  const doubled = [...marqueeItems,...marqueeItems];
-  inner.innerHTML = doubled.map(t=>`<div class="marquee-item"><span class="dot">◆</span>${t}</div>`).join('');
-}
-
-function buildBrands(){
-  document.getElementById('brandsRow').innerHTML = brands.map(b=>`<div class="brand-pill">${b}</div>`).join('');
-}
-
-function renderProducts(filter){
-  const grid = document.getElementById('productsGrid');
-  const filtered = filter==='all'?products:products.filter(p=>p.category===filter);
-  if(!filtered.length){
-    grid.innerHTML=`<div class="products-empty" style="grid-column:1/-1"><span class="emoji">🔍</span>No laptops in this category right now. Check back soon or enquire below!</div>`;
-    return;
-  }
-  grid.innerHTML = filtered.map(p=>`
-    <div class="product-card reveal" onclick="enquireProduct('${p.name}')">
-      ${p.badge?`<span class="product-badge badge-${p.badge}">${p.badge==='hot'?'🔥 Hot Deal':p.badge==='best'?'⭐ Best Seller':'🆕 New'}</span>`:''}
-      <div class="product-img">${p.emoji}</div>
-      <div class="product-body">
-        <div class="product-brand">${p.brand}</div>
-        <div class="product-name">${p.name}</div>
-        <div class="product-specs">${p.specs.map(s=>`<span class="spec-tag">${s}</span>`).join('')}</div>
-        <div class="product-footer">
-          <div class="product-price">
-            <span class="price-main">${p.price}</span>
-            <span class="price-old">${p.old}</span>
-          </div>
-          <button class="btn-cart" onclick="event.stopPropagation();enquireProduct('${p.name}')">📞 Enquire</button>
+    function renderProds(f) {
+      const grid = document.getElementById('prodGrid');
+      const list = f === 'all' ? products : products.filter(p => p.cat === f);
+      if (!list.length) { grid.innerHTML = `<div class="prod-empty"> No laptops in this category right now. Enquire below!</div>`; return; }
+      grid.innerHTML = list.map(p => `
+    <div class="prod-card rv" onclick="enquireProd('${p.name}')">
+      ${p.badge ? `<span class="prod-badge b-${p.badge}">${p.badge === 'hot' ? ' Hot Deal' : p.badge === 'best' ? ' Best Seller' : ' New'}</span>` : ''}
+      <div class="prod-img">${p.emoji}</div>
+      <div class="prod-body">
+        <div class="prod-brand">${p.brand}</div>
+        <div class="prod-name">${p.name}</div>
+        <div class="spec-tags">${p.specs.map(s => `<span class="spec">${s}</span>`).join('')}</div>
+        <div class="prod-foot">
+          <div><div class="price-now">${p.price}</div><div class="price-old">${p.old}</div></div>
+          <div style="display:flex;gap:.4rem;align-items:center"><button class="btn-cart-add" id="cart-btn-${p.id}" onclick="event.stopPropagation();addToCartById(${p.id})">🛒 Add to Cart</button><button style="width:32px;height:32px;border-radius:8px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-size:14px;flex-shrink:0;transition:var(--t)" title="Enquire" onclick="event.stopPropagation();enquireProd('${p.name}')">📞</button></div>
         </div>
       </div>
     </div>
   `).join('');
-  observeReveal();
-}
+      reveal();
+    }
 
-function setupTabs(){
-  document.querySelectorAll('.filter-tab').forEach(tab=>{
-    tab.addEventListener('click',function(){
-      document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
-      this.classList.add('active');
-      renderProducts(this.dataset.filter);
-    });
-  });
-}
+    function setupTabs() {
+      document.querySelectorAll('.ftab').forEach(t => {
+        t.addEventListener('click', function () {
+          document.querySelectorAll('.ftab').forEach(x => x.classList.remove('active'));
+          this.classList.add('active');
+          renderProds(this.dataset.filter);
+        });
+      });
+    }
 
-function buildParticles(){
-  const container = document.getElementById('particles');
-  for(let i=0;i<20;i++){
-    const p = document.createElement('div');
-    p.className='particle';
-    const size = Math.random()*4+2;
-    p.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${Math.random()>.5?'rgba(59,130,246,':'rgba(245,158,11,'}${Math.random()*.4+.2});animation-delay:${Math.random()*6}s;animation-duration:${Math.random()*5+6}s`;
-    container.appendChild(p);
-  }
-}
+    function reveal() {
+      document.querySelectorAll('.rv,.rl,.rr').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight - 60) el.classList.add('on');
+      });
+    }
 
-function setupScroll(){
-  const backTop = document.getElementById('backTop');
-  window.addEventListener('scroll',()=>{
-    backTop.classList.toggle('show',window.scrollY>400);
-    observeReveal();
-  });
-  observeReveal();
-}
+    function setupScroll() {
+      const bk = document.getElementById('bkTop');
+      window.addEventListener('scroll', () => {
+        bk.classList.toggle('show', window.scrollY > 400);
+        reveal();
+      });
+      reveal();
+    }
 
-function observeReveal(){
-  document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>{
-    const rect = el.getBoundingClientRect();
-    if(rect.top<window.innerHeight-80) el.classList.add('visible');
-  });
-}
+    function setupNav() {
+      const nav = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) { nav.style.boxShadow = '0 4px 30px rgba(99,102,241,.1)' }
+        else { nav.style.boxShadow = 'none' }
+      });
+    }
 
-function setupNav(){
-  const nav = document.getElementById('navbar');
-  window.addEventListener('scroll',()=>{
-    nav.style.background = window.scrollY>50?'rgba(6,9,15,.97)':'rgba(6,9,15,.85)';
-  });
-}
+    function closeMob() { document.getElementById('mobMenu').classList.remove('open') }
 
-function setupHamburger(){
-  const btn = document.getElementById('hamburger');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click',()=>menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
-}
+    function showToast(m) {
+      const t = document.getElementById('toast');
+      t.textContent = m; t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 3500);
+    }
 
-function showToast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),3500);
-}
+    function enquireProd(name) {
+      document.getElementById('eMsg').value = `I'm interested in the ${name}. Please let me know availability and price.`;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      showToast(` Enquiry set for: ${name}`);
+    }
 
-function enquireProduct(name){
-  document.getElementById('enquiryMsg').value = `I'm interested in the ${name}. Please let me know availability and price.`;
-  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
-  showToast(`📋 Enquiry set for: ${name}`);
-}
+    function submitEnq() {
+      const n = document.getElementById('eName').value.trim();
+      const ph = document.getElementById('ePhone').value.trim();
+      if (!n || !ph) { showToast(' Please fill Name and Phone!'); return; }
+      showToast(` Enquiry sent, ${n}! We'll contact you soon.`);
+      ['eName', 'ePhone', 'eMsg'].forEach(id => document.getElementById(id).value = '');
+      ['eCat', 'eBudget'].forEach(id => document.getElementById(id).value = '');
+    }
 
-function submitEnquiry(){
-  const name = document.getElementById('enquiryName').value.trim();
-  const phone = document.getElementById('enquiryPhone').value.trim();
-  if(!name||!phone){showToast('⚠️ Please fill Name and Phone!');return;}
-  showToast(`✅ Enquiry sent, ${name}! We'll contact you soon.`);
-  document.getElementById('enquiryName').value='';
-  document.getElementById('enquiryPhone').value='';
-  document.getElementById('enquiryMsg').value='';
-  document.getElementById('enquiryCategory').value='';
-  document.getElementById('enquiryBudget').value='';
-}
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
 
-document.addEventListener('DOMContentLoaded',init);
-</script>
+  <!-- CART OVERLAY & DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-head">
+      <div>
+        <h3> Your Cart</h3>
+        <div class="cart-head-sub" id="cartHeadSub">0 items</div>
+      </div>
+      <button class="cart-close" onclick="toggleCart()"></button>
+    </div>
+    <div class="cart-items" id="cartItemsList"></div>
+    <div class="cart-foot" id="cartFoot" style="display:none">
+      <div class="cart-total-row">
+        <span class="cart-total-label">Total Estimate</span>
+        <span class="cart-total-val" id="cartTotal">₹0</span>
+      </div>
+      <button class="btn-checkout" onclick="checkoutCart()"> Enquire All Items</button>
+      <button class="btn-enquire-small" onclick="clearCart()"> Clear Cart</button>
+    </div>
+  </div>
 </body>
+
 </html>
+
+
+
+
