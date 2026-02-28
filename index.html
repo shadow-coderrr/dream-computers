@@ -2233,6 +2233,450 @@
         font-size: 16px
       }
     }
+
+    /* ===== PRODUCT DETAIL MODAL ===== */
+    .pd-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 7, 32, .55);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+      backdrop-filter: blur(6px)
+    }
+
+    .pd-overlay.open {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .pd-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 2001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease, transform .35s ease;
+      transform: translateY(40px)
+    }
+
+    .pd-modal.open {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0)
+    }
+
+    .pd-box {
+      background: #fff;
+      border-radius: 24px;
+      width: 100%;
+      max-width: 960px;
+      max-height: 92vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 40px 100px rgba(99, 102, 241, .25), 0 0 0 1px rgba(99, 102, 241, .1)
+    }
+
+    /* Header */
+    .pd-head {
+      padding: 1rem 1.5rem;
+      border-bottom: 1.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(135deg, #f0f4ff, #fff);
+      flex-shrink: 0
+    }
+
+    .pd-back {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--p);
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+      padding: .4rem .8rem;
+      border-radius: 99px;
+      transition: var(--t)
+    }
+
+    .pd-back:hover {
+      background: rgba(99, 102, 241, .1)
+    }
+
+    .pd-head-title {
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--muted)
+    }
+
+    .pd-close {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-family: inherit;
+      transition: var(--t);
+      color: var(--text)
+    }
+
+    .pd-close:hover {
+      background: #fee2e2;
+      border-color: #fca5a5;
+      color: #ef4444
+    }
+
+    /* Body scroll area */
+    .pd-body {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      overflow-y: auto;
+      flex: 1
+    }
+
+    /* Left - Image panel */
+    .pd-left {
+      background: linear-gradient(160deg, #f0f4ff 0%, #fdf4ff 100%);
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      position: sticky;
+      top: 0;
+      border-right: 1.5px solid var(--border)
+    }
+
+    .pd-emoji {
+      font-size: 9rem;
+      filter: drop-shadow(0 20px 40px rgba(99, 102, 241, .2));
+      animation: float-up 4s ease-in-out infinite;
+      line-height: 1
+    }
+
+    .pd-badge-wrap {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      justify-content: center
+    }
+
+    .pd-condition {
+      background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+      color: #166534;
+      padding: .35rem .9rem;
+      border-radius: 99px;
+      font-size: .75rem;
+      font-weight: 800;
+      border: 1.5px solid #86efac
+    }
+
+    .pd-img-tags {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      justify-content: center
+    }
+
+    .pd-img-tag {
+      background: #fff;
+      border: 1.5px solid var(--border);
+      padding: .3rem .8rem;
+      border-radius: 8px;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--muted)
+    }
+
+    /* Right - Info panel */
+    .pd-right {
+      padding: 2rem;
+      overflow-y: auto
+    }
+
+    .pd-brand-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .7rem;
+      font-weight: 900;
+      color: var(--p);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: .5rem;
+      background: rgba(99, 102, 241, .08);
+      padding: .25rem .75rem;
+      border-radius: 6px
+    }
+
+    .pd-name {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: .5rem;
+      letter-spacing: -.5px
+    }
+
+    .pd-rating {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: 1.2rem
+    }
+
+    .pd-stars {
+      color: #f59e0b;
+      font-size: 1rem;
+      letter-spacing: 1px
+    }
+
+    .pd-rating span {
+      font-size: .8rem;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    /* Price */
+    .pd-price-box {
+      background: linear-gradient(135deg, #f0f4ff, #fdf4ff);
+      border: 1.5px solid rgba(99, 102, 241, .15);
+      border-radius: 16px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem
+    }
+
+    .pd-price-now {
+      font-size: 2rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--p), var(--o));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1
+    }
+
+    .pd-price-old {
+      font-size: .9rem;
+      color: var(--muted);
+      text-decoration: line-through;
+      margin-top: .25rem
+    }
+
+    .pd-saving {
+      font-size: .8rem;
+      color: #16a34a;
+      font-weight: 800;
+      margin-top: .3rem;
+      display: flex;
+      align-items: center;
+      gap: .3rem
+    }
+
+    /* Spec table */
+    .pd-spec-title {
+      font-size: .85rem;
+      font-weight: 900;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin: 1.2rem 0 .75rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--border)
+    }
+
+    .pd-spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.2rem
+    }
+
+    .pd-spec-table tr {
+      border-bottom: 1px solid var(--border)
+    }
+
+    .pd-spec-table tr:last-child {
+      border-bottom: none
+    }
+
+    .pd-spec-table td {
+      padding: .6rem .5rem;
+      font-size: .84rem
+    }
+
+    .pd-spec-table td:first-child {
+      color: var(--muted);
+      font-weight: 700;
+      width: 42%;
+      white-space: nowrap
+    }
+
+    .pd-spec-table td:last-child {
+      color: var(--text);
+      font-weight: 600
+    }
+
+    /* Highlights */
+    .pd-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .6rem;
+      margin-bottom: 1.5rem
+    }
+
+    .pd-hl {
+      background: var(--bg2);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: .75rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem
+    }
+
+    .pd-hl-icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: .05rem
+    }
+
+    .pd-hl-text {
+      font-size: .78rem;
+      color: var(--muted);
+      font-weight: 600;
+      line-height: 1.4
+    }
+
+    .pd-hl-text strong {
+      color: var(--text);
+      display: block;
+      font-size: .82rem;
+      margin-bottom: .1rem
+    }
+
+    /* Action buttons */
+    .pd-actions {
+      display: flex;
+      gap: .75rem;
+      flex-direction: column;
+      position: sticky;
+      bottom: 0;
+      background: #fff;
+      padding: 1.25rem 0 .5rem;
+      margin-top: auto;
+      border-top: 1.5px solid var(--border)
+    }
+
+    .pd-btn-cart {
+      background: linear-gradient(135deg, var(--p), var(--o));
+      color: #fff;
+      border: none;
+      padding: 1rem;
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--t);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      box-shadow: 0 8px 25px rgba(99, 102, 241, .35)
+    }
+
+    .pd-btn-cart:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 35px rgba(99, 102, 241, .5)
+    }
+
+    .pd-btn-cart.added {
+      background: linear-gradient(135deg, #22c55e, #16a34a)
+    }
+
+    .pd-btn-enq {
+      background: #fff;
+      color: var(--p);
+      border: 2px solid rgba(99, 102, 241, .3);
+      padding: .9rem;
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: .95rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--t);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem
+    }
+
+    .pd-btn-enq:hover {
+      background: rgba(99, 102, 241, .07);
+      border-color: var(--p);
+      transform: translateY(-1px)
+    }
+
+    /* Mobile */
+    @media(max-width:760px) {
+      .pd-body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr
+      }
+
+      .pd-left {
+        position: relative;
+        padding: 1.5rem 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        border-right: none;
+        border-bottom: 1.5px solid var(--border)
+      }
+
+      .pd-emoji {
+        font-size: 5rem
+      }
+
+      .pd-name {
+        font-size: 1.25rem
+      }
+
+      .pd-price-now {
+        font-size: 1.6rem
+      }
+
+      .pd-highlights {
+        grid-template-columns: 1fr
+      }
+
+      .pd-modal {
+        padding: .5rem;
+        align-items: flex-end
+      }
+
+      .pd-box {
+        border-radius: 20px 20px 0 0;
+        max-height: 94vh
+      }
+    }
   </style>
 </head>
 
@@ -2767,9 +3211,9 @@
       const list = f === 'all' ? products : products.filter(p => p.cat === f);
       if (!list.length) { grid.innerHTML = `<div class="prod-empty"> No laptops in this category right now. Enquire below!</div>`; return; }
       grid.innerHTML = list.map(p => `
-    <div class="prod-card rv" onclick="enquireProd('${p.name}')">
-      ${p.badge ? `<span class="prod-badge b-${p.badge}">${p.badge === 'hot' ? ' Hot Deal' : p.badge === 'best' ? ' Best Seller' : ' New'}</span>` : ''}
-      <div class="prod-img">${p.emoji}</div>
+    <div class="prod-card rv" onclick="window.open('product.html?id=${p.id}','_blank')" style="cursor:pointer">
+      ${p.badge ? `<span class="prod-badge b-${p.badge}">${p.badge === 'hot' ? '🔥 Hot Deal' : p.badge === 'best' ? '⭐ Best Seller' : '🆕 New'}</span>` : ''}
+      <div class="prod-img" style="position:relative">${p.emoji}<span style="position:absolute;bottom:6px;right:6px;background:rgba(99,102,241,.12);color:var(--p);font-size:.6rem;font-weight:800;padding:.2rem .5rem;border-radius:6px;letter-spacing:.3px">VIEW DETAILS</span></div>
       <div class="prod-body">
         <div class="prod-brand">${p.brand}</div>
         <div class="prod-name">${p.name}</div>
@@ -2841,9 +3285,158 @@
       ['eCat', 'eBudget'].forEach(id => document.getElementById(id).value = '');
     }
 
+
+    // ===== EXPANDED PRODUCT DETAILS =====
+    const productDetails = {
+      1: { processor: 'Intel Core i5-6300U (6th Gen)', ram: '8GB DDR4', storage: '256GB SSD', display: '14" Full HD (1920x1080) IPS', battery: '48Wh – Up to 8 hrs', os: 'Windows 10 Pro (Licensed)', weight: '1.36 kg', ports: 'USB 3.0 x2, HDMI, VGA, SD Card, RJ45', wifi: 'Intel Dual Band Wireless AC', bluetooth: 'Bluetooth 4.1', camera: '720p HD Webcam', keyboard: 'Backlit Keyboard', condition: 'Grade A – Excellent Condition', warranty: '30-Day Replacement Guarantee', about: 'The Dell Latitude E7470 is a premium business ultrabook sourced from corporate inventory. Ultra-thin, powerful, and built to last — perfect for professionals and executives.' },
+      2: { processor: 'Intel Core i5-7300U (7th Gen)', ram: '8GB DDR4', storage: '512GB SSD', display: '14" Full HD (1920x1080) IPS Anti-Glare', battery: '56Wh – Up to 10 hrs', os: 'Windows 10 Pro (Licensed)', weight: '1.68 kg', ports: 'USB 3.1 x3, Thunderbolt, HDMI, SD Card', wifi: 'Intel 8265 Dual Band AC', bluetooth: 'Bluetooth 4.2', camera: '720p HD Webcam + IR', keyboard: 'Backlit Spill-Resistant', condition: 'Grade A – Near Mint', warranty: '30-Day Replacement Guarantee', about: 'The Lenovo ThinkPad T470 is one of the most reliable business laptops ever made. Keyboard is world-class, battery life is exceptional. Ideal for coding, office work, and travel.' },
+      3: { processor: 'Intel Core i5-6200U (6th Gen)', ram: '8GB DDR4', storage: '256GB SSD', display: '14" Full HD Touch Display', battery: '44Wh – Up to 7 hrs', os: 'Windows 10 Pro (Licensed)', weight: '1.48 kg', ports: 'USB 3.0 x2, DisplayPort, Smart Card, RJ45', wifi: 'Intel Dual Band AC', bluetooth: 'Bluetooth 4.0', camera: '720p HD Webcam', keyboard: 'Spill-Resistant Keyboard', condition: 'Grade A – Excellent Condition', warranty: '30-Day Replacement Guarantee', about: 'HP EliteBook 840 G3 is built for serious professionals. Military-grade durability with a premium aluminum chassis. Touchscreen display for added productivity.' },
+      4: { processor: 'AMD A6-9225 Dual Core', ram: '4GB DDR4', storage: '1TB HDD', display: '15.6" HD (1366x768)', battery: '30Wh – Up to 5 hrs', os: 'Windows 10 Home', weight: '2.05 kg', ports: 'USB 3.0, USB 2.0, HDMI, SD Card, RJ45', wifi: '802.11 b/g/n', bluetooth: 'Bluetooth 4.1', camera: '720p Webcam', keyboard: 'Standard Keyboard', condition: 'Grade B – Good Working Condition', warranty: '15-Day Replacement', about: 'The Lenovo IdeaPad 330 is a budget-friendly student laptop perfect for everyday tasks, assignments, and browsing. Comes with 1TB storage for all your files.' },
+      5: { processor: 'Intel Core i3-7020U (7th Gen)', ram: '4GB DDR4', storage: '500GB HDD', display: '15.6" HD (1366x768)', battery: '42Wh – Up to 6 hrs', os: 'Windows 10 Home', weight: '2.04 kg', ports: 'USB 3.0 x2, HDMI, SD Card, RJ45', wifi: 'Dual Band 802.11ac', bluetooth: 'Bluetooth 4.2', camera: '720p HD Webcam', keyboard: 'Backlit Keyboard', condition: 'Grade B – Good Condition', warranty: '15-Day Replacement', about: 'Dell Inspiron 15 is a solid student laptop with Intel 7th Gen performance. Great for college, online classes, and everyday computing needs at an unbeatable price.' },
+      6: { processor: 'Intel Celeron N4000 Dual Core', ram: '4GB DDR4', storage: '256GB SSD', display: '15.6" HD (1366x768)', battery: '41Wh – Up to 7 hrs', os: 'Windows 10 Home S', weight: '1.91 kg', ports: 'USB 3.1, USB 2.0 x2, HDMI, SD Card', wifi: '802.11 b/g/n/ac', bluetooth: 'Bluetooth 4.2', camera: '720p Webcam', keyboard: 'Standard Keyboard', condition: 'Grade B – Good Working Condition', warranty: '15-Day Replacement', about: 'HP 15s is a compact and lightweight notebook ideal for students on a budget. SSD storage ensures fast boot and responsive performance for daily use.' },
+      7: { processor: 'Intel Core i5-8265U (8th Gen)', ram: '8GB DDR4', storage: '512GB SSD', display: '15.6" Full HD (1920x1080) NanoEdge', battery: '42Wh – Up to 8 hrs', os: 'Windows 10 Home', weight: '1.80 kg', ports: 'USB 3.2 x2, USB-C, HDMI, SD Card', wifi: '802.11ac Dual Band', bluetooth: 'Bluetooth 5.0', camera: '720p HD Webcam', keyboard: 'Chiclet Keyboard', condition: 'Grade A – Excellent Condition', warranty: '30-Day Replacement Guarantee', about: 'ASUS VivoBook 15 with 8th Gen Intel Core i5 offers powerful performance in a slim, stylish body. Perfect for business users who need power and portability.' },
+      8: { processor: 'Intel Core i5-10300H (10th Gen)', ram: '8GB DDR4', storage: '256GB NVMe SSD', display: '15.6" Full HD IPS 144Hz', battery: '51Wh – Up to 6 hrs', os: 'Windows 10 Home', weight: '2.25 kg', ports: 'USB 3.2 x3, HDMI 2.0, SD Card', wifi: 'Wi-Fi 6 AX201', bluetooth: 'Bluetooth 5.1', camera: '720p HD Webcam', keyboard: 'RGB Backlit Gaming', condition: 'Grade A – Excellent Gaming Condition', warranty: '30-Day Replacement Guarantee', gpu: 'NVIDIA GTX 1650 4GB GDDR5', about: 'MSI GF63 Thin is a powerful gaming laptop with NVIDIA GTX 1650 GPU. Play popular games at high settings and handle creative workloads with ease.' },
+      9: { processor: 'AMD Ryzen 5 4600H (4th Gen)', ram: '8GB DDR4', storage: '512GB NVMe SSD', display: '15.6" Full HD IPS 144Hz', battery: '60Wh – Up to 7 hrs', os: 'Windows 10 Home', weight: '2.3 kg', ports: 'USB 3.2 x4, HDMI 2.0, Thunderbolt', wifi: 'Wi-Fi 6 AX200', bluetooth: 'Bluetooth 5.1', camera: '720p HD Webcam', keyboard: 'RGB Backlit Gaming', condition: 'Grade A – Excellent Gaming Ready', warranty: '30-Day Replacement Guarantee', gpu: 'NVIDIA GTX 1650Ti 4GB GDDR6', about: 'Lenovo Legion 5 is a beast for gaming. AMD Ryzen 5 + GTX 1650Ti combo handles all modern games and heavy multitasking with ease. One of our best gaming deals.' }
+    };
+
+    let currentPDProduct = null;
+
+    function openPD(id) {
+      const p = products.find(x => x.id === id);
+      const d = productDetails[id];
+      if (!p || !d) return;
+      currentPDProduct = p;
+
+      // Populate header info
+      document.getElementById('pdEmoji').textContent = p.emoji;
+      document.getElementById('pdBrand').textContent = p.brand;
+      document.getElementById('pdName').textContent = p.name;
+      document.getElementById('pdCondition').textContent = ' ' + d.condition;
+      document.getElementById('pdPriceNow').textContent = p.price;
+      document.getElementById('pdPriceOld').textContent = 'MRP ' + p.old;
+
+      // Calculate savings
+      const now = parseInt(p.price.replace(/[^0-9]/g, ''));
+      const old = parseInt(p.old.replace(/[^0-9]/g, ''));
+      const saved = old - now;
+      const pct = Math.round((saved / old) * 100);
+      document.getElementById('pdSaving').innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> You save ₹' + saved.toLocaleString('en-IN') + ' (' + pct + '% OFF)';
+
+      // Image tags
+      document.getElementById('pdImgTags').innerHTML = p.specs.map(s => `<span class="pd-img-tag">${s}</span>`).join('');
+
+      // Highlights
+      const hls = [
+        { icon: '', title: 'Quality Tested', text: d.condition },
+        { icon: '', title: 'Ready to Use', text: 'Formatted, cleaned & configured' },
+        { icon: '', title: 'Warranty', text: d.warranty },
+        { icon: '', title: 'Ideal For', text: p.cat === 'gaming' ? 'Gaming & Heavy Tasks' : p.cat === 'student' ? 'Students & College' : 'Business & Office' }
+      ];
+      document.getElementById('pdHighlights').innerHTML = hls.map(h => `<div class="pd-hl"><div class="pd-hl-icon">${h.icon}</div><div class="pd-hl-text"><strong>${h.title}</strong>${h.text}</div></div>`).join('');
+
+      // Spec table
+      const specs = [
+        ['Processor', d.processor],
+        ['RAM', d.ram],
+        ['Storage', d.storage],
+        ['Display', d.display],
+        ['Graphics', d.gpu || 'Intel Integrated Graphics'],
+        ['Battery', d.battery],
+        ['Operating System', d.os],
+        ['Weight', d.weight],
+        ['Ports', d.ports],
+        ['Wi-Fi', d.wifi],
+        ['Bluetooth', d.bluetooth],
+        ['Camera', d.camera],
+        ['Keyboard', d.keyboard]
+      ];
+      document.getElementById('pdSpecTable').innerHTML = specs.map(([k, v]) => `<tr><td>${k}</td><td>${v}</td></tr>`).join('');
+
+      // Update cart button state
+      const inCart = cart.some(i => i.id === id);
+      const btn = document.getElementById('pdCartBtn');
+      btn.textContent = inCart ? ' Added to Cart' : ' Add to Cart';
+      btn.className = inCart ? 'pd-btn-cart added' : 'pd-btn-cart';
+
+      // Open modal
+      document.getElementById('pdOverlay').classList.add('open');
+      document.getElementById('pdModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePD() {
+      document.getElementById('pdOverlay').classList.remove('open');
+      document.getElementById('pdModal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function pdAddCart() {
+      if (!currentPDProduct) return;
+      addToCartById(currentPDProduct.id);
+      const btn = document.getElementById('pdCartBtn');
+      btn.textContent = ' Added to Cart';
+      btn.classList.add('added');
+    }
+
+    function pdEnquire() {
+      if (!currentPDProduct) return;
+      closePD();
+      enquireProd(currentPDProduct.name);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closePD(); });
+
     document.addEventListener('DOMContentLoaded', init);
   </script>
 
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="pd-overlay" id="pdOverlay" onclick="closePD()"></div>
+  <div class="pd-modal" id="pdModal">
+    <div class="pd-box">
+      <div class="pd-head">
+        <button class="pd-back" onclick="closePD()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          Back to Laptops
+        </button>
+        <span class="pd-head-title">Product Details</span>
+        <button class="pd-close" onclick="closePD()"></button>
+      </div>
+      <div class="pd-body">
+        <div class="pd-left">
+          <div class="pd-emoji" id="pdEmoji"></div>
+          <div class="pd-badge-wrap">
+            <span class="pd-condition" id="pdCondition">✅ Quality Tested</span>
+          </div>
+          <div class="pd-img-tags" id="pdImgTags"></div>
+        </div>
+        <div class="pd-right">
+          <div class="pd-brand-chip" id="pdBrand">Brand</div>
+          <div class="pd-name" id="pdName">Laptop Name</div>
+          <div class="pd-rating">
+            <span class="pd-stars"></span>
+            <span id="pdRating">4.5 Verified Stock</span>
+          </div>
+          <div class="pd-price-box">
+            <div class="pd-price-now" id="pdPriceNow">₹0</div>
+            <div class="pd-price-old" id="pdPriceOld">MRP ₹0</div>
+            <div class="pd-saving" id="pdSaving"></div>
+          </div>
+          <div class="pd-highlights" id="pdHighlights"></div>
+          <div class="pd-spec-title">Full Specifications</div>
+          <table class="pd-spec-table" id="pdSpecTable"></table>
+          <div class="pd-actions">
+            <button class="pd-btn-cart" id="pdCartBtn" onclick="pdAddCart()"> Add to Cart</button>
+            <button class="pd-btn-enq" onclick="pdEnquire()"> Enquire about this Laptop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- CART OVERLAY & DRAWER -->
   <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
   <div class="cart-drawer" id="cartDrawer">
