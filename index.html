@@ -137,12 +137,26 @@
 
     .logo {
       font-size: 1.3rem;
+      font-size: clamp(1.1rem, 4vw, 1.3rem);
       font-weight: 900;
       letter-spacing: -.5px;
       display: flex;
       align-items: center;
       gap: 8px;
       color: var(--p)
+    }
+
+    .logo-box {
+      width: 32px;
+      height: 32px;
+      background: var(--p);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: .9rem;
+      flex-shrink: 0
     }
 
     .logo-box {
@@ -518,19 +532,19 @@
     }
 
     .bs1 {
-      background: linear-gradient(125deg, #1e3a8a, #2563eb 60%, #60a5fa)
+      background: url('assets/macbook_bnr.png') center/cover no-repeat;
     }
 
     .bs2 {
-      background: linear-gradient(125deg, #064e3b, #059669 60%, #34d399)
+      background: url('assets/hp_laptop.png') center/cover no-repeat;
     }
 
     .bs3 {
-      background: linear-gradient(125deg, #4c1d95, #7c3aed 60%, #a78bfa)
+      background: url('assets/office_laptop_dell.png') center/cover no-repeat;
     }
 
     .bs4 {
-      background: linear-gradient(125deg, #7c2d12, #c2410c 60%, #fb923c)
+      background: url('assets/store_interior.png') center/cover no-repeat;
     }
 
     .bnr-cnt {
@@ -1950,15 +1964,7 @@
     </div>
   </div>
 
-  <!-- TOP BAR -->
-  <div class="topbar" id="top">
-    <div class="tb-l"><span><i class="fa-solid fa-location-dot"></i>75, Super Bazaar, Trichy</span></div>
-    <div class="tb-r">
-      <span><i class="fa-solid fa-phone"></i>+91 80987 77744</span>
-      <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank"><i class="fa-brands fa-youtube"
-          style="color:#ef4444"></i> YouTube</a>
-    </div>
-  </div>
+
 
   <!-- NAVBAR -->
   <nav class="navbar">
