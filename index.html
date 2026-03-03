@@ -1,1767 +1,641 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dream Computers | Trichy's Premium Refurbished Laptops</title>
-  <meta name="description"
-    content="Dream Computers – Trichy's #1 shop for affordable, quality-tested refurbished laptops from Apple, HP, Dell, Lenovo. Super Bazaar, Trichy." />
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="fevicon/fevicon.jpeg" />
-  <link rel="apple-touch-icon" href="fevicon/fevicon.jpeg" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      /* Clean White Theme Colors */
-      --primary: #2563eb;
-      /* Deep Professional Blue */
-      --primary-hover: #1d4ed8;
-      --text-main: #111827;
-      /* Slate 900 */
-      --text-light: #6b7280;
-      /* Gray 500 */
-      --bg-page: #f9fafb;
-      /* Gray 50 */
-      --bg-card: #ffffff;
-      /* Pure White */
-      --border-color: #e5e7eb;
-      /* Gray 200 */
-
-      --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: var(--bg-page);
-      color: var(--text-main);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Top Bar */
-    .top-bar {
-      background-color: #1f2937;
-      /* Dark slate for contrast */
-      color: #f3f4f6;
-      font-size: 0.8rem;
-      padding: 8px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .top-bar-left,
-    .top-bar-right {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-    }
-
-    .top-bar i {
-      margin-right: 6px;
-      color: #9ca3af;
-    }
-
-    /* Nav Bar */
-    .navbar {
-      background-color: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
-      padding: 15px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      letter-spacing: -0.5px;
-    }
-
-    .logo span {
-      color: var(--text-main);
-    }
-
-    .search-container {
-      flex: 1;
-      max-width: 500px;
-      margin: 0 20px;
-      position: relative;
-    }
-
-    .search-container input {
-      width: 100%;
-      padding: 12px 20px;
-      padding-right: 50px;
-      border: 1px solid var(--border-color);
-      border-radius: 99px;
-      font-size: 0.95rem;
-      background-color: var(--bg-page);
-      transition: var(--transition);
-    }
-
-    .search-container input:focus {
-      outline: none;
-      border-color: var(--primary);
-      background-color: var(--bg-card);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-    }
-
-    .search-container button {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: var(--primary);
-      color: white;
-      border: none;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .search-container button:hover {
-      background: var(--primary-hover);
-    }
-
-    .nav-actions {
-      display: flex;
-      gap: 25px;
-      align-items: center;
-    }
-
-    .icon-btn {
-      position: relative;
-      font-size: 1.3rem;
-      color: var(--text-main);
-      transition: var(--transition);
-    }
-
-    .icon-btn:hover {
-      color: var(--primary);
-    }
-
-    .badge {
-      position: absolute;
-      top: -8px;
-      right: -8px;
-      background-color: #ef4444;
-      color: white;
-      font-size: 0.65rem;
-      font-weight: 700;
-      width: 18px;
-      height: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
-    }
-
-    /* Menu Bar */
-    .menu-bar {
-      background-color: var(--bg-card);
-      border-bottom: 1px solid var(--border-color);
-      padding: 0 5%;
-    }
-
-    .menu-list {
-      display: flex;
-      list-style: none;
-      gap: 35px;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    .menu-list::-webkit-scrollbar {
-      display: none;
-    }
-
-    .menu-list li a {
-      display: block;
-      padding: 15px 0;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-main);
-      border-bottom: 2px solid transparent;
-      transition: var(--transition);
-      white-space: nowrap;
-    }
-
-    .menu-list li a:hover {
-      color: var(--primary);
-      border-bottom-color: var(--primary);
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 30px 5%;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 20px;
-    }
-
-    .hero-main {
-      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-      border-radius: 16px;
-      padding: 60px 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      border: 1px solid #bfdbfe;
-    }
-
-    .hero-main::after {
-      content: '\f108';
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      position: absolute;
-      right: -20px;
-      bottom: -50px;
-      font-size: 15rem;
-      color: rgba(59, 130, 246, 0.05);
-      pointer-events: none;
-    }
-
-    .hero-main h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 15px;
-      color: #1e3a8a;
-      max-width: 550px;
-    }
-
-    .hero-main p {
-      font-size: 1.15rem;
-      color: #3b82f6;
-      margin-bottom: 35px;
-      max-width: 450px;
-      font-weight: 500;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background-color: var(--primary);
-      color: white;
-      padding: 16px 32px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: var(--transition);
-      align-self: flex-start;
-      box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-    }
-
-    .hero-side {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .side-card {
-      background: var(--bg-card);
-      border-radius: 16px;
-      padding: 35px 30px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border: 1px solid var(--border-color);
-      transition: var(--transition);
-    }
-
-    .side-card:hover {
-      box-shadow: var(--shadow-md);
-      border-color: #bfdbfe;
-    }
-
-    .side-card.brand-gradient {
-      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-      color: white;
-      border: none;
-      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
-    }
-
-    .side-card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .side-card p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .side-link {
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.95rem;
-    }
-
-    .side-card.brand-gradient .side-link {
-      color: white;
-    }
-
-    .side-card:not(.brand-gradient) .side-link {
-      color: var(--primary);
-    }
-
-    /* Categories Section */
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 25px;
-    }
-
-    .section-header h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--text-main);
-      letter-spacing: -0.5px;
-    }
-
-    .view-all {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: var(--transition);
-    }
-
-    .view-all:hover {
-      color: var(--primary-hover);
-      transform: translateX(3px);
-    }
-
-    .categories {
-      padding: 40px 5%;
-    }
-
-    .cat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-      gap: 20px;
-    }
-
-    .cat-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 25px 15px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      transition: var(--transition);
-    }
-
-    .cat-card:hover {
-      border-color: var(--primary);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-4px);
-    }
-
-    .cat-icon {
-      width: 55px;
-      height: 55px;
-      background: var(--bg-page);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.6rem;
-      color: var(--primary);
-      transition: var(--transition);
-    }
-
-    .cat-card:hover .cat-icon {
-      background: var(--primary);
-      color: white;
-    }
-
-    .cat-card h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-main);
-    }
-
-    /* Products Grid */
-    .products-section {
-      padding: 40px 5% 80px;
-    }
-
-    .prop-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .product-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      transition: var(--transition);
-      overflow: hidden;
-    }
-
-    .product-card:hover {
-      box-shadow: var(--shadow-hover);
-      border-color: #d1d5db;
-      transform: translateY(-4px);
-    }
-
-    .product-badge {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: #10b981;
-      /* Emerald 500 */
-      color: white;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 99px;
-      text-transform: uppercase;
-      z-index: 1;
-      letter-spacing: 0.5px;
-    }
-
-    .product-badge.hot {
-      background: #ef4444;
-      /* Red 500 */
-    }
-
-    .product-img {
-      height: 200px;
-      background: #f8fafc;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #cbd5e1;
-      font-size: 4rem;
-      transition: var(--transition);
-    }
-
-    .product-card:hover .product-img {
-      background: #f1f5f9;
-    }
-
-    .product-brand {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 6px;
-      font-weight: 700;
-    }
-
-    .product-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 15px;
-      line-height: 1.4;
-      flex: 1;
-      color: var(--text-main);
-    }
-
-    .product-specs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    .spec-tag {
-      background: var(--bg-page);
-      padding: 5px 12px;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      color: var(--text-light);
-      font-weight: 600;
-      border: 1px solid var(--border-color);
-    }
-
-    .product-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: auto;
-      border-top: 1px solid var(--border-color);
-      padding-top: 20px;
-    }
-
-    .price-wrap {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .price-new {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .price-old {
-      font-size: 0.85rem;
-      color: #9ca3af;
-      text-decoration: line-through;
-      font-weight: 500;
-    }
-
-    .btn-enquiry {
-      background: #10b981;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 99px;
-      font-size: 0.9rem;
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: var(--transition);
-      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn-enquiry:hover {
-      background: #059669;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
-    }
-
-    .glitch-text {
-      display: inline-block;
-      animation: glitch-flicker 4s infinite;
-    }
-
-    @keyframes glitch-flicker {
-
-      0%,
-      14%,
-      16%,
-      100% {
-        text-shadow: none;
-        transform: none;
-      }
-
-      15% {
-        text-shadow: -2px 0px 0px rgba(239, 68, 68, 0.9), 2px 0px 0px rgba(59, 130, 246, 0.9);
-        transform: skewX(-3deg);
-      }
-
-      80% {
-        text-shadow: 2px 0px 0px rgba(239, 68, 68, 0.9), -2px 0px 0px rgba(59, 130, 246, 0.9);
-        transform: skewX(2deg);
-      }
-    }
-
-    /* Product Bottom Row Customizations */
-    .qty-wrap {
-      display: flex;
-      align-items: center;
-      background: var(--bg-page);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      overflow: hidden;
-      height: 38px;
-    }
-
-    .qty-btn {
-      width: 32px;
-      height: 100%;
-      background: transparent;
-      border: none;
-      font-weight: 700;
-      color: var(--text-light);
-      cursor: pointer;
-      transition: var(--transition);
-    }
-
-    .qty-btn:hover {
-      background: #e5e7eb;
-      color: var(--text-main);
-    }
-
-    .qty-num {
-      width: 32px;
-      text-align: center;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: var(--text-main);
-    }
-
-    .action-group {
-      display: flex;
-      gap: 10px;
-      margin-top: 15px;
-      width: 100%;
-    }
-
-    .btn-add {
-      flex: 1;
-      background: var(--text-main);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: var(--transition);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-add:hover {
-      background: var(--primary);
-      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
-    }
-
-    .btn-enquiry-icon {
-      width: 38px;
-      height: 38px;
-      background: #10b981;
-      color: white;
-      border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-decoration: none;
-      transition: var(--transition);
-      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
-    }
-
-    .btn-enquiry-icon:hover {
-      background: #059669;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
-    }
-
-    .flex-col {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    /* Cart Sidebar */
-    .cart-sidebar {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 100%;
-      max-width: 400px;
-      height: 100vh;
-      background: var(--bg-card);
-      z-index: 2001;
-      box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
-      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cart-sidebar.open {
-      right: 0;
-    }
-
-    .cart-header {
-      padding: 20px 25px;
-      border-bottom: 1px solid var(--border-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .cart-header h3 {
-      font-size: 1.2rem;
-      font-weight: 800;
-    }
-
-    .cart-items {
-      flex: 1;
-      overflow-y: auto;
-      padding: 20px 25px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .cart-item {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #f3f4f6;
-    }
-
-    .c-item-img {
-      width: 60px;
-      height: 60px;
-      background: #f8fafc;
-      border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--primary);
-      font-size: 1.5rem;
-    }
-
-    .c-item-details {
-      flex: 1;
-    }
-
-    .c-item-title {
-      font-size: 0.9rem;
-      font-weight: 700;
-      line-height: 1.3;
-      margin-bottom: 6px;
-    }
-
-    .c-item-price {
-      font-size: 0.9rem;
-      color: var(--primary);
-      font-weight: 700;
-    }
-
-    .c-item-qty {
-      font-size: 0.8rem;
-      color: var(--text-light);
-      margin-left: 8px;
-    }
-
-    .c-item-remove {
-      color: #ef4444;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1.1rem;
-      padding: 5px;
-    }
-
-    .cart-footer {
-      padding: 20px 25px;
-      border-top: 1px solid var(--border-color);
-      background: #f9fafb;
-    }
-
-    .cart-total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-      font-size: 1.1rem;
-      font-weight: 800;
-    }
-
-    .btn-checkout {
-      width: 100%;
-      background: var(--primary);
-      color: white;
-      padding: 14px;
-      border: none;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: var(--transition);
-      display: flex;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .btn-checkout:hover {
-      background: var(--primary-hover);
-    }
-
-    .empty-cart-msg {
-      text-align: center;
-      color: var(--text-light);
-      margin-top: 40px;
-      font-weight: 500;
-    }
-
-    /* Banner Section */
-    .banner-section {
-      padding: 0 5% 60px;
-    }
-
-    .banner-box {
-      background: #1f2937;
-      border-radius: 16px;
-      padding: 40px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: white;
-      background-image: radial-gradient(circle at top right, #374151 0%, #1f2937 100%);
-      box-shadow: var(--shadow-md);
-    }
-
-    .banner-content h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    .banner-content p {
-      color: #9ca3af;
-      font-size: 1.1rem;
-      max-width: 500px;
-    }
-
-    .banner-action .btn-outline {
-      display: inline-block;
-      background: transparent;
-      border: 2px solid white;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 99px;
-      font-weight: 700;
-      transition: var(--transition);
-    }
-
-    .banner-action .btn-outline:hover {
-      background: white;
-      color: #1f2937;
-    }
-
-    /* Footer */
-    .footer {
-      background: #111827;
-      /* Darker than slate */
-      color: #f3f4f6;
-      padding: 80px 5% 20px;
-      border-top: 1px solid #1f2937;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2.5fr 1fr 1fr 1.5fr;
-      gap: 40px;
-      margin-bottom: 60px;
-    }
-
-    .footer-col h4 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 25px;
-      color: white;
-      letter-spacing: 0.5px;
-    }
-
-    .footer-logo {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: white;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      letter-spacing: -0.5px;
-    }
-
-    .footer-logo span {
-      color: var(--primary);
-    }
-
-    .footer-desc {
-      color: #9ca3af;
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-bottom: 30px;
-      max-width: 320px;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .footer-links a {
-      color: #9ca3af;
-      font-size: 0.95rem;
-      transition: var(--transition);
-      display: flex;
-      align-items: center;
-      font-weight: 500;
-    }
-
-    .footer-links a:hover {
-      color: white;
-      transform: translateX(4px);
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .contact-icon {
-      color: var(--primary);
-      font-size: 1.3rem;
-      margin-top: 2px;
-    }
-
-    .contact-text h5 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: white;
-      margin-bottom: 4px;
-    }
-
-    .contact-text p {
-      font-size: 0.95rem;
-      color: #9ca3af;
-      line-height: 1.5;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .social-icons a {
-      width: 42px;
-      height: 42px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 1.1rem;
-      transition: var(--transition);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .social-icons a:hover {
-      background: var(--primary);
-      border-color: var(--primary);
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-
-    .footer-bottom span {
-      color: #9ca3af;
-    }
-
-    /* Mobile Hamburger & Overlay Menu */
-    .hamburger-btn {
-      display: none;
-      background: none;
-      border: none;
-      font-size: 1.6rem;
-      color: var(--text-main);
-      cursor: pointer;
-      padding: 5px;
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      left: -100%;
-      width: 85%;
-      max-width: 320px;
-      height: 100vh;
-      background: var(--bg-card);
-      z-index: 2000;
-      box-shadow: 5px 0 25px rgba(0, 0, 0, 0.15);
-      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      display: flex;
-      flex-direction: column;
-      padding: 25px;
-    }
-
-    .mobile-menu.active {
-      left: 0;
-    }
-
-    .mobile-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(17, 24, 39, 0.6);
-      backdrop-filter: blur(4px);
-      z-index: 1999;
-      opacity: 0;
-      visibility: hidden;
-      transition: 0.3s ease;
-    }
-
-    .mobile-overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .close-menu {
-      align-self: flex-end;
-      background: #f3f4f6;
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      font-size: 1.2em;
-      color: var(--text-main);
-      cursor: pointer;
-      margin-bottom: 25px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: var(--transition);
-    }
-
-    .close-menu:hover {
-      background: #e5e7eb;
-      color: #ef4444;
-    }
-
-    .mobile-nav-links {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 30px;
-    }
-
-    .mobile-nav-links a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 18px;
-      border-radius: 10px;
-      font-weight: 600;
-      background: #f9fafb;
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-      transition: var(--transition);
-    }
-
-    .mobile-nav-links a:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: #eff6ff;
-    }
-
-    .mobile-nav-links a i {
-      color: #9ca3af;
-    }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-side {
-        flex-direction: row;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-
-      /* Fix horizontal space issues on mobile */
-      body,
-      html {
-        overflow-x: hidden;
-        width: 100%;
-      }
-
-      .top-bar {
-        display: none;
-      }
-
-      .search-container {
-        display: none;
-      }
-
-      .navbar {
-        padding: 15px 5%;
-      }
-
-      .logo {
-        font-size: 1.35rem;
-      }
-
-      .nav-actions {
-        gap: 18px;
-      }
-
-      .hamburger-btn {
-        display: block;
-      }
-
-      .menu-bar {
-        display: none;
-      }
-
-      .hero-side {
-        flex-direction: column;
-      }
-
-      .hero-main {
-        padding: 40px 25px;
-        text-align: center;
-      }
-
-      .hero-main h1 {
-        font-size: 2.2rem;
-        margin: 0 auto 15px;
-      }
-
-      .hero-main p {
-        margin: 0 auto 30px;
-      }
-
-      .btn-primary {
-        align-self: center;
-      }
-
-      .banner-box {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-        padding: 35px 20px;
-      }
-
-      .footer {
-        padding: 60px 8% 20px;
-      }
-
-      .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .footer-col {
-        text-align: center;
-      }
-
-      .footer-desc {
-        margin: 0 auto 25px;
-      }
-
-      .social-icons {
-        justify-content: center;
-      }
-
-      .contact-item {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-      }
-
-      .prop-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-      }
-    }
-  </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dream Computers | Trichy's #1 Refurbished Laptop Store</title>
+<meta name="description" content="Dream Computers – Trichy's best shop for premium refurbished laptops. Apple, HP, Dell, Lenovo at unbeatable prices. Super Bazaar, Trichy."/>
+<link rel="icon" type="image/jpeg" href="fevicon/fevicon.jpeg"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+:root{
+  --p:#2563eb;--pd:#1d4ed8;--pl:#eff6ff;
+  --acc:#10b981;--red:#ef4444;--warn:#f59e0b;
+  --t:#0f172a;--tm:#64748b;
+  --bg:#f1f5f9;--card:#fff;
+  --bdr:#e2e8f0;
+  --r:10px;--rl:16px;
+  --sh:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.05);
+  --shm:0 4px 16px rgba(0,0,0,.1);
+  --tr:.25s cubic-bezier(.4,0,.2,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:inherit}
+
+/* TOP BAR */
+.topbar{background:#1e293b;color:#94a3b8;font-size:.75rem;padding:7px 5%;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tb-l,.tb-r{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.topbar i{margin-right:5px;color:#475569}
+.topbar a{color:#94a3b8;transition:var(--tr)}
+.topbar a:hover{color:#fff}
+
+/* NAVBAR */
+.navbar{background:var(--card);border-bottom:1px solid var(--bdr);padding:0 5%;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:500;box-shadow:var(--sh)}
+.nav-l{display:flex;align-items:center;gap:12px}
+.hmbg{background:none;border:none;width:38px;height:38px;display:flex;align-items:center;justify-content:center;border-radius:8px;font-size:1.25rem;color:var(--t);transition:var(--tr)}
+.hmbg:hover{background:var(--bg);color:var(--p)}
+.logo{font-size:1.3rem;font-weight:900;letter-spacing:-.5px;display:flex;align-items:center;gap:8px;color:var(--p)}
+.logo-box{width:32px;height:32px;background:var(--p);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;flex-shrink:0}
+/* GLITCH LOGO */
+.gw{position:relative;display:inline-block;animation:gl-main 4s linear infinite}
+.gw .gd{color:var(--t)}
+.gw::before{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;color:#ff003c;font-weight:900;pointer-events:none;animation:gl-r 4s linear infinite;z-index:2}
+.gw::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;color:#00fff9;font-weight:900;pointer-events:none;animation:gl-c 4s linear infinite;animation-delay:.06s;z-index:2}
+@keyframes gl-main{0%,19%,22%,49%,53%,81%,84%,100%{text-shadow:none;transform:none}20%{text-shadow:-4px 0 #ff003c,4px 0 #00fff9;transform:skewX(-1.5deg)}20.5%{text-shadow:4px 0 #ff003c,-4px 0 #00fff9;transform:skewX(1.5deg)}21%{text-shadow:-5px 0 #ffe600,5px 0 #ff003c;transform:translateX(-2px)}21.5%{text-shadow:none;transform:none}50%{text-shadow:-7px 0 #ff003c,7px 0 #00fff9;transform:translateX(-3px) skewX(-2deg)}50.5%{text-shadow:7px 0 #ff003c,-7px 0 #00fff9;transform:translateX(3px) skewX(2deg)}51%{text-shadow:-4px 0 #ffe600,4px 0 #ff003c}51.5%{text-shadow:none;transform:none}82%{text-shadow:-3px 0 #ff003c,3px 0 #00fff9;transform:skewX(-1deg)}82.5%{text-shadow:none;transform:none}}
+@keyframes gl-r{0%,19.5%,22.5%,49.5%,53%,81.5%,84%,100%{opacity:0;clip-path:inset(50% 0 50% 0);transform:none}20%{opacity:1;clip-path:inset(5% 0 65% 0);transform:translateX(-9px)}20.5%{clip-path:inset(48% 0 18% 0);transform:translateX(10px)}21%{clip-path:inset(22% 0 44% 0);transform:translateX(-6px)}21.5%{clip-path:inset(68% 0 4% 0);transform:translateX(7px);opacity:0}50%{opacity:1;clip-path:inset(3% 0 75% 0);transform:translateX(-11px)}50.5%{clip-path:inset(60% 0 5% 0);transform:translateX(13px)}51%{clip-path:inset(30% 0 38% 0);transform:translateX(-7px)}51.5%{clip-path:inset(78% 0 2% 0);transform:translateX(9px);opacity:0}82%{opacity:1;clip-path:inset(15% 0 58% 0);transform:translateX(-6px)}82.5%{clip-path:inset(62% 0 8% 0);transform:translateX(7px);opacity:0}}
+@keyframes gl-c{0%,19.5%,22.5%,49.5%,53%,81.5%,84%,100%{opacity:0;clip-path:inset(50% 0 50% 0);transform:none}20%{opacity:1;clip-path:inset(65% 0 5% 0);transform:translateX(9px)}20.5%{clip-path:inset(18% 0 48% 0);transform:translateX(-10px)}21%{clip-path:inset(44% 0 22% 0);transform:translateX(6px)}21.5%{clip-path:inset(4% 0 68% 0);transform:translateX(-7px);opacity:0}50%{opacity:1;clip-path:inset(75% 0 3% 0);transform:translateX(11px)}50.5%{clip-path:inset(5% 0 60% 0);transform:translateX(-13px)}51%{clip-path:inset(38% 0 30% 0);transform:translateX(7px)}51.5%{clip-path:inset(2% 0 78% 0);transform:translateX(-9px);opacity:0}82%{opacity:1;clip-path:inset(58% 0 15% 0);transform:translateX(6px)}82.5%{clip-path:inset(8% 0 62% 0);transform:translateX(-7px);opacity:0}}
+.nav-r{display:flex;align-items:center;gap:4px}
+.nicn{position:relative;background:none;border:none;width:38px;height:38px;border-radius:9px;font-size:1.05rem;color:var(--tm);display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.nicn:hover{background:var(--bg);color:var(--p)}
+.nbadge{position:absolute;top:4px;right:4px;background:var(--red);color:#fff;font-size:.5rem;font-weight:800;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--card)}
+
+/* CAT NAV */
+.cat-nav{background:var(--card);border-bottom:1px solid var(--bdr)}
+.cat-nav ul{display:flex;list-style:none;gap:0;overflow-x:auto;scrollbar-width:none;padding:0 5%}
+.cat-nav ul::-webkit-scrollbar{display:none}
+.cat-nav ul a{display:block;padding:12px 14px;font-size:.83rem;font-weight:600;color:var(--tm);white-space:nowrap;border-bottom:2.5px solid transparent;transition:var(--tr)}
+.cat-nav ul a:hover,.cat-nav ul a.active{color:var(--p);border-bottom-color:var(--p)}
+
+/* BANNER CAROUSEL */
+.bnr-sec{padding:12px 4%}
+.bnr-wrap{position:relative;border-radius:var(--rl);overflow:hidden;box-shadow:var(--shm);aspect-ratio:3/1;min-height:160px}
+.bnr-slides{display:flex;height:100%;transition:.55s cubic-bezier(.4,0,.2,1)}
+.bnr-slide{min-width:100%;height:100%;display:flex;align-items:center;padding:36px 50px;position:relative;overflow:hidden}
+.bs1{background:linear-gradient(125deg,#1e3a8a,#2563eb 60%,#60a5fa)}
+.bs2{background:linear-gradient(125deg,#064e3b,#059669 60%,#34d399)}
+.bs3{background:linear-gradient(125deg,#4c1d95,#7c3aed 60%,#a78bfa)}
+.bs4{background:linear-gradient(125deg,#7c2d12,#c2410c 60%,#fb923c)}
+.bnr-cnt{color:#fff;z-index:2;position:relative;max-width:460px}
+.bnr-tag{display:inline-block;background:rgba(255,255,255,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:.68rem;font-weight:700;padding:4px 12px;border-radius:99px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.bnr-cnt h1{font-size:2rem;font-weight:900;line-height:1.1;margin-bottom:6px;letter-spacing:-.5px}
+.bnr-cnt p{font-size:.88rem;opacity:.82;margin-bottom:18px;line-height:1.5}
+.bnr-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1e293b;padding:10px 22px;border-radius:99px;font-weight:700;font-size:.84rem;transition:var(--tr);box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.bnr-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.bnr-bgico{position:absolute;right:-20px;bottom:-40px;font-size:13rem;opacity:.055;color:#fff;pointer-events:none;z-index:1}
+.bnr-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:10}
+.bdot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);border:none;transition:var(--tr);cursor:pointer;padding:0}
+.bdot.on{background:#fff;width:22px;border-radius:4px}
+.bnr-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.18);backdrop-filter:blur(6px);color:#fff;border:none;width:36px;height:36px;border-radius:50%;font-size:.85rem;z-index:10;display:flex;align-items:center;justify-content:center;transition:var(--tr);cursor:pointer}
+.bnr-arr:hover{background:rgba(255,255,255,.32)}
+.bnr-arr.prev{left:12px}.bnr-arr.next{right:12px}
+
+/* TRUST STRIP */
+.trust{background:var(--card);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:16px 4%;display:flex;justify-content:space-around;flex-wrap:wrap;gap:12px;margin-bottom:0}
+.ti{display:flex;align-items:center;gap:10px;flex:1;min-width:140px}
+.ti-ico{width:38px;height:38px;background:var(--pl);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--p);flex-shrink:0}
+.ti h5{font-size:.78rem;font-weight:700;margin-bottom:1px}
+.ti p{font-size:.68rem;color:var(--tm)}
+
+/* SECTION */
+.sec{padding:22px 4% 8px}
+.sec-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.sec-t{font-size:1.1rem;font-weight:800;color:var(--t);display:flex;align-items:center;gap:10px}
+.sec-t::after{content:'';display:block;width:24px;height:3px;background:var(--p);border-radius:2px}
+.val{font-size:.78rem;font-weight:700;color:var(--p);display:flex;align-items:center;gap:4px;transition:var(--tr);white-space:nowrap}
+.val:hover{color:var(--pd);transform:translateX(2px)}
+
+/* BRANDS */
+.brands-sc{overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:0 4% 10px;margin:0 -4%}
+.brands-sc::-webkit-scrollbar{display:none}
+.brd-row{display:flex;gap:10px;width:max-content;padding:0 4%}
+.brd-card{display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;transition:var(--tr);text-decoration:none}
+.brd-card:hover{transform:translateY(-3px)}
+.brd-img{width:72px;height:72px;border-radius:var(--rl);background:var(--card);box-shadow:var(--sh);border:1.5px solid var(--bdr);display:flex;align-items:center;justify-content:center;transition:var(--tr);overflow:hidden}
+.brd-card:hover .brd-img{border-color:var(--p);box-shadow:0 6px 18px rgba(37,99,235,.15)}
+.brd-nm{font-size:.68rem;font-weight:700;color:var(--tm);text-align:center;max-width:72px;line-height:1.3}
+.brd-card:hover .brd-nm{color:var(--p)}
+.bi-apple{font-size:1.8rem;color:#1d1d1f}
+.bi-hp{font-size:1.1rem;font-weight:900;color:#0096D6;font-family:'Inter',sans-serif;letter-spacing:-1px;line-height:1}
+.bi-dell{font-size:.95rem;font-weight:900;color:#007DB8;font-family:'Inter',sans-serif;letter-spacing:-.5px;line-height:1}
+.bi-lnv{font-size:.72rem;font-weight:900;color:#E2231A;font-family:'Inter',sans-serif;letter-spacing:0;line-height:1}
+.bi-ms{font-size:1.6rem;color:#00a4ef}
+.bi-tch{font-size:1.6rem;color:#06b6d4}
+.bi-gm{font-size:1.6rem;color:#8b5cf6}
+.bi-dsk{font-size:1.6rem;color:#64748b}
+
+/* PRODUCT SECTION WRAPPER */
+.prod-sec{padding:8px 4% 24px}
+
+/* PRODUCT GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+
+/* PRODUCT CARD — clean like usedlaptopstore.in */
+.pcard{background:var(--card);border:1.5px solid var(--bdr);border-radius:var(--rl);overflow:hidden;display:flex;flex-direction:column;transition:var(--tr);cursor:pointer}
+.pcard:hover{border-color:#bfdbfe;box-shadow:var(--shm);transform:translateY(-3px)}
+.pc-img{position:relative;background:#f8fafc;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--bdr);overflow:hidden}
+.pc-img i{font-size:4.5rem;color:#c8d6e5;transition:var(--tr)}
+.pcard:hover .pc-img i{color:#94a3b8;transform:scale(1.05)}
+.pc-off{position:absolute;top:9px;left:9px;background:var(--red);color:#fff;font-size:.62rem;font-weight:800;padding:3px 8px;border-radius:5px}
+.pc-bge{position:absolute;top:9px;right:9px;background:#1e293b;color:#fff;font-size:.58rem;font-weight:700;padding:3px 8px;border-radius:5px}
+.pc-bdy{padding:12px 13px 13px;display:flex;flex-direction:column;flex:1}
+.pc-brnd{font-size:.65rem;font-weight:800;color:var(--p);text-transform:uppercase;letter-spacing:.7px;margin-bottom:4px}
+.pc-ttl{font-size:.84rem;font-weight:600;color:var(--t);line-height:1.4;margin-bottom:auto;padding-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pc-bot{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
+.pc-px{display:flex;flex-direction:column;gap:1px}
+.pc-new{font-size:1rem;font-weight:800;color:var(--t)}
+.pc-old{font-size:.72rem;color:var(--tm);text-decoration:line-through;font-weight:500}
+.pc-btns{display:flex;gap:7px;flex-shrink:0}
+.pc-add{background:var(--p);color:#fff;border:none;width:34px;height:34px;border-radius:8px;font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;transition:var(--tr);flex-shrink:0}
+.pc-add:hover{background:var(--pd);transform:scale(1.07)}
+.pc-add.ok{background:var(--acc)}
+.pc-call{background:#25D366;color:#fff;border:none;width:34px;height:34px;border-radius:8px;font-size:.82rem;display:flex;align-items:center;justify-content:center;transition:var(--tr);flex-shrink:0;text-decoration:none}
+.pc-call:hover{background:#128C7E;transform:scale(1.07);color:#fff}
+
+/* BULK */
+.bulk{margin:10px 4% 28px;background:#1e293b;border-radius:var(--rl);padding:30px 38px;display:flex;justify-content:space-between;align-items:center;gap:20px;overflow:hidden;position:relative}
+.bulk::before{content:'\f0c0';font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:-10px;top:-50px;font-size:12rem;color:rgba(255,255,255,.03);pointer-events:none}
+.bulk h2{font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:5px}
+.bulk p{color:#94a3b8;font-size:.84rem;max-width:400px}
+.btn-blk{background:#fff;color:#1e293b;padding:11px 24px;border-radius:99px;font-weight:700;font-size:.84rem;white-space:nowrap;transition:var(--tr);display:inline-block}
+.btn-blk:hover{background:#f1f5f9;transform:translateY(-2px)}
+
+/* FOOTER */
+.footer{background:#0f172a;color:#94a3b8;padding:44px 4% 0;border-top:1px solid #1e293b}
+.ftgrid{display:grid;grid-template-columns:2fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid #1e293b}
+.ft-logo{font-size:1.3rem;font-weight:900;color:#fff;display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.ft-logo span{color:var(--p)}
+.ft-logo .logo-box{background:var(--p);flex-shrink:0}
+.ft-desc{font-size:.84rem;line-height:1.7;margin-bottom:20px;max-width:340px}
+.socials{display:flex;gap:9px}
+.socials a{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#64748b;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:var(--tr)}
+.socials a:hover{background:var(--p);color:#fff;border-color:var(--p);transform:translateY(-3px)}
+.ft-col h4{font-size:.78rem;font-weight:700;color:#fff;margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
+.ct-row{display:flex;flex-direction:row;gap:22px;flex-wrap:wrap}
+.ct-itm{display:flex;flex-direction:column;gap:4px}
+.ct-ico{color:var(--p);font-size:1rem;margin-bottom:2px}
+.ct-lbl{font-size:.68rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.3px}
+.ct-val{font-size:.82rem;color:#94a3b8}
+.ct-val a{color:#94a3b8;transition:var(--tr)}
+.ct-val a:hover{color:#fff}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;padding:16px 0;font-size:.74rem;color:#475569;flex-wrap:wrap;gap:8px}
+.ft-bot span{color:#64748b}
+
+/* OVERLAY */
+.ovl{position:fixed;inset:0;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);z-index:800;opacity:0;visibility:hidden;transition:var(--tr)}
+.ovl.on{opacity:1;visibility:visible}
+
+/* CART SIDEBAR */
+.cart-sb{position:fixed;top:0;right:-420px;width:100%;max-width:390px;height:100vh;background:var(--card);z-index:900;box-shadow:-8px 0 40px rgba(0,0,0,.1);transition:.4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+.cart-sb.on{right:0}
+.c-hd{padding:16px 20px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center}
+.c-hd h3{font-size:.96rem;font-weight:800}
+.xbtn{background:#f1f5f9;border:none;width:30px;height:30px;border-radius:7px;font-size:.9rem;color:var(--tm);display:flex;align-items:center;justify-content:center;transition:var(--tr)}
+.xbtn:hover{background:#e2e8f0;color:var(--red)}
+.c-body{flex:1;overflow-y:auto;padding:14px 20px;display:flex;flex-direction:column;gap:14px}
+.emsg{text-align:center;color:var(--tm);padding:50px 0;font-size:.86rem}
+.ci-row{display:flex;gap:11px;align-items:center;padding-bottom:12px;border-bottom:1px solid #f1f5f9}
+.ci-img{width:50px;height:50px;background:var(--bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:var(--p);flex-shrink:0}
+.ci-nfo{flex:1}
+.ci-nm{font-size:.8rem;font-weight:700;line-height:1.3;margin-bottom:3px}
+.ci-pr{font-size:.8rem;color:var(--p);font-weight:700}
+.ci-qt{font-size:.72rem;color:var(--tm);margin-left:5px}
+.ci-del{background:none;border:none;color:#ef4444;font-size:.85rem;padding:4px;cursor:pointer}
+.c-ft{padding:14px 20px;border-top:1px solid var(--bdr);background:#f8fafc}
+.c-tot{display:flex;justify-content:space-between;font-size:.96rem;font-weight:800;margin-bottom:11px}
+.btn-co{width:100%;background:var(--p);color:#fff;border:none;padding:12px;border-radius:9px;font-weight:700;font-size:.9rem;display:flex;align-items:center;justify-content:center;gap:7px;transition:var(--tr)}
+.btn-co:hover{background:var(--pd)}
+.btn-wa{width:100%;background:#25D366;color:#fff;border:none;padding:10px;border-radius:9px;font-weight:700;font-size:.84rem;display:flex;align-items:center;justify-content:center;gap:7px;margin-top:7px;transition:var(--tr);text-decoration:none}
+.btn-wa:hover{background:#128C7E;color:#fff}
+
+/* MOBILE MENU */
+.mob-men{position:fixed;top:0;left:-320px;width:295px;height:100vh;background:var(--card);z-index:900;box-shadow:8px 0 40px rgba(0,0,0,.1);transition:.4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;overflow-y:auto}
+.mob-men.on{left:0}
+.mm-hd{padding:14px 16px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;align-items:center}
+.mm-logo{font-size:1rem;font-weight:900;color:var(--p);display:flex;align-items:center;gap:7px}
+.mm-logo .logo-box{width:26px;height:26px;font-size:.72rem;border-radius:7px}
+.mm-stitle{font-size:.65rem;font-weight:700;color:var(--tm);text-transform:uppercase;letter-spacing:.7px;padding:12px 16px 5px}
+.mm-list{list-style:none}
+.mm-list a{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;font-size:.85rem;font-weight:600;color:var(--t);border-bottom:1px solid #f8fafc;transition:var(--tr)}
+.mm-list a:hover{background:var(--pl);color:var(--p)}
+.ll{display:flex;align-items:center;gap:9px}
+.ll i{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:.78rem;flex-shrink:0}
+.ar{color:#cbd5e1;font-size:.7rem}
+.mm-wa{margin:auto 12px 14px;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--r);padding:12px 14px;display:flex;align-items:center;gap:11px}
+.mm-wa i{font-size:1.7rem;color:#25D366}
+.mm-wa h5{font-size:.78rem;font-weight:700;margin-bottom:2px;color:var(--t)}
+.mm-wa p{font-size:.73rem;color:var(--tm)}
+.mm-wa a{color:var(--tm)}
+
+/* BOTTOM NAV */
+.bnav{display:none;position:fixed;bottom:0;left:0;width:100%;background:var(--card);border-top:1px solid var(--bdr);box-shadow:0 -4px 20px rgba(0,0,0,.07);z-index:400;justify-content:space-around;align-items:center;padding:6px 0 calc(env(safe-area-inset-bottom) + 6px);height:62px}
+.bn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--tm);font-size:.62rem;font-weight:700;background:none;border:none;padding:0 16px;transition:var(--tr);position:relative;text-decoration:none}
+.bn i{font-size:1.2rem}
+.bn.act,.bn:hover{color:var(--p)}
+.bn-home{background:var(--p);color:#fff !important;width:48px;height:48px;border-radius:13px;display:flex;align-items:center;justify-content:center;border:none;font-size:1.15rem;box-shadow:0 4px 16px rgba(37,99,235,.42);transition:var(--tr);padding:0;cursor:pointer}
+.bn-home:hover{background:var(--pd);transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,.5)}
+.bn-bge{position:absolute;top:0;right:7px;background:var(--red);color:#fff;font-size:.48rem;font-weight:900;min-width:14px;height:14px;border-radius:99px;display:flex;align-items:center;justify-content:center;border:2px solid var(--card)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  body{padding-bottom:68px}
+  .topbar{display:none}
+  .cat-nav{display:none}
+  .navbar{padding:0 3.5%}
+  .hmbg{display:flex}
+  .logo{font-size:1.1rem}
+  .bnav{display:flex}
+  .bnr-sec{padding:8px 3.5%}
+  .bnr-slide{padding:22px 20px}
+  .bnr-cnt h1{font-size:1.25rem;margin-bottom:5px}
+  .bnr-cnt p{display:none}
+  .bnr-tag{font-size:.6rem;margin-bottom:7px}
+  .bnr-btn{padding:8px 16px;font-size:.76rem}
+  .bnr-bgico{font-size:7rem}
+  .bnr-arr{display:none}
+  .trust{padding:13px 3.5%;gap:10px}
+  .ti{min-width:120px;gap:8px}
+  .ti-ico{width:34px;height:34px;font-size:.88rem}
+  .ti h5{font-size:.72rem}
+  .ti p{font-size:.62rem}
+  .sec{padding:18px 3.5% 6px}
+  .sec-t{font-size:.96rem}
+  .brands-sc{padding:0 3.5% 10px;margin:0 -3.5%}
+  .brd-row{padding:0 3.5%}
+  .brd-img{width:62px;height:62px}
+  .brd-nm{font-size:.64rem;max-width:62px}
+  .prod-sec{padding:6px 3.5% 20px}
+  .pgrid{grid-template-columns:1fr 1fr;gap:9px}
+  .pc-img i{font-size:3rem}
+  .pc-bdy{padding:9px 10px 11px}
+  .pc-ttl{font-size:.76rem}
+  .pc-new{font-size:.9rem}
+  .pc-old{font-size:.66rem}
+  .pc-add,.pc-call{width:30px;height:30px;font-size:.76rem}
+  .pc-off,.pc-bge{font-size:.56rem;padding:2px 7px;top:7px}
+  .pc-bge{right:7px}
+  .bulk{flex-direction:column;text-align:center;padding:22px 18px;margin:8px 3.5% 22px}
+  .bulk h2{font-size:1.15rem}
+  .bulk p{font-size:.78rem}
+  .footer{padding:32px 3.5% 0}
+  .ftgrid{grid-template-columns:1fr;gap:24px;padding-bottom:24px}
+  .ft-desc{font-size:.8rem;max-width:100%}
+  .ct-row{gap:18px}
+  .ft-bot{flex-direction:column;text-align:center;gap:6px;font-size:.7rem;padding:14px 0}
+}
+@media(max-width:360px){
+  .pgrid{gap:7px}
+  .pc-img i{font-size:2.5rem}
+}
+</style>
 </head>
-
 <body>
 
-  <!-- Mobile Menu Overlay inside body -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="close-menu" id="closeMenuBtn"><i class="fa-solid fa-xmark"></i></button>
+<!-- OVERLAY -->
+<div class="ovl" id="ovl"></div>
 
-    <div class="search-container" style="display: block; margin: 0 0 25px 0; max-width: 100%;">
-      <input type="text" placeholder="Search laptops...">
-      <button><i class="fa-solid fa-search"></i></button>
+<!-- MOBILE MENU -->
+<div class="mob-men" id="mobMenu">
+
+  <!-- Logo Header -->
+  <div class="mm-hd">
+    <div class="mm-logo">
+      <div class="logo-box"><i class="fa-solid fa-laptop-code"></i></div>
+      Dream<span style="color:var(--t)">Computers</span>
     </div>
-
-    <ul class="mobile-nav-links">
-      <li><a href="#">Home <i class="fa-solid fa-angle-right"></i></a></li>
-      <li><a href="#shop">New Arrivals <i class="fa-solid fa-angle-right"></i></a></li>
-      <li><a href="#">Apple MacBooks <i class="fa-solid fa-angle-right"></i></a></li>
-      <li><a href="#">Premium Segment <i class="fa-solid fa-angle-right"></i></a></li>
-      <li><a href="#">Gaming & Graphics <i class="fa-solid fa-angle-right"></i></a></li>
-      <li><a href="#contact">Contact Us <i class="fa-solid fa-angle-right"></i></a></li>
-    </ul>
-
-    <div class="contact-item"
-      style="margin-top: auto; padding: 25px 10px 0; border-top: 1px solid var(--border-color);">
-      <div class="contact-icon" style="font-size: 1.8rem; color: #10b981;"><i class="fa-brands fa-whatsapp"></i></div>
-      <div class="contact-text">
-        <h5 style="color: var(--text-main);">Chat with us on WhatsApp</h5>
-        <p><a href="https://wa.me/918098777744" style="color: inherit;">+91 80987 77744</a></p>
-      </div>
-    </div>
+    <button class="xbtn" id="closeMenu"><i class="fa-solid fa-xmark"></i></button>
   </div>
 
-  <!-- Top Bar Info -->
-  <div class="top-bar">
-    <div class="top-bar-left">
-      <span><i class="fa-solid fa-location-dot"></i> 75, Super Bazaar, Singarathope, Trichy</span>
-    </div>
-    <div class="top-bar-right">
-      <span><i class="fa-solid fa-phone"></i> +91 80987 77744</span>
-      <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" style="color:white; font-weight: 500;"><i
-          class="fa-brands fa-youtube" style="color:#ef4444;"></i> dreamcomputerstrichy</a>
-    </div>
-  </div>
-
-  <!-- Main Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <i class="fa-solid fa-laptop-code"></i> <span class="glitch-text">Dream<span>Computers</span></span>
+  <!-- Quick CTA Buttons -->
+  <div style="display:flex;gap:9px;padding:12px 16px;border-bottom:1px solid var(--bdr)">
+    <a href="tel:+918098777744" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#eff6ff;color:var(--p);padding:10px 0;border-radius:9px;font-size:.78rem;font-weight:700;border:1px solid #bfdbfe;text-decoration:none">
+      <i class="fa-solid fa-phone"></i>Call Now
     </a>
-
-    <div class="search-container">
-      <input type="text" placeholder="Search for brands, processors, storage...">
-      <button><i class="fa-solid fa-search"></i></button>
-    </div>
-
-    <div class="nav-actions">
-      <a href="#" class="icon-btn" title="Account"><i class="fa-regular fa-user"></i></a>
-      <a href="#" class="icon-btn" title="Wishlist">
-        <i class="fa-regular fa-heart"></i>
-        <span class="badge" style="background:var(--text-main);">0</span>
-      </a>
-      <button id="cartIconBtn" class="icon-btn" style="background:none; border:none; cursor:pointer;" title="Cart">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span class="badge" id="cartBadgeCount">0</span>
-      </button>
-      <button class="hamburger-btn" id="openMenuBtn"><i class="fa-solid fa-bars-staggered"></i></button>
-    </div>
-  </nav>
-
-  <!-- Menu Bar -->
-  <div class="menu-bar">
-    <ul class="menu-list">
-      <li><a href="index.html" style="color:var(--primary); border-bottom-color:var(--primary);">Home</a></li>
-      <li><a href="#">Apple MacBooks</a></li>
-      <li><a href="#">Premium Segment</a></li>
-      <li><a href="#">Gaming & Graphics</a></li>
-      <li><a href="#">Touch Screen</a></li>
-      <li><a href="#">Desktop PCs</a></li>
-      <li><a href="#contact">Store Location</a></li>
-    </ul>
+    <a href="https://wa.me/918098777744" target="_blank" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#f0fdf4;color:#16a34a;padding:10px 0;border-radius:9px;font-size:.78rem;font-weight:700;border:1px solid #bbf7d0;text-decoration:none">
+      <i class="fa-brands fa-whatsapp"></i>WhatsApp
+    </a>
+    <a href="#contact" onclick="closeAll()" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#fefce8;color:#d97706;padding:10px 0;border-radius:9px;font-size:.78rem;font-weight:700;border:1px solid #fde68a;text-decoration:none">
+      <i class="fa-solid fa-location-dot"></i>Visit Us
+    </a>
   </div>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-main">
-      <h1>Premium Refurbished Laptops at Unbeatable Prices</h1>
-      <p>Quality tested, A-Grade commercial laptops available exclusively at Super Bazaar, Trichy.</p>
-      <a href="#shop" class="btn-primary">Shop Collection <i class="fa-solid fa-arrow-right"
-          style="margin-left:8px;"></i></a>
-    </div>
-    <div class="hero-side">
-      <div class="side-card brand-gradient">
-        <h3>Corporate Stock</h3>
-        <p>Bulk inventory perfectly suited for business & students wanting high performance.</p>
-        <a href="#" class="side-link">View Models <i class="fa-solid fa-angle-right"></i></a>
+  <!-- Shop Categories -->
+  <div class="mm-stitle">🛒 Shop by Brand</div>
+  <ul class="mm-list">
+    <li><a href="#top" onclick="closeAll()"><div class="ll"><i style="background:#eff6ff;color:var(--p)" class="fa-solid fa-house"></i>Home</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#apple" onclick="closeAll()"><div class="ll"><i style="background:#f1f5f9;color:#1d1d1f" class="fa-brands fa-apple"></i>Apple MacBooks</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#hp" onclick="closeAll()"><div class="ll"><i style="background:#eff6ff;color:#0096D6;font-weight:900;font-size:.55rem;letter-spacing:-.5px">hp</i>HP Laptops</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#dell" onclick="closeAll()"><div class="ll"><i style="background:#eff6ff;color:#007DB8;font-weight:900;font-size:.5rem">DELL</i>Dell Laptops</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#lenovo" onclick="closeAll()"><div class="ll"><i style="background:#fff1f2;color:#E2231A" class="fa-solid fa-laptop"></i>Lenovo Laptops</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#faf5ff;color:#8b5cf6" class="fa-brands fa-windows"></i>Microsoft Surface</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+  </ul>
+
+  <!-- Shop by Type -->
+  <div class="mm-stitle">💻 Shop by Type</div>
+  <ul class="mm-list">
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#fefce8;color:#d97706" class="fa-solid fa-fire"></i>New Arrivals</div><span style="background:#ef4444;color:#fff;font-size:.55rem;font-weight:800;padding:2px 7px;border-radius:99px">HOT</span></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#ecfdf5;color:#10b981" class="fa-solid fa-hand-pointer"></i>Touch Screen</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#faf5ff;color:#8b5cf6" class="fa-solid fa-gamepad"></i>Gaming &amp; Graphics</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#fff7ed;color:#ea580c" class="fa-solid fa-desktop"></i>Desktop PCs</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#fefce8;color:#d97706" class="fa-solid fa-tag"></i>Budget Picks (Under ₹15k)</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#ecfdf5;color:#059669" class="fa-solid fa-briefcase"></i>Corporate / Business</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#eff6ff;color:var(--p)" class="fa-solid fa-graduation-cap"></i>Student Picks</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" style="color:#e11d48;background:#fff1f2"><div class="ll"><i style="background:#ffe4e6;color:#e11d48" class="fa-regular fa-heart"></i>My Wishlist</div><i class="fa-solid fa-heart" style="color:#e11d48;font-size:.75rem"></i></a></li>
+  </ul>
+
+  <!-- Info & Policies -->
+  <div class="mm-stitle">ℹ️ Info &amp; Policies</div>
+  <ul class="mm-list">
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#eff6ff;color:var(--p)" class="fa-solid fa-circle-info"></i>About Dream Computers</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#contact" onclick="closeAll()"><div class="ll"><i style="background:#ecfdf5;color:#10b981" class="fa-solid fa-headset"></i>Contact Support</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#contact" onclick="closeAll()"><div class="ll"><i style="background:#f1f5f9;color:#64748b" class="fa-solid fa-location-dot"></i>Store Location — Trichy</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#faf5ff;color:#7c3aed" class="fa-solid fa-shield-halved"></i>Privacy Policy</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#f8fafc;color:#64748b" class="fa-solid fa-file-contract"></i>Terms &amp; Conditions</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#fefce8;color:#d97706" class="fa-solid fa-rotate-left"></i>Refund Policy</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+    <li><a href="#" onclick="closeAll()"><div class="ll"><i style="background:#eff6ff;color:var(--p)" class="fa-solid fa-truck"></i>Shipping Policy</div><i class="ar fa-solid fa-angle-right"></i></a></li>
+  </ul>
+
+  <!-- Social Links -->
+  <div style="display:flex;align-items:center;justify-content:center;gap:12px;padding:16px 16px 8px;border-top:1px solid var(--bdr);margin-top:6px">
+    <a href="https://wa.me/918098777744" target="_blank" style="width:40px;height:40px;border-radius:10px;background:#f0fdf4;border:1px solid #bbf7d0;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#25D366;text-decoration:none"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="#" style="width:40px;height:40px;border-radius:10px;background:#fff0f9;border:1px solid #fbcfe8;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#e1306c;text-decoration:none"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank" style="width:40px;height:40px;border-radius:10px;background:#fff1f2;border:1px solid #fecdd3;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#ef4444;text-decoration:none"><i class="fa-brands fa-youtube"></i></a>
+    <a href="#" style="width:40px;height:40px;border-radius:10px;background:#eff6ff;border:1px solid #bfdbfe;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#1877f2;text-decoration:none"><i class="fa-brands fa-facebook-f"></i></a>
+  </div>
+  <div style="text-align:center;padding:4px 0 18px;font-size:.68rem;color:var(--tm)">© 2026 Dream Computers, Super Bazaar, Trichy</div>
+
+</div>
+
+<!-- CART SIDEBAR -->
+<div class="cart-sb" id="cartSb">
+  <div class="c-hd">
+    <h3>🛍️ Your Cart</h3>
+    <button class="xbtn" id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="c-body" id="cartBody">
+    <div class="emsg"><i class="fa-solid fa-bag-shopping" style="font-size:2.2rem;color:#e2e8f0;display:block;margin-bottom:10px"></i>Your cart is empty</div>
+  </div>
+  <div class="c-ft">
+    <div class="c-tot"><span>Total</span><span id="cartTotal">₹ 0</span></div>
+    <button class="btn-co"><i class="fa-solid fa-lock"></i>Secure Checkout</button>
+    <a href="https://wa.me/918098777744" class="btn-wa" target="_blank"><i class="fa-brands fa-whatsapp"></i>Order via WhatsApp</a>
+  </div>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar" id="top">
+  <div class="tb-l"><span><i class="fa-solid fa-location-dot"></i>75, Super Bazaar, Trichy</span></div>
+  <div class="tb-r">
+    <span><i class="fa-solid fa-phone"></i>+91 80987 77744</span>
+    <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank"><i class="fa-brands fa-youtube" style="color:#ef4444"></i> YouTube</a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-l">
+    <button class="hmbg" id="openMenu"><i class="fa-solid fa-bars-staggered"></i></button>
+    <a href="#top" class="logo">
+      <div class="logo-box"><i class="fa-solid fa-laptop-code"></i></div>
+      <span class="gw" data-text="DreamComputers">Dream<span class="gd">Computers</span></span>
+    </a>
+  </div>
+  <div class="nav-r">
+    <button class="nicn" title="Account"><i class="fa-regular fa-user"></i></button>
+    <button class="nicn" id="openCartBtn" title="Cart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span class="nbadge" id="cartBadge">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- CATEGORY NAV -->
+<div class="cat-nav">
+  <ul>
+    <li><a href="#top" class="active">Home</a></li>
+    <li><a href="#apple">Apple</a></li>
+    <li><a href="#hp">HP</a></li>
+    <li><a href="#dell">Dell</a></li>
+    <li><a href="#lenovo">Lenovo</a></li>
+    <li><a href="#">Touch Screen</a></li>
+    <li><a href="#">Gaming</a></li>
+    <li><a href="#">Desktops</a></li>
+    <li><a href="#contact">Store</a></li>
+  </ul>
+</div>
+
+<!-- HERO BANNER -->
+<section class="bnr-sec">
+  <div class="bnr-wrap" id="bnrWrap">
+    <div class="bnr-slides" id="bnrSlides">
+      <div class="bnr-slide bs1">
+        <div class="bnr-cnt"><div class="bnr-tag">⚡ Hot Deal</div><h1>MacBook Pro M1<br>Just ₹54,900</h1><p>Apple Silicon at refurbished prices — A-Grade tested</p><a href="#apple" class="bnr-btn">Shop Apple <i class="fa-solid fa-arrow-right"></i></a></div>
+        <i class="fa-brands fa-apple bnr-bgico"></i>
       </div>
-      <div class="side-card">
-        <h3>Trusted Seller</h3>
-        <p>Visit our store directly in Trichy to experience the build and performance.</p>
-        <a href="#contact" class="side-link">Get Directions <i class="fa-solid fa-angle-right"></i></a>
+      <div class="bnr-slide bs2">
+        <div class="bnr-cnt"><div class="bnr-tag">💼 Corporate Grade</div><h1>HP EliteBook<br>From ₹18,500</h1><p>Commercial-grade HP laptops for business &amp; students</p><a href="#hp" class="bnr-btn">Shop HP <i class="fa-solid fa-arrow-right"></i></a></div>
+        <i class="fa-solid fa-laptop bnr-bgico"></i>
       </div>
-    </div>
-  </section>
-
-  <!-- Categories -->
-  <section class="categories">
-    <div class="section-header">
-      <h2>Shop by Category</h2>
-      <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    <div class="cat-grid">
-      <a href="#" class="cat-card">
-        <div class="cat-icon"><i class="fa-brands fa-apple"></i></div>
-        <h4>Apple</h4>
-      </a>
-      <a href="#" class="cat-card">
-        <div class="cat-icon"><i class="fa-solid fa-laptop"></i></div>
-        <h4>HP Laptops</h4>
-      </a>
-      <a href="#" class="cat-card">
-        <div class="cat-icon"><i class="fa-solid fa-laptop-code"></i></div>
-        <h4>Dell Laptops</h4>
-      </a>
-      <a href="#" class="cat-card">
-        <div class="cat-icon"><i class="fa-brands fa-windows"></i></div>
-        <h4>Lenovo</h4>
-      </a>
-      <a href="#" class="cat-card">
-        <div class="cat-icon"><i class="fa-solid fa-hand-pointer"></i></div>
-        <h4>Touch Screen</h4>
-      </a>
-      <a href="#" class="cat-card">
-        <div class="cat-icon"><i class="fa-solid fa-gamepad"></i></div>
-        <h4>Gaming</h4>
-      </a>
-      <a href="#" class="cat-card">
-        <div class="cat-icon"><i class="fa-solid fa-desktop"></i></div>
-        <h4>Desktops</h4>
-      </a>
-    </div>
-  </section>
-
-  <!-- Featured Products -->
-  <section class="products-section" id="shop">
-    <div class="section-header">
-      <h2>New Arrivals</h2>
-      <a href="#" class="view-all">View All Deals <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-
-    <div class="prop-grid">
-      <!-- Product 1 -->
-      <div class="product-card">
-        <span class="product-badge hot">Best Seller</span>
-        <div class="product-img">
-          <i class="fa-brands fa-apple"></i>
-        </div>
-        <div class="product-brand">Apple</div>
-        <h3 class="product-title">MacBook Pro M1 2020 (8GB RAM, 256GB SSD)</h3>
-        <div class="product-specs">
-          <span class="spec-tag">M1 Chip</span>
-          <span class="spec-tag">8GB Unified</span>
-          <span class="spec-tag">256GB SSD</span>
-        </div>
-        <div class="product-bottom flex-col">
-          <div class="price-row">
-            <div class="price-wrap">
-              <span class="price-new" data-price="55900">₹ 55,900</span>
-              <span class="price-old">₹ 1,22,900</span>
-            </div>
-            <div class="qty-wrap">
-              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
-              <div class="qty-num">1</div>
-              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
-            </div>
-          </div>
-          <div class="action-group">
-            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
-              Cart</button>
-            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
-                class="fa-solid fa-phone"></i></a>
-          </div>
-        </div>
+      <div class="bnr-slide bs3">
+        <div class="bnr-cnt"><div class="bnr-tag">🏆 Best Value</div><h1>Dell Latitude<br>From ₹16,900</h1><p>Rugged &amp; reliable Dell laptops — office ready</p><a href="#dell" class="bnr-btn">Shop Dell <i class="fa-solid fa-arrow-right"></i></a></div>
+        <i class="fa-solid fa-laptop-code bnr-bgico"></i>
       </div>
-
-      <!-- Product 2 -->
-      <div class="product-card">
-        <div class="product-img">
-          <i class="fa-solid fa-laptop"></i>
-        </div>
-        <div class="product-brand">HP</div>
-        <h3 class="product-title">HP EliteBook 840 G6 | Core i5 8th Gen</h3>
-        <div class="product-specs">
-          <span class="spec-tag">Intel i5 8th</span>
-          <span class="spec-tag">16GB RAM</span>
-          <span class="spec-tag">512GB SSD</span>
-        </div>
-        <div class="product-bottom flex-col">
-          <div class="price-row">
-            <div class="price-wrap">
-              <span class="price-new" data-price="22500">₹ 22,500</span>
-              <span class="price-old">₹ 85,000</span>
-            </div>
-            <div class="qty-wrap">
-              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
-              <div class="qty-num">1</div>
-              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
-            </div>
-          </div>
-          <div class="action-group">
-            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
-              Cart</button>
-            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
-                class="fa-solid fa-phone"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="product-card">
-        <div class="product-img">
-          <i class="fa-solid fa-laptop-code"></i>
-        </div>
-        <div class="product-brand">Dell</div>
-        <h3 class="product-title">Dell Latitude 5400 | Core i5 8th Gen</h3>
-        <div class="product-specs">
-          <span class="spec-tag">Intel i5 8th</span>
-          <span class="spec-tag">8GB RAM</span>
-          <span class="spec-tag">256GB SSD</span>
-        </div>
-        <div class="product-bottom flex-col">
-          <div class="price-row">
-            <div class="price-wrap">
-              <span class="price-new" data-price="18900">₹ 18,900</span>
-              <span class="price-old">₹ 72,000</span>
-            </div>
-            <div class="qty-wrap">
-              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
-              <div class="qty-num">1</div>
-              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
-            </div>
-          </div>
-          <div class="action-group">
-            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
-              Cart</button>
-            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
-                class="fa-solid fa-phone"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Product 4 -->
-      <div class="product-card">
-        <span class="product-badge">Premium</span>
-        <div class="product-img">
-          <i class="fa-brands fa-windows"></i>
-        </div>
-        <div class="product-brand">Lenovo</div>
-        <h3 class="product-title">ThinkPad T490s | Touch Screen Edition</h3>
-        <div class="product-specs">
-          <span class="spec-tag">Intel i7 8th</span>
-          <span class="spec-tag">16GB RAM</span>
-          <span class="spec-tag">512GB Nvme</span>
-        </div>
-        <div class="product-bottom flex-col">
-          <div class="price-row">
-            <div class="price-wrap">
-              <span class="price-new" data-price="26500">₹ 26,500</span>
-              <span class="price-old">₹ 98,000</span>
-            </div>
-            <div class="qty-wrap">
-              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
-              <div class="qty-num">1</div>
-              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
-            </div>
-          </div>
-          <div class="action-group">
-            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
-              Cart</button>
-            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
-                class="fa-solid fa-phone"></i></a>
-          </div>
-        </div>
+      <div class="bnr-slide bs4">
+        <div class="bnr-cnt"><div class="bnr-tag">📍 Visit Us</div><h1>Trichy's #1<br>Laptop Store</h1><p>75, Super Bazaar — walk in &amp; experience quality</p><a href="#contact" class="bnr-btn">Get Directions <i class="fa-solid fa-arrow-right"></i></a></div>
+        <i class="fa-solid fa-store bnr-bgico"></i>
       </div>
     </div>
-  </section>
-
-  <!-- Banner Section -->
-  <section class="banner-section">
-    <div class="banner-box">
-      <div class="banner-content">
-        <h2>Looking for Bulk Corporate Ordes?</h2>
-        <p>We provide exclusive discounts and support for IT companies, schools, and offices purchasing in bulk.</p>
-      </div>
-      <div class="banner-action">
-        <a href="#contact" class="btn-outline">Contact Sales</a>
-      </div>
+    <div class="bnr-dots" id="bnrDots">
+      <button class="bdot on" onclick="goSlide(0)"></button>
+      <button class="bdot" onclick="goSlide(1)"></button>
+      <button class="bdot" onclick="goSlide(2)"></button>
+      <button class="bdot" onclick="goSlide(3)"></button>
     </div>
-  </section>
+    <button class="bnr-arr prev" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="bnr-arr next" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+</section>
 
-  <!-- Footer Section -->
-  <footer class="footer" id="contact">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <a href="#" class="footer-logo"><i class="fa-solid fa-laptop-code"></i> Dream<span>Computers</span></a>
-        <p class="footer-desc">Trichy's most trusted shop for premium refurbished high-performance laptops. We bring you
-          commercial-grade laptops explicitly imported and rigorously tested to ensure perfection.</p>
-        <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank"><i
-              class="fa-brands fa-youtube"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
-      </div>
+<!-- TRUST STRIP -->
+<div class="trust">
+  <div class="ti"><div class="ti-ico"><i class="fa-solid fa-shield-check"></i></div><div><h5>Quality Tested</h5><p>A-Grade certified</p></div></div>
+  <div class="ti"><div class="ti-ico"><i class="fa-solid fa-rotate"></i></div><div><h5>Easy Returns</h5><p>Hassle-free policy</p></div></div>
+  <div class="ti"><div class="ti-ico"><i class="fa-solid fa-headset"></i></div><div><h5>Expert Support</h5><p>WhatsApp &amp; in-store</p></div></div>
+  <div class="ti"><div class="ti-ico"><i class="fa-solid fa-tag"></i></div><div><h5>Best Prices</h5><p>Unbeatable deals</p></div></div>
+</div>
 
-      <div class="footer-col">
-        <h4>Categories</h4>
-        <ul class="footer-links">
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Apple MacBooks</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> HP EliteBooks</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Dell Latitudes</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Lenovo ThinkPads</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Desktop Systems</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Helpful Links</h4>
-        <ul class="footer-links">
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> About Us</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Contact Support</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Privacy Policy</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Terms & Conditions</a></li>
-          <li><a href="#"><i class="fa-solid fa-angle-right" style="font-size:0.7em;"></i> Return Policy</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Store Contact</h4>
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <div class="contact-text">
-            <h5>Store Location</h5>
-            <p>75, Super Bazaar,<br>Singarathope, Trichy</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <div class="contact-text">
-            <h5>Call / WhatsApp</h5>
-            <p><a href="tel:+918098777744" style="color: inherit;">+91 80987 77744</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2026 Dream Computers. All Rights Reserved.</p>
-      <p>Developed with <i class="fa-solid fa-heart" style="color:#ef4444; font-size: 0.8rem; margin:0 3px;"></i> by
-        <span style="color:white; font-weight:700;">SR Web Developers</span>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Cart Sidebar HTML -->
-  <div class="cart-sidebar" id="cartSidebar">
-    <div class="cart-header">
-      <h3>Your Cart</h3>
-      <button class="close-menu" id="closeCartBtn" style="margin:0;"><i class="fa-solid fa-xmark"></i></button>
-    </div>
-    <div class="cart-items" id="cartItemsList">
-      <div class="empty-cart-msg">Your cart is empty.</div>
-    </div>
-    <div class="cart-footer">
-      <div class="cart-total">
-        <span>Total:</span>
-        <span id="cartTotalPrice">₹ 0</span>
-      </div>
-      <button class="btn-checkout"><i class="fa-solid fa-lock"></i> Secure Checkout</button>
+<!-- ALL CATEGORIES -->
+<section class="sec">
+  <div class="sec-hd">
+    <div class="sec-t">All Categories</div>
+    <a href="#" class="val">View all <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+  <div class="brands-sc">
+    <div class="brd-row">
+      <a href="#apple" class="brd-card"><div class="brd-img"><i class="fa-brands fa-apple bi-apple"></i></div><div class="brd-nm">Apple</div></a>
+      <a href="#hp" class="brd-card"><div class="brd-img"><span class="bi-hp">hp</span></div><div class="brd-nm">HP Laptops</div></a>
+      <a href="#dell" class="brd-card"><div class="brd-img"><span class="bi-dell">DELL</span></div><div class="brd-nm">Dell Laptops</div></a>
+      <a href="#lenovo" class="brd-card"><div class="brd-img"><span class="bi-lnv">Lenovo</span></div><div class="brd-nm">Lenovo</div></a>
+      <a href="#" class="brd-card"><div class="brd-img"><i class="fa-brands fa-windows bi-ms"></i></div><div class="brd-nm">Microsoft Surface</div></a>
+      <a href="#" class="brd-card"><div class="brd-img"><i class="fa-solid fa-hand-pointer bi-tch"></i></div><div class="brd-nm">Touch Screen</div></a>
+      <a href="#" class="brd-card"><div class="brd-img"><i class="fa-solid fa-gamepad bi-gm"></i></div><div class="brd-nm">Gaming</div></a>
+      <a href="#" class="brd-card"><div class="brd-img"><i class="fa-solid fa-desktop bi-dsk"></i></div><div class="brd-nm">Desktops</div></a>
     </div>
   </div>
+</section>
 
-  <!-- Script for interactivity -->
-  <script>
-    // Mobile Menu
-    document.addEventListener('DOMContentLoaded', () => {
-      const openBtn = document.getElementById('openMenuBtn');
-      const closeBtn = document.getElementById('closeMenuBtn');
-      const menu = document.getElementById('mobileMenu');
-      const overlay = document.getElementById('mobileOverlay');
+<!-- APPLE -->
+<section id="apple">
+  <div class="sec"><div class="sec-hd"><div class="sec-t">Apple</div><a href="#" class="val">View all <i class="fa-solid fa-arrow-right"></i></a></div></div>
+  <div class="prod-sec">
+    <div class="pgrid">
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-apple"></i><div class="pc-off">15% OFF</div><div class="pc-bge">Best Seller</div></div><div class="pc-bdy"><div class="pc-brnd">Apple</div><div class="pc-ttl">MacBook Pro M1 (2020) — 8GB RAM, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="54900">₹54,900</div><div class="pc-old">₹64,500</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-apple"></i><div class="pc-off">16% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Apple</div><div class="pc-ttl">MacBook Air M1 (2020) — 16GB RAM, 512GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="53000">₹53,000</div><div class="pc-old">₹63,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-apple"></i><div class="pc-off">14% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Apple</div><div class="pc-ttl">MacBook Pro M2 (2022) — 8GB RAM, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="63000">₹63,000</div><div class="pc-old">₹73,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-apple"></i><div class="pc-off">17% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Apple</div><div class="pc-ttl">MacBook Air M1 (2020) — 16GB RAM, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="48000">₹48,000</div><div class="pc-old">₹58,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+    </div>
+  </div>
+</section>
 
-      const cartIconBtn = document.getElementById('cartIconBtn');
-      const closeCartBtn = document.getElementById('closeCartBtn');
-      const cartSidebar = document.getElementById('cartSidebar');
+<!-- HP -->
+<section id="hp">
+  <div class="sec"><div class="sec-hd"><div class="sec-t">HP Laptops</div><a href="#" class="val">View all <i class="fa-solid fa-arrow-right"></i></a></div></div>
+  <div class="prod-sec">
+    <div class="pgrid">
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop"></i><div class="pc-off">22% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">HP</div><div class="pc-ttl">HP EliteBook 840 G5 — i5 8th Gen, 8GB, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="21000">₹21,000</div><div class="pc-old">₹27,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop"></i><div class="pc-off">20% OFF</div><div class="pc-bge">Popular</div></div><div class="pc-bdy"><div class="pc-brnd">HP</div><div class="pc-ttl">HP EliteBook 840 G6 — i5 8th Gen, 16GB, 512GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="22500">₹22,500</div><div class="pc-old">₹28,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop"></i><div class="pc-off">21% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">HP</div><div class="pc-ttl">HP EliteBook 840 G5 — i7 8th Gen, 8GB, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="23000">₹23,000</div><div class="pc-old">₹29,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop"></i><div class="pc-off">20% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">HP</div><div class="pc-ttl">HP ProBook 650 G5 — i5 8th Gen, 8GB, 256GB, 15" Display</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="22500">₹22,500</div><div class="pc-old">₹28,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+    </div>
+  </div>
+</section>
 
-      const toggleMenu = () => {
-        menu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
-      };
+<!-- DELL -->
+<section id="dell">
+  <div class="sec"><div class="sec-hd"><div class="sec-t">Dell Laptops</div><a href="#" class="val">View all <i class="fa-solid fa-arrow-right"></i></a></div></div>
+  <div class="prod-sec">
+    <div class="pgrid">
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop-code"></i><div class="pc-off">21% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Dell</div><div class="pc-ttl">Dell Latitude 5400 — i5 8th Gen, 8GB, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="18900">₹18,900</div><div class="pc-old">₹24,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop-code"></i><div class="pc-off">19% OFF</div><div class="pc-bge">Value Pick</div></div><div class="pc-bdy"><div class="pc-brnd">Dell</div><div class="pc-ttl">Dell Latitude 5490 — i7 8th Gen, 16GB, 512GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="24500">₹24,500</div><div class="pc-old">₹30,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop-code"></i><div class="pc-off">22% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Dell</div><div class="pc-ttl">Dell Latitude E7480 — i5 7th Gen, 8GB, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="16900">₹16,900</div><div class="pc-old">₹21,500</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-solid fa-laptop-code"></i><div class="pc-off">20% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Dell</div><div class="pc-ttl">Dell Latitude 7480 — i7 7th Gen, 16GB, 512GB NVMe</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="22000">₹22,000</div><div class="pc-old">₹27,500</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+    </div>
+  </div>
+</section>
 
-      const toggleCart = () => {
-        cartSidebar.classList.toggle('open');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = cartSidebar.classList.contains('open') ? 'hidden' : '';
-      };
+<!-- LENOVO -->
+<section id="lenovo">
+  <div class="sec"><div class="sec-hd"><div class="sec-t">Lenovo Laptops</div><a href="#" class="val">View all <i class="fa-solid fa-arrow-right"></i></a></div></div>
+  <div class="prod-sec">
+    <div class="pgrid">
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-windows"></i><div class="pc-off">16% OFF</div><div class="pc-bge">Touch</div></div><div class="pc-bdy"><div class="pc-brnd">Lenovo</div><div class="pc-ttl">ThinkPad T490s — i7 8th Gen, 16GB, 512GB NVMe, Touch</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="26500">₹26,500</div><div class="pc-old">₹31,500</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-windows"></i><div class="pc-off">18% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Lenovo</div><div class="pc-ttl">ThinkPad T480 — i5 8th Gen, 8GB, 256GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="19500">₹19,500</div><div class="pc-old">₹24,000</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-windows"></i><div class="pc-off">17% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Lenovo</div><div class="pc-ttl">ThinkPad T480s — i7 8th Gen, 16GB, 512GB NVMe</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="24500">₹24,500</div><div class="pc-old">₹29,500</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+      <div class="pcard"><div class="pc-img"><i class="fa-brands fa-windows"></i><div class="pc-off">20% OFF</div></div><div class="pc-bdy"><div class="pc-brnd">Lenovo</div><div class="pc-ttl">IdeaPad Slim 5 — i5 10th Gen, 8GB, 512GB SSD</div><div class="pc-bot"><div class="pc-px"><div class="pc-new" data-price="21000">₹21,000</div><div class="pc-old">₹26,500</div></div><div class="pc-btns"><button class="pc-add" onclick="addCart(this)"><i class="fa-solid fa-plus"></i></button><a href="tel:+918098777744" class="pc-call" title="Call Now"><i class="fa-solid fa-phone"></i></a></div></div></div></div>
+    </div>
+  </div>
+</section>
 
-      const closeAll = () => {
-        menu.classList.remove('active');
-        cartSidebar.classList.remove('open');
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-      }
+<!-- BULK BANNER -->
+<div class="bulk">
+  <div><h2>Bulk Corporate Orders?</h2><p>Exclusive discounts for IT companies, schools, colleges &amp; offices. Get in touch for custom pricing.</p></div>
+  <a href="#contact" class="btn-blk">Contact Sales →</a>
+</div>
 
-      openBtn.addEventListener('click', toggleMenu);
-      closeBtn.addEventListener('click', toggleMenu);
-      cartIconBtn.addEventListener('click', toggleCart);
-      closeCartBtn.addEventListener('click', toggleCart);
-      overlay.addEventListener('click', closeAll);
-    });
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="ftgrid">
+    <div>
+      <div class="ft-logo"><div class="logo-box"><i class="fa-solid fa-laptop-code"></i></div>Dream<span>Computers</span></div>
+      <p class="ft-desc">Trichy's most trusted shop for premium refurbished laptops — commercial-grade Apple, HP, Dell &amp; Lenovo, rigorously A-Grade tested.</p>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@dreamcomputerstrichy" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://wa.me/918098777744" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Store Contact</h4>
+      <div class="ct-row">
+        <div class="ct-itm"><div class="ct-ico"><i class="fa-solid fa-location-dot"></i></div><div class="ct-lbl">Location</div><div class="ct-val">75, Super Bazaar,<br>Singarathope, Trichy</div></div>
+        <div class="ct-itm"><div class="ct-ico"><i class="fa-brands fa-whatsapp"></i></div><div class="ct-lbl">Call / WhatsApp</div><div class="ct-val"><a href="tel:+918098777744">+91 80987 77744</a></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p>&copy; 2026 Dream Computers. All Rights Reserved.</p>
+    <p>Made with <i class="fa-solid fa-heart" style="color:#ef4444;font-size:.65rem;margin:0 3px"></i> by <span style="color:#94a3b8;font-weight:700">SR Web Developers</span></p>
+  </div>
+</footer>
 
-    // Cart Logic
-    let cart = [];
+<!-- BOTTOM NAV -->
+<div class="bnav">
+  <button class="bn" id="openMenuMob"><i class="fa-solid fa-bars-staggered"></i><span>Menu</span></button>
+  <button class="bn-home" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-house"></i></button>
+  <button class="bn" id="openCartMob"><i class="fa-solid fa-bag-shopping"></i><span class="bn-bge" id="cartBadgeMob">0</span><span>Cart</span></button>
+</div>
 
-    function updateQty(btn, change) {
-      const qtyDiv = btn.parentElement.querySelector('.qty-num');
-      let current = parseInt(qtyDiv.textContent);
-      let next = current + change;
-      if (next >= 1 && next <= 10) {
-        qtyDiv.textContent = next;
-      }
-    }
+<script>
+// PANELS
+const ovl=document.getElementById('ovl');
+const mm=document.getElementById('mobMenu');
+const cs=document.getElementById('cartSb');
+function openMenu(){mm.classList.add('on');ovl.classList.add('on');document.body.style.overflow='hidden'}
+function openCart(){cs.classList.add('on');ovl.classList.add('on');document.body.style.overflow='hidden'}
+function closeAll(){mm.classList.remove('on');cs.classList.remove('on');ovl.classList.remove('on');document.body.style.overflow=''}
+document.getElementById('openMenu').onclick=openMenu;
+document.getElementById('openMenuMob').onclick=openMenu;
+document.getElementById('closeMenu').onclick=closeAll;
+document.getElementById('openCartBtn').onclick=openCart;
+document.getElementById('openCartMob').onclick=openCart;
+document.getElementById('closeCart').onclick=closeAll;
+ovl.onclick=closeAll;
 
-    function addToCart(btn) {
-      const card = btn.closest('.product-card');
-      const title = card.querySelector('.product-title').textContent;
-      const priceElement = card.querySelector('.price-new');
-      const priceText = priceElement.textContent;
-      const priceValue = parseInt(priceElement.getAttribute('data-price'));
-      const iconHTML = card.querySelector('.product-img').innerHTML;
-      const qty = parseInt(card.querySelector('.qty-num').textContent);
+// BANNER
+let cur=0,total=4,timer;
+function goSlide(n){cur=n;document.getElementById('bnrSlides').style.transform=`translateX(-${n*100}%)`;document.querySelectorAll('.bdot').forEach((d,i)=>d.classList.toggle('on',i===n))}
+function nextSlide(){goSlide((cur+1)%total)}
+function prevSlide(){goSlide((cur-1+total)%total)}
+function startAuto(){timer=setInterval(nextSlide,4200)}
+function stopAuto(){clearInterval(timer)}
+const bw=document.getElementById('bnrWrap');
+bw.addEventListener('mouseenter',stopAuto);
+bw.addEventListener('mouseleave',startAuto);
+startAuto();
+let tx=0;
+bw.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;stopAuto()},{passive:true});
+bw.addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>40){d>0?nextSlide():prevSlide()}startAuto()},{passive:true});
 
-      // Check if already in cart
-      const existing = cart.find(item => item.title === title);
-      if (existing) {
-        existing.qty += qty;
-      } else {
-        cart.push({ title, priceText, priceValue, iconHTML, qty });
-      }
-
-      renderCart();
-
-      // Reset qty selector
-      card.querySelector('.qty-num').textContent = 1;
-
-      // Visual feedback
-      const ogText = btn.innerHTML;
-      btn.innerHTML = '<i class="fa-solid fa-check"></i> Added';
-      btn.style.background = '#10b981';
-      setTimeout(() => {
-        btn.innerHTML = ogText;
-        btn.style.background = '';
-      }, 1500);
-    }
-
-    function removeFromCart(index) {
-      cart.splice(index, 1);
-      renderCart();
-    }
-
-    function renderCart() {
-      const list = document.getElementById('cartItemsList');
-      const badge = document.getElementById('cartBadgeCount');
-      const totalEl = document.getElementById('cartTotalPrice');
-
-      list.innerHTML = '';
-      let totalItems = 0;
-      let totalPrice = 0;
-
-      if (cart.length === 0) {
-        list.innerHTML = '<div class="empty-cart-msg">Your cart is empty.</div>';
-        badge.textContent = 0;
-        totalEl.textContent = '₹ 0';
-        return;
-      }
-
-      cart.forEach((item, index) => {
-        totalItems += item.qty;
-        totalPrice += (item.priceValue * item.qty);
-
-        list.innerHTML += `
-          <div class="cart-item">
-            <div class="c-item-img">${item.iconHTML}</div>
-            <div class="c-item-details">
-              <div class="c-item-title">${item.title}</div>
-              <span class="c-item-price">${item.priceText}</span>
-              <span class="c-item-qty">x ${item.qty}</span>
-            </div>
-            <button class="c-item-remove" onclick="removeFromCart(${index})"><i class="fa-solid fa-trash"></i></button>
-          </div>
-        `;
-      });
-
-      badge.textContent = totalItems;
-      totalEl.textContent = '₹ ' + totalPrice.toLocaleString('en-IN');
-    }
-  </script>
+// CART
+let cart=[];
+function addCart(btn){
+  const card=btn.closest('.pcard');
+  const title=card.querySelector('.pc-ttl').textContent.trim();
+  const pel=card.querySelector('.pc-new');
+  const pval=parseInt(pel.getAttribute('data-price'));
+  const ptxt=pel.textContent;
+  const ico=card.querySelector('.pc-img i');
+  const brand=card.querySelector('.pc-brnd').textContent;
+  const ex=cart.find(i=>i.title===title);
+  if(ex){ex.qty++}else{cart.push({title,pval,ptxt,ico:ico?ico.className:'fa-solid fa-laptop',brand,qty:1})}
+  renderCart();
+  btn.innerHTML='<i class="fa-solid fa-check"></i>';
+  btn.classList.add('ok');
+  setTimeout(()=>{btn.innerHTML='<i class="fa-solid fa-plus"></i>';btn.classList.remove('ok')},1400);
+}
+function remCart(i){cart.splice(i,1);renderCart()}
+function renderCart(){
+  const body=document.getElementById('cartBody');
+  const bg=document.getElementById('cartBadge');
+  const bm=document.getElementById('cartBadgeMob');
+  const tot=document.getElementById('cartTotal');
+  let items=0,total=0;
+  if(!cart.length){
+    body.innerHTML='<div class="emsg"><i class="fa-solid fa-bag-shopping" style="font-size:2.2rem;color:#e2e8f0;display:block;margin-bottom:10px"></i>Your cart is empty</div>';
+    bg.textContent=bm.textContent=0;tot.textContent='₹ 0';return;
+  }
+  body.innerHTML='';
+  cart.forEach((item,i)=>{
+    items+=item.qty;total+=item.pval*item.qty;
+    body.innerHTML+=`<div class="ci-row"><div class="ci-img"><i class="${item.ico}"></i></div><div class="ci-nfo"><div class="ci-nm">${item.title}</div><div><span class="ci-pr">${item.ptxt}</span><span class="ci-qt">× ${item.qty}</span></div></div><button class="ci-del" onclick="remCart(${i})"><i class="fa-solid fa-trash"></i></button></div>`;
+  });
+  bg.textContent=bm.textContent=items;
+  tot.textContent='₹ '+total.toLocaleString('en-IN');
+}
+</script>
 </body>
-
 </html>
