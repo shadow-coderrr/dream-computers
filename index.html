@@ -602,22 +602,255 @@
     @keyframes glitch-flicker {
 
       0%,
-      96%,
-      98%,
+      14%,
+      16%,
       100% {
         text-shadow: none;
         transform: none;
       }
 
-      97% {
-        text-shadow: -2px 0px 0px rgba(239, 68, 68, 0.8), 2px 0px 0px rgba(59, 130, 246, 0.8);
-        transform: skewX(-2deg);
+      15% {
+        text-shadow: -2px 0px 0px rgba(239, 68, 68, 0.9), 2px 0px 0px rgba(59, 130, 246, 0.9);
+        transform: skewX(-3deg);
       }
 
-      99% {
-        text-shadow: 2px 0px 0px rgba(239, 68, 68, 0.8), -2px 0px 0px rgba(59, 130, 246, 0.8);
+      80% {
+        text-shadow: 2px 0px 0px rgba(239, 68, 68, 0.9), -2px 0px 0px rgba(59, 130, 246, 0.9);
         transform: skewX(2deg);
       }
+    }
+
+    /* Product Bottom Row Customizations */
+    .qty-wrap {
+      display: flex;
+      align-items: center;
+      background: var(--bg-page);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+      height: 38px;
+    }
+
+    .qty-btn {
+      width: 32px;
+      height: 100%;
+      background: transparent;
+      border: none;
+      font-weight: 700;
+      color: var(--text-light);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .qty-btn:hover {
+      background: #e5e7eb;
+      color: var(--text-main);
+    }
+
+    .qty-num {
+      width: 32px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-main);
+    }
+
+    .action-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    .btn-add {
+      flex: 1;
+      background: var(--text-main);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-add:hover {
+      background: var(--primary);
+      box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-enquiry-icon {
+      width: 38px;
+      height: 38px;
+      background: #10b981;
+      color: white;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+    }
+
+    .btn-enquiry-icon:hover {
+      background: #059669;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+    }
+
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    /* Cart Sidebar */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 400px;
+      height: 100vh;
+      background: var(--bg-card);
+      z-index: 2001;
+      box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-sidebar.open {
+      right: 0;
+    }
+
+    .cart-header {
+      padding: 20px 25px;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-header h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .cart-item {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .c-item-img {
+      width: 60px;
+      height: 60px;
+      background: #f8fafc;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+    .c-item-details {
+      flex: 1;
+    }
+
+    .c-item-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .c-item-price {
+      font-size: 0.9rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .c-item-qty {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-left: 8px;
+    }
+
+    .c-item-remove {
+      color: #ef4444;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      padding: 5px;
+    }
+
+    .cart-footer {
+      padding: 20px 25px;
+      border-top: 1px solid var(--border-color);
+      background: #f9fafb;
+    }
+
+    .cart-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .btn-checkout {
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-checkout:hover {
+      background: var(--primary-hover);
+    }
+
+    .empty-cart-msg {
+      text-align: center;
+      color: var(--text-light);
+      margin-top: 40px;
+      font-weight: 500;
     }
 
     /* Banner Section */
@@ -1059,7 +1292,6 @@
   <div class="top-bar">
     <div class="top-bar-left">
       <span><i class="fa-solid fa-location-dot"></i> 75, Super Bazaar, Singarathope, Trichy</span>
-      <span><i class="fa-solid fa-envelope"></i> srwebdevelopers@protonmail.com</span>
     </div>
     <div class="top-bar-right">
       <span><i class="fa-solid fa-phone"></i> +91 80987 77744</span>
@@ -1085,10 +1317,10 @@
         <i class="fa-regular fa-heart"></i>
         <span class="badge" style="background:var(--text-main);">0</span>
       </a>
-      <a href="#" class="icon-btn" title="Cart">
+      <button id="cartIconBtn" class="icon-btn" style="background:none; border:none; cursor:pointer;" title="Cart">
         <i class="fa-solid fa-bag-shopping"></i>
-        <span class="badge">2</span>
-      </a>
+        <span class="badge" id="cartBadgeCount">0</span>
+      </button>
       <button class="hamburger-btn" id="openMenuBtn"><i class="fa-solid fa-bars-staggered"></i></button>
     </div>
   </nav>
@@ -1187,12 +1419,24 @@
           <span class="spec-tag">8GB Unified</span>
           <span class="spec-tag">256GB SSD</span>
         </div>
-        <div class="product-bottom">
-          <div class="price-wrap">
-            <span class="price-new">₹ 55,900</span>
-            <span class="price-old">₹ 1,22,900</span>
+        <div class="product-bottom flex-col">
+          <div class="price-row">
+            <div class="price-wrap">
+              <span class="price-new" data-price="55900">₹ 55,900</span>
+              <span class="price-old">₹ 1,22,900</span>
+            </div>
+            <div class="qty-wrap">
+              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
+              <div class="qty-num">1</div>
+              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+            </div>
           </div>
-          <a href="tel:+918098777744" class="btn-enquiry" title="Enquiry"><i class="fa-solid fa-phone"></i> Enquiry</a>
+          <div class="action-group">
+            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
+              Cart</button>
+            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
+                class="fa-solid fa-phone"></i></a>
+          </div>
         </div>
       </div>
 
@@ -1208,12 +1452,24 @@
           <span class="spec-tag">16GB RAM</span>
           <span class="spec-tag">512GB SSD</span>
         </div>
-        <div class="product-bottom">
-          <div class="price-wrap">
-            <span class="price-new">₹ 22,500</span>
-            <span class="price-old">₹ 85,000</span>
+        <div class="product-bottom flex-col">
+          <div class="price-row">
+            <div class="price-wrap">
+              <span class="price-new" data-price="22500">₹ 22,500</span>
+              <span class="price-old">₹ 85,000</span>
+            </div>
+            <div class="qty-wrap">
+              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
+              <div class="qty-num">1</div>
+              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+            </div>
           </div>
-          <a href="tel:+918098777744" class="btn-enquiry" title="Enquiry"><i class="fa-solid fa-phone"></i> Enquiry</a>
+          <div class="action-group">
+            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
+              Cart</button>
+            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
+                class="fa-solid fa-phone"></i></a>
+          </div>
         </div>
       </div>
 
@@ -1229,12 +1485,24 @@
           <span class="spec-tag">8GB RAM</span>
           <span class="spec-tag">256GB SSD</span>
         </div>
-        <div class="product-bottom">
-          <div class="price-wrap">
-            <span class="price-new">₹ 18,900</span>
-            <span class="price-old">₹ 72,000</span>
+        <div class="product-bottom flex-col">
+          <div class="price-row">
+            <div class="price-wrap">
+              <span class="price-new" data-price="18900">₹ 18,900</span>
+              <span class="price-old">₹ 72,000</span>
+            </div>
+            <div class="qty-wrap">
+              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
+              <div class="qty-num">1</div>
+              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+            </div>
           </div>
-          <a href="tel:+918098777744" class="btn-enquiry" title="Enquiry"><i class="fa-solid fa-phone"></i> Enquiry</a>
+          <div class="action-group">
+            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
+              Cart</button>
+            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
+                class="fa-solid fa-phone"></i></a>
+          </div>
         </div>
       </div>
 
@@ -1251,12 +1519,24 @@
           <span class="spec-tag">16GB RAM</span>
           <span class="spec-tag">512GB Nvme</span>
         </div>
-        <div class="product-bottom">
-          <div class="price-wrap">
-            <span class="price-new">₹ 26,500</span>
-            <span class="price-old">₹ 98,000</span>
+        <div class="product-bottom flex-col">
+          <div class="price-row">
+            <div class="price-wrap">
+              <span class="price-new" data-price="26500">₹ 26,500</span>
+              <span class="price-old">₹ 98,000</span>
+            </div>
+            <div class="qty-wrap">
+              <button class="qty-btn" onclick="updateQty(this, -1)">-</button>
+              <div class="qty-num">1</div>
+              <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+            </div>
           </div>
-          <a href="tel:+918098777744" class="btn-enquiry" title="Enquiry"><i class="fa-solid fa-phone"></i> Enquiry</a>
+          <div class="action-group">
+            <button class="btn-add" onclick="addToCart(this)"><i class="fa-solid fa-cart-shopping"></i> Add to
+              Cart</button>
+            <a href="tel:+918098777744" class="btn-enquiry-icon" title="Call for Enquiry"><i
+                class="fa-solid fa-phone"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -1328,13 +1608,6 @@
             <p><a href="tel:+918098777744" style="color: inherit;">+91 80987 77744</a></p>
           </div>
         </div>
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-          <div class="contact-text">
-            <h5>Email Support</h5>
-            <p>srwebdevelopers@protonmail.com</p>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -1346,29 +1619,148 @@
     </div>
   </footer>
 
-  <!-- Script for mobile menu alignment and toggling -->
+  <!-- Cart Sidebar HTML -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-menu" id="closeCartBtn" style="margin:0;"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cartItemsList">
+      <div class="empty-cart-msg">Your cart is empty.</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span id="cartTotalPrice">₹ 0</span>
+      </div>
+      <button class="btn-checkout"><i class="fa-solid fa-lock"></i> Secure Checkout</button>
+    </div>
+  </div>
+
+  <!-- Script for interactivity -->
   <script>
+    // Mobile Menu
     document.addEventListener('DOMContentLoaded', () => {
       const openBtn = document.getElementById('openMenuBtn');
       const closeBtn = document.getElementById('closeMenuBtn');
       const menu = document.getElementById('mobileMenu');
       const overlay = document.getElementById('mobileOverlay');
 
+      const cartIconBtn = document.getElementById('cartIconBtn');
+      const closeCartBtn = document.getElementById('closeCartBtn');
+      const cartSidebar = document.getElementById('cartSidebar');
+
       const toggleMenu = () => {
         menu.classList.toggle('active');
         overlay.classList.toggle('active');
-        // Prevent scrolling when menu is open
-        if (menu.classList.contains('active')) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = '';
-        }
+        document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
       };
+
+      const toggleCart = () => {
+        cartSidebar.classList.toggle('open');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = cartSidebar.classList.contains('open') ? 'hidden' : '';
+      };
+
+      const closeAll = () => {
+        menu.classList.remove('active');
+        cartSidebar.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
 
       openBtn.addEventListener('click', toggleMenu);
       closeBtn.addEventListener('click', toggleMenu);
-      overlay.addEventListener('click', toggleMenu);
+      cartIconBtn.addEventListener('click', toggleCart);
+      closeCartBtn.addEventListener('click', toggleCart);
+      overlay.addEventListener('click', closeAll);
     });
+
+    // Cart Logic
+    let cart = [];
+
+    function updateQty(btn, change) {
+      const qtyDiv = btn.parentElement.querySelector('.qty-num');
+      let current = parseInt(qtyDiv.textContent);
+      let next = current + change;
+      if (next >= 1 && next <= 10) {
+        qtyDiv.textContent = next;
+      }
+    }
+
+    function addToCart(btn) {
+      const card = btn.closest('.product-card');
+      const title = card.querySelector('.product-title').textContent;
+      const priceElement = card.querySelector('.price-new');
+      const priceText = priceElement.textContent;
+      const priceValue = parseInt(priceElement.getAttribute('data-price'));
+      const iconHTML = card.querySelector('.product-img').innerHTML;
+      const qty = parseInt(card.querySelector('.qty-num').textContent);
+
+      // Check if already in cart
+      const existing = cart.find(item => item.title === title);
+      if (existing) {
+        existing.qty += qty;
+      } else {
+        cart.push({ title, priceText, priceValue, iconHTML, qty });
+      }
+
+      renderCart();
+
+      // Reset qty selector
+      card.querySelector('.qty-num').textContent = 1;
+
+      // Visual feedback
+      const ogText = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-check"></i> Added';
+      btn.style.background = '#10b981';
+      setTimeout(() => {
+        btn.innerHTML = ogText;
+        btn.style.background = '';
+      }, 1500);
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      renderCart();
+    }
+
+    function renderCart() {
+      const list = document.getElementById('cartItemsList');
+      const badge = document.getElementById('cartBadgeCount');
+      const totalEl = document.getElementById('cartTotalPrice');
+
+      list.innerHTML = '';
+      let totalItems = 0;
+      let totalPrice = 0;
+
+      if (cart.length === 0) {
+        list.innerHTML = '<div class="empty-cart-msg">Your cart is empty.</div>';
+        badge.textContent = 0;
+        totalEl.textContent = '₹ 0';
+        return;
+      }
+
+      cart.forEach((item, index) => {
+        totalItems += item.qty;
+        totalPrice += (item.priceValue * item.qty);
+
+        list.innerHTML += `
+          <div class="cart-item">
+            <div class="c-item-img">${item.iconHTML}</div>
+            <div class="c-item-details">
+              <div class="c-item-title">${item.title}</div>
+              <span class="c-item-price">${item.priceText}</span>
+              <span class="c-item-qty">x ${item.qty}</span>
+            </div>
+            <button class="c-item-remove" onclick="removeFromCart(${index})"><i class="fa-solid fa-trash"></i></button>
+          </div>
+        `;
+      });
+
+      badge.textContent = totalItems;
+      totalEl.textContent = '₹ ' + totalPrice.toLocaleString('en-IN');
+    }
   </script>
 </body>
 
